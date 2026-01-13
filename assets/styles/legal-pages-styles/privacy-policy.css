@@ -1,0 +1,162 @@
+.legal-section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--Text-Color);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.legal-section h1,
+.legal-section h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--Text-Color);
+  text-align: left;
+}
+
+.legal-section h1 {
+  font-size: 3.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.legal-section h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.legal-section p {
+  margin-bottom: 1.5rem;
+}
+
+.legal-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.legal-section ul li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+/* .legal-section ul li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: var(--Accent-Color);
+} */
+
+
+/* for cookie settings */
+/* Cookie Preference Container */
+.cookie-toggle-ui {
+  background-color: var(--Secondary-Background-Color);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Section Heading */
+.cookie-toggle-ui h3 {
+  font-size: 1.8rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--Text-Color);
+}
+
+/* Form Layout */
+#cookie-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Individual Cookie Option */
+.cookie-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--Secondary-Background-Color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px var(--Accent-Color);
+  transition: background-color 0.3s ease;
+}
+
+.cookie-option:hover {
+  background-color: var(--Accent-Color-Light);
+}
+
+/* Checkbox Styling */
+.cookie-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--Accent-Color);
+  cursor: pointer;
+}
+
+/* Label Text */
+.cookie-option span {
+  font-size: 1rem;
+  font-family: var(--Inter-font-family);
+  color: var(--Text-Color);
+}
+
+/* Save Button */
+#cookie-form button[type="submit"] {
+  background: none;
+  background-color: none;
+  color: var(--Text-Color);
+  font-size: 1rem;
+  font-family: var(--Inter-font-family);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--Text-Color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: center;
+}
+
+#cookie-form button[type="submit"]:hover {
+  background-color: var(--Text-Color);
+  color: var(--Secondary-Background-Color);
+}
+
+/* message on cookie settings preference saved */
+.cookie-message {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--Inter-font-family);
+  color: var(--Text-Color);
+  opacity: 0;
+  transform: translateY(10px); 
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none; 
+}
+
+.cookie-message.visible {
+  opacity: 1;
+  transform: translateY(0); 
+  pointer-events: auto;
+}
+
+
+@media (max-width: 600px) {
+  .legal-section {
+    padding: 2rem 1rem;
+  }
+
+  .legal-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .legal-section h2 {
+    font-size: 1.25rem;
+  }
+}

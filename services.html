@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Zonofal – Services" data-es="Zonofal – Servicios">Zonofal</title>
+<link rel="stylesheet" href="assets/styles/style.css">
+<link rel="stylesheet" href="assets/styles/services.css">
+
+ <!-- google font family nunito-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- google font family inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 7 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- favicon -->
+<!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+
+</head>
+<body>
+
+<!-- Header Section -->
+<header id="header" role="banner" aria-labelledby="header-title">
+
+  <!-- Logo -->
+  <a href="index.html" class="logo" aria-label="Zonofal Home">
+    <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img">
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+
+      <!-- Dropdown toggle -->
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="more-links" aria-label="Toggle More Links">
+          <svg class="dropdown-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Language Selector -->
+    <div class="language-selector desktop-only">
+      <button class="language-toggle" id="language-toggle" aria-label="Change Language">
+        ES
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (outside nav) -->
+  <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="Additional Links">
+    <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
+    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    <li><a href="index.html" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Mobile Menu" aria-controls="mobile-menu" aria-expanded="false">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+      <line class="line-top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="line-middle" x1="4" y1="12" x2="20" y2="12" />
+      <line class="line-bottom" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <ul>
+      <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="ux-ui.html">UX/UI</a></li>
+      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Introduction to Services Section -->
+<section id="services-intro" class="services-intro-section" role="region" aria-labelledby="services-heading" aria-label="Introduction to Services">
+  <div class="services-content">
+    <h2 id="services-heading" 
+        data-en="What We Offer" 
+        data-es="Lo Que Ofrecemos">
+      What We Offer
+    </h2>
+
+    <p data-en="We specialize in front-end development that blends performance, accessibility, and visual storytelling. Whether you're launching a new site or refining an existing one, we deliver solutions tailored to your goals." 
+       data-es="Nos especializamos en desarrollo front-end que combina rendimiento, accesibilidad y narrativa visual. Ya sea que estés lanzando un nuevo sitio o mejorando uno existente, ofrecemos soluciones adaptadas a tus objetivos.">
+      We specialize in front-end development that blends performance, accessibility, and visual storytelling. Whether you're launching a new site or refining an existing one, we deliver solutions tailored to your goals.
+    </p>
+  </div>
+</section>
+
+<hr class="section-divider" aria-hidden="true">
+
+<!-- features list section -->
+<section id="features-list" class="features-section" role="region" aria-labelledby="features-heading" aria-label="Core Services Overview">
+  <div class="features-container">
+    <h2 id="features-heading" 
+        data-en="Core Services" 
+        data-es="Servicios Principales">
+      Core Services
+    </h2>
+
+    <div class="features-grid">
+      <!-- Web Development -->
+      <article class="feature-card" role="region" aria-labelledby="feature-webdev" aria-label="Web Development Service">
+        <i class="fas fa-code feature-icon" aria-hidden="true"></i>
+        <h3 id="feature-webdev" 
+            data-en="Web Development" 
+            data-es="Desarrollo Web">
+          Web Development
+        </h3>
+        <p data-en="Responsive, accessible websites built with clean HTML, CSS, and JavaScript. Optimized for performance and scalability." 
+           data-es="Sitios web responsivos y accesibles construidos con HTML, CSS y JavaScript limpio. Optimizados para rendimiento y escalabilidad.">
+          Responsive, accessible websites built with clean HTML, CSS, and JavaScript. Optimized for performance and scalability.
+        </p>
+      </article>
+
+      <!-- UX/UI Design -->
+      <article class="feature-card" role="region" aria-labelledby="feature-uxui" aria-label="UX/UI Design Service">
+        <i class="fas fa-pencil-ruler feature-icon" aria-hidden="true"></i>
+        <h3 id="feature-uxui" 
+            data-en="UX/UI Design" 
+            data-es="Diseño UX/UI">
+          UX/UI Design
+        </h3>
+        <p data-en="User-centered interfaces with intuitive layouts, visual polish, and thoughtful animations. Designed for clarity and engagement." 
+           data-es="Interfaces centradas en el usuario con diseños intuitivos, pulido visual y animaciones cuidadas. Diseñadas para claridad y engagement.">
+          User-centered interfaces with intuitive layouts, visual polish, and thoughtful animations. Designed for clarity and engagement.
+        </p>
+      </article>
+
+      <!-- Front-End Consulting -->
+      <article class="feature-card" role="region" aria-labelledby="feature-consulting" aria-label="Front-End Consulting Service">
+        <i class="fas fa-lightbulb feature-icon" aria-hidden="true"></i>
+        <h3 id="feature-consulting" 
+            data-en="Front-End Consulting" 
+            data-es="Consultoría Front-End">
+          Front-End Consulting
+        </h3>
+        <p data-en="Strategic guidance on architecture, performance, accessibility, and best practices. Ideal for teams seeking expert input." 
+           data-es="Orientación estratégica sobre arquitectura, rendimiento, accesibilidad y buenas prácticas. Ideal para equipos que buscan asesoramiento experto.">
+          Strategic guidance on architecture, performance, accessibility, and best practices. Ideal for teams seeking expert input.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- feature section -->
+<section id="services-overview" class="services-details-section" role="region" aria-labelledby="services-overview-heading" aria-label="Detailed Services Overview">
+  <h2 id="services-overview-heading"
+      data-en="Detailed Services Overview"
+      data-es="Resumen Detallado de Servicios">
+    Detailed Services Overview
+  </h2>
+
+  <!-- Web Development -->
+  <article class="service-block" id="service-webdev" role="region" aria-labelledby="service-webdev-heading" aria-label="Web Development Service">
+    <h3 id="service-webdev-heading" data-en="Web Development" data-es="Desarrollo Web">Web Development</h3>
+    <p class="service-intro"
+       data-en="Responsive, accessible websites tailored to real-world needs. Optimized for performance and usability."
+       data-es="Sitios web responsivos y accesibles adaptados a necesidades reales. Optimizados para rendimiento y usabilidad.">
+       Responsive, accessible websites tailored to real-world needs. Optimized for performance and usability.
+    </p>
+
+    <div class="service-section" aria-labelledby="service-webdev-techs-heading">
+      <h4 id="service-webdev-techs-heading"
+          data-en="Technologies We Use"
+          data-es="Tecnologías que Utilizamos">
+        Technologies We Use
+      </h4>
+      <ul class="service-list" role="list">
+        <li role="listitem" data-en="Semantic HTML5 and ARIA roles" data-es="HTML5 semántico y roles ARIA">Semantic HTML5 and ARIA roles</li>
+        <li role="listitem" data-en="CSS Grid, Flexbox, Sass, and Tailwind" data-es="CSS Grid, Flexbox, Sass y Tailwind">CSS Grid, Flexbox, Sass, and Tailwind</li>
+        <li role="listitem" data-en="JavaScript (ES6+), React, and Redux" data-es="JavaScript (ES6+), React y Redux">JavaScript (ES6+), React, and Redux</li>
+        <li role="listitem" data-en="GSAP and D3.js for animation and data" data-es="GSAP y D3.js para animación y datos">GSAP and D3.js for animation and data</li>
+        <li role="listitem" data-en="Font Awesome and SVG icon systems" data-es="Font Awesome y sistemas de íconos SVG">Font Awesome and SVG icon systems</li>
+        <li role="listitem" data-en="Figma for design and prototyping" data-es="Figma para diseño y prototipado">Figma for design and prototyping</li>
+        <li role="listitem" data-en="Git and GitHub for version control" data-es="Git y GitHub para control de versiones">Git and GitHub for version control</li>
+        <li role="listitem" data-en="Accessibility-first UX practices" data-es="Buenas prácticas de UX con accesibilidad como prioridad">Accessibility-first UX practices</li>
+      </ul>
+    </div>
+
+    <div class="service-section" aria-labelledby="service-webdev-projects-heading">
+      <h4 id="service-webdev-projects-heading"
+          data-en="Types of Projects We Handle"
+          data-es="Tipos de Proyectos que Realizamos">
+        Types of Projects We Handle
+      </h4>
+      <ul class="service-list" role="list">
+        <li role="listitem" data-en="Personal portfolios and resumes" data-es="Portafolios personales y currículums">Personal portfolios and resumes</li>
+        <li role="listitem" data-en="Landing pages and product showcases" data-es="Páginas de aterrizaje y vitrinas de productos">Landing pages and product showcases</li>
+        <li role="listitem" data-en="Custom forms and contact flows" data-es="Formularios personalizados y flujos de contacto">Custom forms and contact flows</li>
+        <li role="listitem" data-en="Blogs and content-driven layouts" data-es="Blogs y diseños centrados en contenido">Blogs and content-driven layouts</li>
+        <li role="listitem" data-en="Interactive dashboards and data visualizations" data-es="Paneles interactivos y visualización de datos">Interactive dashboards and data visualizations</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- UX/UI Design -->
+  <article class="service-block" id="service-uxui" role="region" aria-labelledby="service-uxui-heading" aria-label="UX UI Design Service">
+    <h3 id="service-uxui-heading" data-en="UX/UI Design" data-es="Diseño UX/UI">UX/UI Design</h3>
+    <p class="service-intro"
+       data-en="User-centered interfaces with clarity, polish, and intuitive interaction. Designed to reduce friction and guide users naturally."
+       data-es="Interfaces centradas en el usuario con claridad, pulido e interacción intuitiva. Diseñadas para reducir fricción y guiar al usuario.">
+       User-centered interfaces with clarity, polish, and intuitive interaction. Designed to reduce friction and guide users naturally.
+    </p>
+
+    <div class="service-section" aria-labelledby="service-uxui-principles-heading">
+      <h4 id="service-uxui-principles-heading" data-en="Design Principles" data-es="Principios de Diseño">Design Principles</h4>
+      <ul class="service-list" role="list">
+        <li role="listitem" data-en="Clarity and consistency across layouts" data-es="Claridad y consistencia en los diseños">Clarity and consistency across layouts</li>
+        <li role="listitem" data-en="Accessibility and inclusive design" data-es="Accesibilidad y diseño inclusivo">Accessibility and inclusive design</li>
+        <li role="listitem" data-en="Visual hierarchy and intuitive navigation" data-es="Jerarquía visual y navegación intuitiva">Visual hierarchy and intuitive navigation</li>
+        <li role="listitem" data-en="Responsive behavior across devices" data-es="Comportamiento responsivo en todos los dispositivos">Responsive behavior across devices</li>
+      </ul>
+    </div>
+
+    <div class="service-section" aria-labelledby="service-uxui-tools-heading">
+      <h4 id="service-uxui-tools-heading" data-en="Tools & Methodologies" data-es="Herramientas y Metodologías">Tools & Methodologies</h4>
+      <ul class="service-list" role="list">
+        <li role="listitem" data-en="Figma for wireframes and prototypes" data-es="Figma para wireframes y prototipos">Figma for wireframes and prototypes</li>
+        <li role="listitem" data-en="Modular CSS and design systems" data-es="CSS modular y sistemas de diseño">Modular CSS and design systems</li>
+        <li role="listitem" data-en="User flow mapping and interaction design" data-es="Mapeo de flujo de usuario y diseño de interacción">User flow mapping and interaction design</li>
+        <li role="listitem" data-en="Iterative feedback and refinement cycles" data-es="Ciclos iterativos de retroalimentación y refinamiento">Iterative feedback and refinement cycles</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Front-End Consulting -->
+  <article class="service-block" id="service-consulting" role="region" aria-labelledby="service-consulting-heading" aria-label="Front End Consulting Service">
+    <h3 id="service-consulting-heading" data-en="Front-End Consulting" data-es="Consultoría Front-End">Front-End Consulting</h3>
+    <p class="service-intro"
+       data-en="Strategic guidance for scalable, performant, and accessible front-end solutions. From audits to implementation support."
+       data-es="Asesoramiento estratégico para soluciones front-end escalables, eficientes y accesibles. Desde auditorías hasta soporte de implementación.">
+       Strategic guidance for scalable, performant, and accessible front-end solutions. From audits to implementation support.
+    </p>
+
+    <div class="service-section" aria-labelledby="service-consulting-process-heading">
+      <h4 id="service-consulting-process-heading" data-en="Consultation Process" data-es="Proceso de Consultoría">Consultation Process</h4>
+      <ul class="service-list" role="list">
+        <li role="listitem" data-en="Initial audit of codebase and UX" data-es="Auditoría inicial del código y experiencia de usuario">Initial audit of codebase and UX</li>
+        <li role="listitem" data-en="Collaborative goal-setting and roadmap" data-es="Definición colaborativa de objetivos y hoja de ruta">Collaborative goal-setting and roadmap</li>
+        <li role="listitem" data-en="Recommendations for performance and accessibility" data-es="Recomendaciones para rendimiento y accesibilidad">Recommendations for performance and accessibility</li>
+        <li role="listitem" data-en="Follow-up support and implementation guidance" data-es="Soporte de seguimiento y guía de implementación">Follow-up support and implementation guidance</li>
+      </ul>
+    </div>
+
+    <div class="service-section" aria-labelledby="service-consulting-areas-heading">
+      <h4 id="service-consulting-areas-heading" data-en="Areas of Expertise" data-es="Áreas de Especialización">Areas of Expertise</h4>
+      <ul class="service-list" role="list">
+        <li role="listitem" data-en="Semantic HTML and modular CSS architecture" data-es="HTML semántico y arquitectura CSS modular">Semantic HTML and modular CSS architecture</li>
+        <li role="listitem" data-en="Form validation and user flow optimization" data-es="Validación de formularios y optimización de flujo de usuario">Form validation and user flow optimization</li>
+        <li role="listitem" data-en="Performance optimization and device compatibility" data-es="Optimización de rendimiento y compatibilidad de dispositivos">Performance optimization and device compatibility</li>
+        <li role="listitem" data-en="Accessibility audits and WCAG compliance" data-es="Auditorías de accesibilidad y cumplimiento WCAG">Accessibility audits and WCAG compliance</li>
+      </ul>
+    </div>
+
+    <div class="service-section" aria-labelledby="service-consulting-benefits-heading">
+      <h4 id="service-consulting-benefits-heading" data-en="Client Benefits" data-es="Beneficios para el Cliente">Client Benefits</h4>
+      <ul class="service-list" role="list">
+        <li role="listitem" data-en="Improved user experience and trust" data-es="Mejor experiencia de usuario y confianza">Improved user experience and trust</li>
+        <li role="listitem" data-en="Faster load times and better SEO" data-es="Tiempos de carga más rápidos y mejor SEO">Faster load times and better SEO</li>
+        <li role="listitem" data-en="Scalable codebase and future-proof design" data-es="Código escalable y diseño preparado para el futuro">Scalable codebase and future-proof design</li>
+        <li role="listitem" data-en="Clear documentation and maintainability" data-es="Documentación clara y facilidad de mantenimiento">Clear documentation and maintainability</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- CTA section -->
+<section class="cta-section" role="region" aria-labelledby="cta-heading" aria-label="Call to Action Section">
+  <div class="cta-container">
+    <h2 id="cta-heading" 
+        data-en="Ready to Get Started?" 
+        data-es="¿Listos para Comenzar?">
+      Ready to Get Started?
+    </h2>
+
+    <p class="cta-text" 
+       data-en="Whether you need a custom website, a polished user interface, or expert front-end guidance, we're here to help. Let’s talk about your goals and how we can bring them to life." 
+       data-es="Ya sea que necesites un sitio web personalizado, una interfaz pulida o asesoramiento experto en front-end, estamos aquí para ayudarte. Hablemos sobre tus objetivos y cómo podemos hacerlos realidad.">
+      Whether you need a custom website, a polished user interface, or expert front-end guidance, we're here to help. Let’s talk about your goals and how we can bring them to life.
+    </p>
+
+    <a href="contact.html" class="cta-button" 
+       data-en="Contact Us" 
+       data-es="Contáctanos"
+       aria-label="Contact us to start your project">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
+  <div class="footer-content">
+
+     <!-- Logo and Newsletter -->
+    <div>
+      <!-- Footer Logo -->
+      <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
+        <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img-footer">
+      </a>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-section newsletter" aria-labelledby="newsletter-heading">
+        <h3 id="newsletter-heading" class="visually-hidden"></h3>
+        <p 
+          data-en="Subscribe to our newsletter for the latest updates on features and releases." 
+          data-es="Suscríbete a nuestro boletín para recibir las últimas actualizaciones sobre funciones y lanzamientos.">
+          Subscribe to our newsletter for the latest updates on features and releases.
+        </p>
+
+        <form action="#" method="post" aria-label="Newsletter Signup Form">
+          <label for="email-input" class="visually-hidden"></label>
+          <input 
+            type="email" 
+            id="email-input" 
+            name="email" 
+            placeholder="Your Email Here" 
+            required 
+            data-en="Your Email Here" 
+            data-es="Tu correo electrónico aquí"
+          >
+          <button type="submit" 
+            data-en="Join" 
+            data-es="Unirse" 
+            aria-label="Join the newsletter">
+            Join
+          </button>
+        </form>
+
+        <p 
+          data-en="By subscribing, you agree to our privacy policy and consent to receive updates." 
+          data-es="Al suscribirte, aceptas nuestra política de privacidad y das tu consentimiento para recibir actualizaciones.">
+          By subscribing, you agree to our privacy policy and consent to receive updates.
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-section navigation-links" role="navigation" aria-label="Quick Links">
+      <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section navigation-links" role="navigation" aria-label="Resources">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carrers">Careers</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-section social-media" aria-label="Social Media Links">
+      <h3 data-en="Stay Connected" data-es="Mantente en Linea">Stay Connected</h3>
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alfonzo-535b7b305/" target="_blank" class="social-icon-footer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="social-name">LinkedIn</span>
+        </a>
+        <a href="https://github.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="social-name">GitHub</span>
+        </a>
+        <a href="https://twitter.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <span class="social-name">Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/josealfonzo792/" target="_blank" class="social-icon-footer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/+542657617907" target="_blank" class="social-icon-footer" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="social-name">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Language Selector for Mobile -->
+    <div class="footer-section language-selector mobile-only">
+      <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
+        ES
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+
+    <!-- Divider -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <div class="footer-section credits">
+        <p data-en="© 2025 Zonofal. All Rights Reserved." data-es="© 2025 Zonofal. Todos los derechos reservados.">
+          © 2025 Zonofal. All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="footer-section policies" role="navigation" aria-label="Legal Links">
+        <a href="pages/legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="pages/legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="pages/legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>

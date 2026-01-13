@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Zonofal – Contact" data-es="Zonofal – Contacto">Zonofal</title>
+<link rel="stylesheet" href="assets/styles/style.css">
+<link rel="stylesheet" href="assets/styles/contact.css">
+
+<!-- google font family nunito-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- google font family inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 7 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- favicon -->
+<!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+
+</head>
+<body>
+   <!-- Header Section -->
+<header id="header" role="banner" aria-labelledby="header-title">
+
+  <!-- Logo -->
+  <a href="index.html" class="logo" aria-label="Zonofal Home">
+    <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img">
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+
+      <!-- Dropdown toggle -->
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="more-links" aria-label="Toggle More Links">
+          <svg class="dropdown-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Language Selector -->
+    <div class="language-selector desktop-only">
+      <button class="language-toggle" id="language-toggle" aria-label="Change Language">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (outside nav) -->
+  <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="Additional Links">
+    <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
+    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    <li><a href="index.html" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Mobile Menu" aria-controls="mobile-menu" aria-expanded="false">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+      <line class="line-top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="line-middle" x1="4" y1="12" x2="20" y2="12" />
+      <line class="line-bottom" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <ul>
+      <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="ux-ui.html">UX/UI</a></li>
+      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Intro Section -->
+<section id="contact-intro" class="contact-intro-section" role="region" aria-labelledby="contact-intro-heading" aria-label="Contact Introduction">
+  <div class="intro-content">
+    <h2 id="contact-intro-heading" 
+        data-en="Let’s start a conversation" 
+        data-es="Comencemos una conversación">
+      Let’s start a conversation
+    </h2>
+
+    <p 
+      data-en="Whether you have a project in mind, a question, or simply wish to connect. We’d be delighted to hear from you. Feel free to fill out the form or reach out directly, and let’s create something exceptional together." 
+      data-es="Ya sea que tengas un proyecto en mente, una pregunta o simplemente desees ponerte en contacto. Estaremos encantados de saber de ti. No dudes en completar el formulario o escribirnos directamente, y creemos algo excepcional juntos.">
+      Whether you have a project in mind, a question, or simply wish to connect. We’d be delighted to hear from you. Feel free to fill out the form or reach out directly, and let’s create something exceptional together.
+    </p>
+  </div>
+</section>
+
+<hr class="section-divider" aria-hidden="true">
+
+<!-- Contact Info Section -->
+<section id="contact-info" class="contact-info-section" role="region" aria-labelledby="contact-info-heading" aria-label="Contact Information Section">
+  <div class="contact-info-layout">
+
+    <!-- Left Column: Contact Details -->
+    <div class="contact-info-grid">
+
+      <!-- Address -->
+      <address class="contact-info-item" aria-label="Office Address">
+        <i class="fas fa-map-marker-alt contact-icon" aria-hidden="true"></i>
+        <h3 data-en="Address" data-es="Dirección">Address</h3>
+        <p>
+          <span data-en="Paraguay 817" data-es="Paraguay 817">Paraguay 817</span><br>
+          <span data-en="Villa Mercedes, San Luis, Argentina" data-es="Villa Mercedes, San Luis, Argentina">Villa Mercedes, San Luis, Argentina</span>
+        </p>
+      </address>
+
+      <!-- Phone -->
+      <div class="contact-info-item" role="region" aria-label="Phone Number">
+        <i class="fas fa-phone contact-icon" aria-hidden="true"></i>
+        <h3 data-en="Phone" data-es="Teléfono">Phone</h3>
+        <p>
+          <a href="tel:+5492657617907" aria-label="Call Zonofal at +54 9 2657 617907">+54 9 2657 617907</a>
+        </p>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-info-item" role="region" aria-label="Email Address">
+        <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
+        <h3 data-en="Email" data-es="Correo Electrónico">Email</h3>
+        <p>
+          <a href="mailto:zonofal@gmail.com" aria-label="Email Zonofal at zonofal@gmail.com">Zonofal@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Column: Heading -->
+    <div class="contact-info-heading-wrapper">
+      <h2 id="contact-info-heading" data-en="Contact Information" data-es="Información de Contacto">
+        Contact Information
+      </h2>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" role="region" aria-labelledby="contact-heading" aria-label="Contact Form Section">
+  <h2 id="contact-heading" data-en="Contact Us" data-es="Contáctanos">Contact Us</h2>
+
+  <div class="contact-content">
+    <!-- Left Message Text -->
+    <div class="contact-message">
+      <p class="intro-text" 
+         data-en="We’re always eager to hear about new ideas. Please don’t hesitate to get in touch, ask questions, or initiate a project." 
+         data-es="Siempre nos entusiasma conocer nuevas ideas. No dudes en ponerte en contacto, hacer preguntas o iniciar un proyecto.">
+        We’re always eager to hear about new ideas. Please don’t hesitate to get in touch, ask questions, or initiate a project.
+      </p>
+    </div>
+
+    <!-- Right Contact Form -->
+    <div class="form-wrapper">
+      <form id="contact-form" action="https://formsubmit.co/josealfonzo792@gmail.com" method="POST" novalidate aria-describedby="form-instructions">
+        <input type="hidden" name="_subject" value="New Contact Form Submission">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="">
+        <input type="text" name="_honey" style="display:none" aria-hidden="true">
+        
+        <!-- Name -->
+        <label for="name" class="visually-hidden" data-en="Name" data-es="Nombre">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" data-en="Your Name" data-es="Tu Nombre" required aria-required="true">
+
+        <!-- Email -->
+        <label for="email" class="visually-hidden" data-en="Email" data-es="Correo Electronico">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" data-en="Your Email" data-es="Tu Correo" required aria-required="true">
+
+        <!-- Phone (Optional) -->
+        <label for="phone" class="visually-hidden" data-en="Phone" data-es="Teléfono">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)" data-en="Your Phone" data-es="Tu Teléfono">
+
+        <!-- Message -->
+        <label for="message" class="visually-hidden" data-en="Message" data-es="Mensaje">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" data-en="Your Message" data-es="Tu Mensaje" required aria-required="true"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" data-en="Send Message" data-es="Enviar Mensaje" aria-label="Send your message">Send Message</button>
+      </form>
+
+      <!-- Thank You Message -->
+      <div id="thank-you-message" style="display: none;" aria-live="polite"
+           data-en="Your message has been sent successfully. We’ll get back to you as soon as possible." 
+           data-es="Tu mensaje ha sido enviado exitosamente. Nos pondremos en contacto contigo lo antes posible.">
+
+        <h3 data-en="Thank You!" data-es="¡Gracias!">Thank You!</h3>
+        <p data-en="Your message has been sent successfully. We’ll get back to you as soon as possible." 
+           data-es="Tu mensaje ha sido enviado exitosamente. Nos pondremos en contacto contigo lo antes posible.">
+          Your message has been sent successfully. We’ll get back to you as soon as possible.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location & Availability Section -->
+<section id="location" class="location-section" role="region" aria-labelledby="location-heading" aria-label="Location and Availability">
+  <h2 id="location-heading" 
+      data-en="Location & Availability" 
+      data-es="Ubicación y Disponibilidad">
+    Location & Availability
+  </h2>
+
+  <p data-en="We work remotely from San Luis, Argentina. Available for consultations and collaborations worldwide." 
+     data-es="Trabajamos de forma remota desde San Luis, Argentina. Disponibles para consultas y colaboraciones globales.">
+    We work remotely from San Luis, Argentina. Available for consultations and collaborations worldwide.
+  </p>
+</section>
+
+<!-- CTA Message Section -->
+<section id="contact-cta-message" class="cta-message-section" role="region" aria-labelledby="cta-message-heading" aria-label="Project Inquiry Call to Action">
+  <div class="cta-message-content">
+    <h2 id="cta-message-heading" 
+        data-en="Have a project in mind?" 
+        data-es="¿Tienes un proyecto en mente?">
+      Have a project in mind?
+    </h2>
+
+    <p data-en="Let’s talk! We’d be delighted to hear about your ideas and explore how we can bring them to life." 
+       data-es="¡Hablemos! Nos encantaría conocer tus ideas y explorar cómo podemos hacerlas realidad.">
+      Let’s talk! We’d be delighted to hear about your ideas and explore how we can bring them to life.
+    </p>
+
+    <a href="#contact-form" class="cta-link-button"
+       data-en="Start the Conversation" 
+       data-es="Inicia la Conversación"
+       aria-label="Start the conversation about your project">
+      Start the Conversation
+    </a>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="newsletter-section" role="region" aria-labelledby="newsletter-heading" aria-label="Newsletter Subscription">
+  <div class="newsletter-content">
+    <h2 id="newsletter-heading" 
+        data-en="Stay in the loop" 
+        data-es="Mantente informado">
+      Stay in the loop
+    </h2>
+
+    <p id="newsletter-description" 
+       data-en="Subscribe to our newsletter for updates on new projects, insights, and practical tips." 
+       data-es="Suscríbete a nuestro boletín para recibir actualizaciones sobre nuevos proyectos, ideas y consejos prácticos.">
+      Subscribe to our newsletter for updates on new projects, insights, and practical tips.
+    </p>
+
+    <form class="newsletter-form" aria-label="Newsletter Signup" aria-describedby="newsletter-description">
+      <label for="email" class="visually-hidden"
+             data-en="Email address" 
+             data-es="Correo electrónico">
+        Email address
+      </label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" aria-label="Email address">
+      
+      <button type="submit" class="newsletter-button"
+              data-en="Subscribe" 
+              data-es="Suscribirse"
+              aria-label="Subscribe to newsletter">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
+  <div class="footer-content">
+
+     <!-- Logo and Newsletter -->
+    <div>
+      <!-- Footer Logo -->
+      <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
+        <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img-footer">
+      </a>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-section newsletter" aria-labelledby="newsletter-heading">
+        <h3 id="newsletter-heading" class="visually-hidden"></h3>
+        <p 
+          data-en="Subscribe to our newsletter for the latest updates on features and releases." 
+          data-es="Suscríbete a nuestro boletín para recibir las últimas actualizaciones sobre funciones y lanzamientos.">
+          Subscribe to our newsletter for the latest updates on features and releases.
+        </p>
+
+        <form action="#" method="post" aria-label="Newsletter Signup Form">
+          <label for="email-input" class="visually-hidden"></label>
+          <input 
+            type="email" 
+            id="email-input" 
+            name="email" 
+            placeholder="Your Email Here" 
+            required 
+            data-en="Your Email Here" 
+            data-es="Tu correo electrónico aquí"
+          >
+          <button type="submit" 
+            data-en="Join" 
+            data-es="Unirse" 
+            aria-label="Join the newsletter">
+            Join
+          </button>
+        </form>
+
+        <p 
+          data-en="By subscribing, you agree to our privacy policy and consent to receive updates." 
+          data-es="Al suscribirte, aceptas nuestra política de privacidad y das tu consentimiento para recibir actualizaciones.">
+          By subscribing, you agree to our privacy policy and consent to receive updates.
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-section navigation-links" role="navigation" aria-label="Quick Links">
+      <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section navigation-links" role="navigation" aria-label="Resources">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carrers">Careers</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-section social-media" aria-labelledby="footer-social-heading">
+      <h3 id="footer-social-heading" data-en="Stay Connected" data-es="Mantente en Linea">Stay Connected</h3>
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alfonzo-535b7b305/" target="_blank" class="social-icon-footer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="social-name">LinkedIn</span>
+        </a>
+        <a href="https://github.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="social-name">GitHub</span>
+        </a>
+        <a href="https://twitter.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <span class="social-name">Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/josealfonzo792/" target="_blank" class="social-icon-footer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/+542657617907" target="_blank" class="social-icon-footer" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="social-name">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Language Selector for Mobile -->
+    <div class="footer-section language-selector mobile-only">
+      <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+
+    <!-- Divider -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <div class="footer-section credits">
+        <p data-en="© 2025 Zonofal. All Rights Reserved." data-es="© 2025 Zonofal. Todos los derechos reservados.">
+          © 2025 Zonofal. All Rights Reserved.
+        </p>
+      </div>
+      <div class="footer-section policies" role="navigation" aria-label="Legal Links">
+        <a href="pages/legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="pages/legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="pages/legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>

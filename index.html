@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Zonofal – Home" data-es="Zonofal – Inicio">Zonofal</title>
+<link rel="stylesheet" href="assets/styles/style.css">
+
+<!-- google font family nunito-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- google font family inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 7 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- favicon -->
+<!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+</head>
+<body>
+
+  <!-- Header Section -->
+<header id="header">
+  <!-- Logo -->
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img">
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li>
+        <a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+      </li>
+      <li>
+        <a href="services.html" data-en="Services" data-es="Servicios">Services</a>
+      </li>
+      <li>
+        <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+      </li>
+
+      <!-- Dropdown toggle -->
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="more-links" aria-label="Toggle More Links">
+          <svg class="dropdown-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Language Selector -->
+    <div class="language-selector desktop-only">
+      <button class="language-toggle" id="language-toggle" aria-label="Change Language">
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (outside nav) -->
+  <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="More Links">
+    <li><a href="about.html" role="menuitem" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="web-dev.html" role="menuitem" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    <li><a href="#home" role="menuitem" data-en="Home" data-es="Inicio">Home</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Menu">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+      <line class="line-top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="line-middle" x1="4" y1="12" x2="20" y2="12" />
+      <line class="line-bottom" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <ul>
+      <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="ux-ui.html">UX/UI</a></li>
+      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="hero-section" aria-labelledby="home-heading" role="region">
+  <div class="hero-image-container">
+    <img src="assets/images/web-dev.jpg" alt="Illustration of web development workspace with screens and code" class="hero-image">
+  </div>
+
+  <div class="home-content">
+    <h1 id="home-heading" class="fade-in" 
+        data-en="Design That Elevates Businesses" 
+        data-es="Diseño que Potencia Negocios">
+      Design That Elevates Businesses
+    </h1>
+
+    <p class="tagline fade-in" 
+       data-en="Building intuitive experiences that help brands grow." 
+       data-es="Construyendo experiencias intuitivas que ayudan a las marcas a crecer.">
+      Building intuitive experiences that help brands grow.
+    </p>
+
+    <a href="contact.html" 
+       class="cta-button hero-cta-button fade-in" 
+       data-en="Contact Us" 
+       data-es="Contáctanos" 
+       aria-label="Contact Us to start your project">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+<!-- Features Section (Home) -->
+<section class="features-list-home" role="region" aria-labelledby="features-heading">
+  <h2 id="features-heading" 
+      data-en="Transform your ideas into stunning websites with our expert services"
+      data-es="Transforma tus ideas en sitios web impactantes con nuestros servicios expertos">
+    Transform your ideas into stunning websites with our expert services
+  </h2>
+
+  <div class="features-items-home">
+    <div class="feature-item-home">
+      <i class="fas fa-palette feature-icon" aria-hidden="true"></i>
+      <h3 
+        data-en="Elevate user experience through innovative UX/UI design solutions"
+        data-es="Mejora la experiencia del usuario con soluciones innovadoras de diseño UX/UI">
+        Elevate user experience through innovative UX/UI design solutions
+      </h3>
+      <p 
+        data-en="Our web development services ensure your site is responsive, fast, and user-friendly"
+        data-es="Nuestros servicios de desarrollo web garantizan que tu sitio sea responsivo, rápido y fácil de usar">
+        Our web development services ensure your site is responsive, fast, and user-friendly
+      </p>
+      <a href="ux-ui.html" class="feature-link" 
+         data-en="Learn more" 
+         data-es="Saber más" 
+         aria-label="Learn more about UX/UI design solutions">
+        Learn more <i class="fas fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="feature-item-home">
+      <i class="fas fa-chart-line feature-icon" aria-hidden="true"></i>
+      <h3 
+        data-en="Expert front-end consulting to optimize your digital presence"
+        data-es="Consultoría front-end experta para optimizar tu presencia digital">
+        Expert front-end consulting to optimize your digital presence
+      </h3>
+      <p 
+        data-en="We provide tailored consulting to enhance your front-end strategies and performance"
+        data-es="Ofrecemos consultoría personalizada para mejorar tus estrategias y rendimiento front-end">
+        We provide tailored consulting to enhance your front-end strategies and performance
+      </p>
+      <a href="services.html" class="feature-link" 
+         data-en="Explore Services" 
+         data-es="Explorar Servicios" 
+         aria-label="Explore our front-end consulting services">
+        Explore Services <i class="fas fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="feature-item-home">
+      <i class="fas fa-code feature-icon" aria-hidden="true"></i>
+      <h3 
+        data-en="Comprehensive solutions for all your web development needs"
+        data-es="Soluciones integrales para todas tus necesidades de desarrollo web">
+        Comprehensive solutions for all your web development needs
+      </h3>
+      <p 
+        data-en="From concept to launch, we cover every aspect of development"
+        data-es="Desde el concepto hasta el lanzamiento, cubrimos cada aspecto del desarrollo">
+        From concept to launch, we cover every aspect of development
+      </p>
+      <a href="web-dev.html" class="feature-link" 
+         data-en="Get started" 
+         data-es="Comienza ahora" 
+         aria-label="Get started with our web development services">
+        Get started <i class="fas fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits" role="region" aria-labelledby="benefits-heading">
+  <div class="left content">
+    <h2 id="benefits-heading"
+        data-en="Discover the key benefits of our front-end development services"
+        data-es="Descubre los beneficios clave de nuestros servicios de desarrollo front-end">
+      Discover the key benefits of our front-end development services
+    </h2>
+
+    <p data-en="Our expert team brings years of experience to deliver high-quality solutions tailored to your needs. With a commitment to timely delivery, we ensure your projects are completed on schedule without compromising innovation."
+       data-es="Nuestro equipo experto aporta años de experiencia para ofrecer soluciones de alta calidad adaptadas a tus necesidades. Con un compromiso de entrega puntual, aseguramos que tus proyectos se completen a tiempo sin comprometer la innovación.">
+      Our expert team brings years of experience to deliver high-quality solutions tailored to your needs. With a commitment to timely delivery, we ensure your projects are completed on schedule without compromising innovation.
+    </p>
+
+    <ul class="benefits-list">
+      <li data-en="Expert team of front-end developers"
+          data-es="Equipo experto de desarrolladores front-end"
+          aria-label="Expert team of front-end developers">
+        <i class="fa-solid fa-users" aria-hidden="true"></i>
+        Expert team of front-end developers
+      </li>
+      <li data-en="Guaranteed time project delivery"
+          data-es="Entrega de proyectos garantizada en tiempo"
+          aria-label="Guaranteed time project delivery">
+        <i class="fa-solid fa-clock" aria-hidden="true"></i> 
+        Guaranteed time project delivery
+      </li>
+      <li data-en="Innovative solutions for modern challenges"
+          data-es="Soluciones innovadoras para desafíos modernos"
+          aria-label="Innovative solutions for modern challenges">
+        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i> 
+        Innovative solutions for modern challenges
+      </li>
+    </ul>
+  </div>
+
+  <div class="right content">
+    <img src="assets/images/image-for-benefit-section.jpg" alt="Team collaborating on front-end development project">
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" role="region" aria-labelledby="cta-heading">
+  <h2 id="cta-heading"
+      data-en="Let's bring your vision to life"
+      data-es="Hagamos realidad tu visión">
+    Let's bring your vision to life
+  </h2>
+
+  <p data-en="Contact us today for a personalized consultation or quote tailored to your needs."
+     data-es="Contáctanos hoy para una consulta personalizada o una cotización adaptada a tus necesidades.">
+    Contact us today for a personalized consultation or quote tailored to your needs.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn primary"
+       data-en="Get started"
+       data-es="Comenzar"
+       aria-label="Get started with a personalized consultation">
+      Get started
+    </a>
+    <a href="services.html" class="btn secondary"
+       data-en="Learn more"
+       data-es="Más información"
+       aria-label="Learn more about our services">
+      Learn more
+    </a>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="visually-hidden"></h2>
+  <div class="footer-content">
+    
+    <!-- Logo and Newsletter -->
+    <div>
+      <!-- Footer Logo -->
+      <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
+        <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img-footer">
+      </a>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-section newsletter" aria-labelledby="newsletter-heading">
+        <h3 id="newsletter-heading" class="visually-hidden"></h3>
+        <p 
+          data-en="Subscribe to our newsletter for the latest updates on features and releases." 
+          data-es="Suscríbete a nuestro boletín para recibir las últimas actualizaciones sobre funciones y lanzamientos.">
+          Subscribe to our newsletter for the latest updates on features and releases.
+        </p>
+
+        <form action="#" method="post" aria-label="Newsletter Signup Form">
+          <label for="email-input" class="visually-hidden"></label>
+          <input 
+            type="email" 
+            id="email-input" 
+            name="email" 
+            placeholder="Your Email Here" 
+            required 
+            data-en="Your Email Here" 
+            data-es="Tu correo electrónico aquí"
+          >
+          <button type="submit" 
+            data-en="Join" 
+            data-es="Unirse" 
+            aria-label="Join the newsletter">
+            Join
+          </button>
+        </form>
+
+        <p 
+          data-en="By subscribing, you agree to our privacy policy and consent to receive updates." 
+          data-es="Al suscribirte, aceptas nuestra política de privacidad y das tu consentimiento para recibir actualizaciones.">
+          By subscribing, you agree to our privacy policy and consent to receive updates.
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-section navigation-links" aria-labelledby="quick-links-heading">
+      <h3 id="quick-links-heading" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section navigation-links" aria-labelledby="resources-heading">
+      <h3 id="resources-heading" data-en="Resources" data-es="Recursos">Resources</h3>
+      <ul>
+        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carreras">Careers</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-section social-media" aria-labelledby="social-heading">
+      <h3 id="social-heading" data-en="Stay Connected" data-es="Mantente en Línea">Stay Connected</h3>
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alfonzo-535b7b305/" target="_blank" class="social-icon-footer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="social-name">LinkedIn</span>
+        </a>
+        <a href="https://github.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="social-name">GitHub</span>
+        </a>
+        <a href="https://twitter.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <span class="social-name">Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/josealfonzo792/" target="_blank" class="social-icon-footer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/+542657617907" target="_blank" class="social-icon-footer" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="social-name">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Language Selector for Mobile -->
+    <div class="footer-section language-selector mobile-only">
+      <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+
+    <!-- Divider -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <div class="footer-section credits">
+        <p data-en="© 2025 Zonofal. All Rights Reserved." data-es="© 2025 Zonofal. Todos los derechos reservados.">
+          © 2025 Zonofal. All Rights Reserved.
+        </p>
+      </div>
+      <div class="footer-section policies" aria-label="Legal Links">
+        <a href="pages/legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="pages/legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="pages/legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>

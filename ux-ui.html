@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zonofal - UX/UI</title>
+<link rel="stylesheet" href="assets/styles/style.css">
+<link rel="stylesheet" href="assets/styles/ux-ui.css">
+
+<!-- google font family nunito-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- google font family inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 7 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- favicon -->
+<!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+
+</head>
+<body>
+
+<!-- Header Section -->
+<header id="header" role="banner" aria-labelledby="header-title">
+
+  <!-- Logo -->
+  <a href="index.html" class="logo" aria-label="Zonofal Home">
+    <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img">
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+
+      <!-- Dropdown toggle -->
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="more-links" aria-label="Toggle More Links">
+          <svg class="dropdown-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Language Selector -->
+    <div class="language-selector desktop-only">
+      <button class="language-toggle" id="language-toggle" aria-label="Change Language">
+        ES
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (outside nav) -->
+  <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="Additional Links">
+    <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
+    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    <li><a href="index.html" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Mobile Menu" aria-controls="mobile-menu" aria-expanded="false">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+      <line class="line-top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="line-middle" x1="4" y1="12" x2="20" y2="12" />
+      <line class="line-bottom" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <ul>
+      <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="ux-ui.html">UX/UI</a></li>
+      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- introduction section -->
+<section id="uxui-header" class="uxui-header-section" role="region" aria-labelledby="uxui-heading" aria-label="UX/UI Design Services Introduction">
+  <div class="uxui-header-container">
+
+    <!-- Page Title -->
+    <h1 id="uxui-heading" 
+        data-en="UX/UI Design Services" 
+        data-es="Servicios de Diseño UX/UI">
+      UX/UI Design Services
+    </h1>
+
+    <!-- Intro Paragraph -->
+    <p class="uxui-intro" 
+       data-en="Good design isn’t decoration, it’s clarity, empathy, and purpose. We craft interfaces that feel intuitive, accessible, and built for scalability. Whether you're launching a product or refining an experience, we design with users in mind and long-term impact at heart." 
+       data-es="El buen diseño no es decoración: es claridad, empatía y propósito. Creamos interfaces intuitivas, accesibles y pensadas para escalar. Ya sea que estés lanzando un producto o perfeccionando una experiencia, diseñamos pensando en los usuarios y en el impacto a largo plazo.">
+      Good design isn’t decoration, it’s clarity, empathy, and purpose. We craft interfaces that feel intuitive, accessible, and built for scalability. Whether you're launching a product or refining an experience, we design with users in mind and long-term impact at heart.
+    </p>
+
+  </div>
+</section>
+
+<hr class="section-divider" aria-hidden="true">
+
+<!-- UX/UI Feature Section -->
+<section class="ux-ui-main-section" role="region" aria-labelledby="uxui-features-heading" aria-label="UX/UI Features Overview">
+  <h2 id="uxui-features-heading" class="visually-hidden" data-en="UX/UI Features" data-es="Funciones UX/UI">UX/UI Features</h2>
+
+  <!-- Feature 1: User Research -->
+  <div class="uxui-feature-item" id="user-research" role="region" aria-labelledby="user-research-heading" aria-label="User Research Feature">
+    <div class="feature-icon">
+      <i class="fas fa-search" aria-hidden="true"></i>
+    </div>
+    <h3 id="user-research-heading" data-en="User Research" data-es="Investigación de Usuarios">
+      User Research
+    </h3>
+    <p 
+      data-en="Every great interface starts with understanding the people who use it. We conduct user research to uncover behaviors, needs, and friction points. Through interviews, surveys, and usability audits. This insight drives design decisions that are grounded in empathy and real-world context." 
+      data-es="Toda gran interfaz comienza con entender a las personas que la usan. Realizamos investigación de usuarios para descubrir comportamientos, necesidades y puntos de fricción. Mediante entrevistas, encuestas y auditorías de usabilidad. Esta información guía decisiones de diseño basadas en empatía y contexto real.">
+      Every great interface starts with understanding the people who use it. We conduct user research to uncover behaviors, needs, and friction points—through interviews, surveys, and usability audits. This insight drives design decisions that are grounded in empathy and real-world context.
+    </p>
+  </div>
+
+  <!-- Feature 2: Wireframing & Prototyping -->
+  <div class="uxui-feature-item" id="wireframing" role="region" aria-labelledby="wireframing-heading" aria-label="Wireframing and Prototyping Feature">
+    <div class="feature-icon">
+      <i class="fas fa-drafting-compass" aria-hidden="true"></i>
+    </div>
+    <h3 id="wireframing-heading" data-en="Wireframing & Prototyping" data-es="Wireframes y Prototipos">
+      Wireframing & Prototyping
+    </h3>
+    <p 
+      data-en="Before pixels meet polish, we map out structure and flow. Wireframes define layout and hierarchy, while prototypes simulate interaction and behavior. These tools help validate ideas early, reduce rework, and align stakeholders around a shared vision." 
+      data-es="Antes de aplicar estilo, definimos estructura y flujo. Los wireframes establecen el diseño y la jerarquía, mientras que los prototipos simulan interacción y comportamiento. Estas herramientas permiten validar ideas temprano, reducir retrabajo y alinear a los involucrados con una visión compartida.">
+      Before pixels meet polish, we map out structure and flow. Wireframes define layout and hierarchy, while prototypes simulate interaction and behavior. These tools help validate ideas early, reduce rework, and align stakeholders around a shared vision.
+    </p>
+  </div>
+
+  <!-- Feature 3: Visual Design -->
+  <div class="uxui-feature-item" id="visual-design" role="region" aria-labelledby="visual-design-heading" aria-label="Visual Design Feature">
+    <div class="feature-icon">
+      <i class="fas fa-paint-brush" aria-hidden="true"></i>
+    </div>
+    <h3 id="visual-design-heading" data-en="Visual Design" data-es="Diseño Visual">
+      Visual Design
+    </h3>
+    <p 
+      data-en="We create interfaces that are not only functional but visually compelling. From typography and color systems to iconography and motion, every detail is crafted to reflect the brand’s identity and enhance user engagement. The result: design that feels intentional, memorable, and scalable." 
+      data-es="Diseñamos interfaces que no solo son funcionales, sino también visualmente atractivas. Desde tipografía y sistemas de color hasta iconografía y movimiento, cada detalle refleja la identidad de marca y mejora la experiencia del usuario. El resultado: diseño intencional, memorable y escalable.">
+      We create interfaces that are not only functional but visually compelling. From typography and color systems to iconography and motion, every detail is crafted to reflect the brand’s identity and enhance user engagement. The result: design that feels intentional, memorable, and scalable.
+    </p>
+  </div>
+</section>
+
+<!-- how it works section -->
+<section id="how-it-works" class="process-section" role="region" aria-labelledby="how-it-works-heading" aria-label="Design Process Overview">
+  <h2 id="how-it-works-heading" 
+      data-en="How It Works" 
+      data-es="Cómo Funciona">
+    How It Works
+  </h2>
+
+  <ol class="process-steps">
+    <li role="listitem">
+      <h3 data-en="1. Initial Consultation" data-es="1. Consulta Inicial">1. Initial Consultation</h3>
+      <p data-en="We begin with a conversation to understand your goals, audience, and brand values. This sets the foundation for a design that’s aligned with your vision." 
+         data-es="Comenzamos con una conversación para entender tus objetivos, audiencia y valores de marca. Esto establece la base para un diseño alineado con tu visión.">
+        We begin with a conversation to understand your goals, audience, and brand values. This sets the foundation for a design that’s aligned with your vision.
+      </p>
+    </li>
+
+    <li role="listitem">
+      <h3 data-en="2. Research & Strategy" data-es="2. Investigación y Estrategia">2. Research & Strategy</h3>
+      <p data-en="We conduct user research and competitive analysis to uncover insights that inform the design direction. This phase ensures decisions are data-driven and user-centered." 
+         data-es="Realizamos investigación de usuarios y análisis competitivo para descubrir ideas que guían la dirección del diseño. Esta fase garantiza decisiones basadas en datos y centradas en el usuario.">
+        We conduct user research and competitive analysis to uncover insights that inform the design direction. This phase ensures decisions are data-driven and user-centered.
+      </p>
+    </li>
+
+    <li role="listitem">
+      <h3 data-en="3. Wireframing & Prototyping" data-es="3. Wireframes y Prototipos">3. Wireframing & Prototyping</h3>
+      <p data-en="We sketch out layouts and build interactive prototypes to test structure, flow, and usability. This step helps validate ideas before visual styling begins." 
+         data-es="Diseñamos estructuras y creamos prototipos interactivos para probar la organización, el flujo y la usabilidad. Este paso permite validar ideas antes de aplicar estilo visual.">
+        We sketch out layouts and build interactive prototypes to test structure, flow, and usability. This step helps validate ideas before visual styling begins.
+      </p>
+    </li>
+
+    <li role="listitem">
+      <h3 data-en="4. Visual Design" data-es="4. Diseño Visual">4. Visual Design</h3>
+      <p data-en="We craft visually engaging interfaces that reflect your brand identity. Typography, color, and imagery are refined to create a cohesive and memorable experience." 
+         data-es="Diseñamos interfaces visualmente atractivas que reflejan tu identidad de marca. Tipografía, color e imágenes se refinan para crear una experiencia coherente y memorable.">
+        We craft visually engaging interfaces that reflect your brand identity. Typography, color, and imagery are refined to create a cohesive and memorable experience.
+      </p>
+    </li>
+
+    <li role="listitem">
+      <h3 data-en="5. Final Delivery" data-es="5. Entrega Final">5. Final Delivery</h3>
+      <p data-en="Once approved, we deliver optimized assets and documentation ready for development or launch. We ensure everything is clean, scalable, and easy to maintain." 
+         data-es="Una vez aprobado, entregamos los recursos optimizados y documentación listos para desarrollo o lanzamiento. Nos aseguramos de que todo sea limpio, escalable y fácil de mantener.">
+        Once approved, we deliver optimized assets and documentation ready for development or launch. We ensure everything is clean, scalable, and easy to maintain.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<!-- gallery section -->
+<section id="gallery" class="gallery-section" role="region" aria-labelledby="gallery-heading" aria-label="UI/UX Project Gallery">
+  <h2 id="gallery-heading" 
+      data-en="UI/UX Project Gallery" 
+      data-es="Galería de Proyectos UI/UX">
+    UI/UX Project Gallery
+  </h2>
+
+  <div class="gallery-grid">
+    <!-- Project 1 -->
+    <figure class="gallery-item">
+      <img src="assets/images/newsletter-desktop-design.jpg" alt="Newsletter sign-up form with success message UI" loading="lazy" decoding="async">
+      <figcaption>
+        <h3 data-en="Newsletter Sign-up Form" data-es="Formulario de Suscripción al Boletín">
+          Newsletter Sign-up Form
+        </h3>
+        <p data-en="A responsive newsletter sign-up form with real-time email validation and a success confirmation message. Includes desktop and mobile layouts." 
+           data-es="Un formulario de suscripción al boletín, adaptable a móviles y escritorio, con validación en tiempo real del correo y mensaje de confirmación.">
+          A responsive newsletter sign-up form with real-time email validation and a success confirmation message. Includes desktop and mobile layouts.
+        </p>
+      </figcaption>
+    </figure>
+
+    <!-- Project 2 -->
+    <figure class="gallery-item">
+      <img src="assets/images/pricing-desktop-design-monthly.jpg" alt="Responsive pricing page with annual and monthly toggle" loading="lazy" decoding="async">
+      <figcaption>
+        <h3 data-en="Pricing Page with Toggle" data-es="Página de Precios con Interruptor">
+          Pricing Page with Toggle
+        </h3>
+        <p data-en="A responsive pricing page featuring toggle functionality for monthly and annual plans. Includes interactive cards, gradient styling, and mobile-first design." 
+           data-es="Una página de precios adaptable con función de interruptor para planes mensuales y anuales. Incluye tarjetas interactivas, estilo con degradados y diseño mobile-first.">
+          A responsive pricing page featuring toggle functionality for monthly and annual plans. Includes interactive cards, gradient styling, and mobile-first design.
+        </p>
+      </figcaption>
+    </figure>
+
+    <!-- Project 3 -->
+    <figure class="gallery-item">
+      <img src="assets/images/coding-desktop-design-slide-1.jpg" alt="Coding bootcamp testimonials slider with user images and quotes" loading="lazy" decoding="async">
+      <figcaption>
+        <h3 data-en="Coding Bootcamp Testimonials Slider" data-es="Slider de Testimonios del Bootcamp de Programación">
+          Coding Bootcamp Testimonials Slider
+        </h3>
+        <p data-en="An interactive testimonials slider featuring student reviews with animated transitions, keyboard navigation, and auto-slide functionality. Optimized for desktop and mobile layouts." 
+           data-es="Un slider interactivo de testimonios con reseñas de estudiantes, transiciones animadas, navegación con teclado y auto-desplazamiento. Optimizado para escritorio y móviles.">
+          An interactive testimonials slider featuring student reviews with animated transitions, keyboard navigation, and auto-slide functionality. Optimized for desktop and mobile layouts.
+        </p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<!-- CTA section -->
+<section class="cta-section" role="region" aria-labelledby="cta-heading" aria-label="Call to Action Section">
+  <h2 id="cta-heading" 
+      data-en="Ready to Elevate Your User Experience?" 
+      data-es="¿Listo para mejorar tu experiencia de usuario?">
+    Ready to Elevate Your User Experience?
+  </h2>
+
+  <p data-en="Whether you're launching a new product or refining an existing one, I offer thoughtful, scalable design solutions tailored to your brand. Let's talk about your goals and how great design can help you reach them." 
+     data-es="Ya sea que estés lanzando un nuevo producto o mejorando uno existente, ofrezco soluciones de diseño escalables y pensadas para tu marca. Hablemos sobre tus objetivos y cómo el buen diseño puede ayudarte a alcanzarlos.">
+    Whether you're launching a new product or refining an existing one, I offer thoughtful, scalable design solutions tailored to your brand. Let's talk about your goals and how great design can help you reach them.
+  </p>
+
+  <a href="contact.html" class="cta-button" 
+     data-en="Request a Consultation" 
+     data-es="Solicitar una Consulta"
+     aria-label="Request a consultation to discuss your design goals">
+    Request a Consultation
+  </a>
+</section>
+
+
+<!-- Footer Section -->
+<footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
+  <div class="footer-content">
+
+   <!-- Logo and Newsletter -->
+    <div>
+      <!-- Footer Logo -->
+      <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
+        <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img-footer">
+      </a>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-section newsletter" aria-labelledby="newsletter-heading">
+        <h3 id="newsletter-heading" class="visually-hidden"></h3>
+        <p 
+          data-en="Subscribe to our newsletter for the latest updates on features and releases." 
+          data-es="Suscríbete a nuestro boletín para recibir las últimas actualizaciones sobre funciones y lanzamientos.">
+          Subscribe to our newsletter for the latest updates on features and releases.
+        </p>
+
+        <form action="#" method="post" aria-label="Newsletter Signup Form">
+          <label for="email-input" class="visually-hidden"></label>
+          <input 
+            type="email" 
+            id="email-input" 
+            name="email" 
+            placeholder="Your Email Here" 
+            required 
+            data-en="Your Email Here" 
+            data-es="Tu correo electrónico aquí"
+          >
+          <button type="submit" 
+            data-en="Join" 
+            data-es="Unirse" 
+            aria-label="Join the newsletter">
+            Join
+          </button>
+        </form>
+
+        <p 
+          data-en="By subscribing, you agree to our privacy policy and consent to receive updates." 
+          data-es="Al suscribirte, aceptas nuestra política de privacidad y das tu consentimiento para recibir actualizaciones.">
+          By subscribing, you agree to our privacy policy and consent to receive updates.
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-section navigation-links" role="navigation" aria-label="Quick Links">
+      <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section navigation-links" role="navigation" aria-label="Resources">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carrers">Careers</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-section social-media" aria-label="Social Media Links">
+      <h3 data-en="Stay Connected" data-es="Mantente en Linea">Stay Connected</h3>
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alfonzo-535b7b305/" target="_blank" class="social-icon-footer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="social-name">LinkedIn</span>
+        </a>
+        <a href="https://github.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="social-name">GitHub</span>
+        </a>
+        <a href="https://twitter.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <span class="social-name">Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/josealfonzo792/" target="_blank" class="social-icon-footer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/+542657617907" target="_blank" class="social-icon-footer" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="social-name">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Language Selector for Mobile -->
+    <div class="footer-section language-selector mobile-only">
+      <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
+        ES
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+
+    <!-- Divider -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <div class="footer-section credits">
+        <p data-en="© 2025 Zonofal. All Rights Reserved." data-es="© 2025 Zonofal. Todos los derechos reservados.">
+          © 2025 Zonofal. All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="footer-section policies" role="navigation" aria-label="Legal Links">
+        <a href="pages/legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="pages/legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="pages/legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>

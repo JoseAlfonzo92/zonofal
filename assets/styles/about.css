@@ -1,0 +1,585 @@
+
+/* about us introduction section */
+
+.about-content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.about-intro-section {
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 3.5rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: var(--Text-Color);
+}
+
+.about-description {
+  font-size: 1.1rem;
+  font-family: var(--Nunito-font-family);
+  color: var(--Text-Color);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-values {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-between;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.about-value {
+  flex: 1 1 45%;
+  background-color: var(--Secondary-Background-Color);
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.about-values h3 {
+  font-size: 1.3rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 0.75rem;
+  color: var(--Text-Color);
+  text-align: left;
+}
+
+.about-values p {
+  font-size: 1rem;
+  font-family: var(--Nunito-font-family);
+  color: var(--Text-Color);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-icon {
+  font-size: 2rem;
+  color: var(--Accent-Color);
+  display: block;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+
+/* about us section  */
+.about-history-section {
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Left Column: Intro */
+.history-intro-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1rem;
+}
+
+.history-intro-column h2 {
+  font-size: 3rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.history-intro-column p {
+  font-size: 1.1rem;
+  font-family: var(--Nunito-font-family);
+  color: var(--Text-Color);
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+/* Right Column: Timeline */
+.history-timeline-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+}
+
+/* Timeline Items */
+.timeline-item {
+  background-color: var(--Secondary-Background-Color);
+  padding: 1.5rem;
+  border-left: 4px solid var(--Accent-Color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  max-width: 100%;
+  transform: translateY(var(--step-offset, 0));
+  transition: transform 0.3s ease;
+}
+
+.timeline-item h3 {
+  font-size: 1.4rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  font-family: var(--Nunito-font-family);
+  color: var(--Text-Color);
+  line-height: 1.6;
+}
+
+/* Step-Stairs Effect */
+.step-0 { --step-offset: 0px; }
+.step-1 { --step-offset: 20px; }
+.step-2 { --step-offset: 40px; }
+.step-3 { --step-offset: 60px; } 
+
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(var(--step-offset, 0)) scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(var(--step-offset, 0)) scale(1);
+}
+
+
+
+
+/* team section */
+.team-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* Individual team member card */
+.team-member {
+  background-color: var(--Secondary-Background-Color);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading */
+#team-heading {
+  font-size: 3rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 3.5rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Photo styling */
+.photo-wrapper {
+  width: 100%;
+  border-bottom: 4px solid var(--Accent-Color);
+  overflow: hidden;
+}
+
+.member-photo-full {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Member info */
+.member-info {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.member-info h3 {
+  font-size: 1.3rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 0.5rem;
+  color: var(--Text-Color);
+}
+
+.role {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--Primary-Color);
+  margin-bottom: 1rem;
+}
+
+/* Social links */
+.member-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.member-socials a {
+  color: var(--Text-Color);
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.member-socials a:hover {
+  color: var(--Accent-Color);
+}
+
+
+
+
+
+/* FAQs section */
+.faqs-section {
+  max-width: 800px;
+  margin: 10rem auto;
+  padding: 2rem;
+  background-color: var(--Secondary-Background-Color);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.faqs-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: var(--Text-Color);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--Secondary-Color);
+  padding: 1rem 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--Text-Color);
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--Primary-Color);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  color: var(--Text-Color);
+  font-size: 0.95rem;
+  padding-left: 1rem;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.faqs-contact {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--Text-Color);
+}
+
+.faqs-link {
+  position: relative;
+  color: var(--Primary-Color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.faqs-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 2px;
+  background-color: var(--Text-Color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.faqs-link:hover {
+  color: var(--Text-Color);
+}
+
+.faqs-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Accordion toggle logic */
+.faq-question[aria-expanded="true"] + .faq-answer {
+  max-height: 500px; /* adjust based on expected content height */
+  opacity: 1;
+}
+
+/* animation for icon */
+.faq-toggle-icon {
+  transition: transform 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+/* Rotate when expanded */
+.faq-question[aria-expanded="true"] .faq-toggle-icon {
+  transform: rotate(360deg);
+}
+
+.faq-text {
+  flex: 1;
+}
+
+.faq-toggle-icon {
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+
+  /* introduction section */
+
+  .about-content {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .about-intro-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .about-values {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    margin-top: 60px;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .about-value {
+   display: flex;
+   flex: 1 1 100%;
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+   padding: 2rem;
+   border-radius: 8px;
+   background-color: var(--Background-Color);
+   flex-direction: column;
+   align-items: center;
+  }
+
+  .about-values h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .about-values p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .about-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+
+  /* about us section */
+
+  .about-history-section {
+    padding: 3rem 1.5rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .history-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .history-intro-column {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .history-intro-column h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .history-intro-column p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .history-timeline-column {
+    gap: 2rem;
+    position: static;
+  }
+
+  .timeline-item {
+    transform: none !important;
+    opacity: 1;
+    scale: 1;
+  }
+
+  .timeline-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-item p {
+    font-size: 0.95rem;
+  }
+
+
+  /* team section */
+  
+ #team-heading {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .team-member {
+    padding-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .photo-wrapper {
+    border-bottom: 3px solid var(--Accent-Color);
+  }
+
+  .member-photo-full {
+    height: 250px;
+  }
+
+  .member-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .member-info h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .role {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .member-socials {
+    gap: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .member-socials a {
+    font-size: 1.2rem;
+  
+  }
+
+  /* FAQs section */
+  
+  .faqs-section {
+    margin: 6rem 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+  }
+
+  .faqs-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+  }
+
+  .faqs-contact {
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .faqs-link {
+    font-size: 0.95rem;
+  }
+
+
+}

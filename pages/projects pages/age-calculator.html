@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Zonofal – Age Calculator App" data-es="Zonofal – Aplicación Calculadora de Edad">Zonofal</title>
+<link rel="stylesheet" href="../../assets/styles/style.css">
+<link rel="stylesheet" href="../../assets/styles/projects-styles/project-style.css">
+
+<!-- google font family nunito-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- google font family inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 7 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- favicon -->
+<!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+<link rel="icon" href="../../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+<body>
+
+<!-- Header Section -->
+<header id="header" role="banner" aria-labelledby="header-title">
+
+  <!-- Logo -->
+  <a href="../../index.html" class="logo" aria-label="Zonofal Home">
+    <img src="../../assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img">
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li><a href="../../portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="../../services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="../../contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+
+      <!-- Dropdown toggle -->
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="more-links" aria-label="Toggle More Links">
+          <svg class="dropdown-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Language Selector -->
+    <div class="language-selector desktop-only">
+      <button class="language-toggle" id="language-toggle" aria-label="Change Language">
+        ES
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (outside nav) -->
+  <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="Additional Links">
+    <li><a href="../../about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
+    <li><a href="../../ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="../../web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    <li><a href="../../index.html" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Mobile Menu" aria-controls="mobile-menu" aria-expanded="false">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+      <line class="line-top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="line-middle" x1="4" y1="12" x2="20" y2="12" />
+      <line class="line-bottom" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <ul>
+      <li><a href="../../index.html" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="../../about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="../../portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="../../services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="../../contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="../../ux-ui.html" role="menuitem">UX/UI</a></li>
+      <li><a href="../../web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- project item header section -->
+<section class="project-item-header" role="region" aria-labelledby="project-title" aria-label="Age Calculator App Project Overview">
+  <div class="project-icon">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+  </div>
+
+  <h2 id="project-title" data-en="Age Calculator App" data-es="Aplicación Calculadora de Edad">
+    Age Calculator App
+  </h2>
+
+  <img 
+    src="../../assets/images/desktop-design-age.jpg" 
+    alt="Age Calculator App Screenshot" 
+    class="project-image" 
+    loading="lazy" 
+    decoding="async"
+  />
+
+  <p class="project-summary" 
+     data-en="A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input."
+     data-es="Una calculadora de edad responsiva desarrollada para un desafío de Frontend Mentor. Incluye HTML semántico, validación personalizada de formularios y animación de resultados con JavaScript puro. Estilizada con la fuente Poppins, sombras suaves y un diseño amigable, la app calcula la edad en años, meses y días según la entrada del usuario.">
+    A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input.
+  </p>
+</section>
+
+<!-- project item body section -->
+<section class="project-item-body" role="region" aria-labelledby="project-details-heading" aria-label="Age Calculator App Project Details">
+  <h3 id="project-details-heading" data-en="Detailed Project Description" data-es="Descripción Detallada del Proyecto">
+    Detailed Project Description
+  </h3>
+
+  <div class="project-section">
+    <h4 role="heading" aria-level="4" data-en="Objectives" data-es="Objetivos">Objectives</h4>
+    <p data-en="Build a clean and responsive age calculator that validates user input and displays results with smooth animation. The project needed to follow accessibility best practices and match the design brief provided by Frontend Mentor."
+       data-es="Construir una calculadora de edad limpia y responsiva que valide la entrada del usuario y muestre los resultados con animación suave. El proyecto debía seguir buenas prácticas de accesibilidad y ajustarse al diseño proporcionado por Frontend Mentor.">
+      Build a clean and responsive age calculator that validates user input and displays results with smooth animation. The project needed to follow accessibility best practices and match the design brief provided by Frontend Mentor.
+    </p>
+  </div>
+
+  <div class="project-section">
+    <h4 role="heading" aria-level="4" data-en="Challenges Faced" data-es="Desafíos Encontrados">Challenges Faced</h4>
+    <p data-en="Implementing accurate date validation across edge cases, handling leap years, and animating the result output without performance issues. Ensuring the layout remained consistent across screen sizes and devices was also key."
+       data-es="Implementar validación precisa de fechas en casos límite, manejar años bisiestos y animar la salida de resultados sin afectar el rendimiento. También fue clave asegurar que el diseño se mantuviera consistente en distintos tamaños de pantalla y dispositivos.">
+      Implementing accurate date validation across edge cases, handling leap years, and animating the result output without performance issues. Ensuring the layout remained consistent across screen sizes and devices was also key.
+    </p>
+  </div>
+
+  <div class="project-section">
+    <h4 role="heading" aria-level="4" data-en="Solutions Implemented" data-es="Soluciones Implementadas">Solutions Implemented</h4>
+    <p data-en="Used semantic HTML5 and custom CSS for layout and styling. Added JavaScript logic for input validation and age calculation, including leap year handling. Applied smooth animations to result output and ensured full keyboard accessibility."
+       data-es="Se utilizó HTML5 semántico y CSS personalizado para el diseño y estilo. Se añadió lógica en JavaScript para validación de entradas y cálculo de edad, incluyendo manejo de años bisiestos. Se aplicaron animaciones suaves a los resultados y se aseguró accesibilidad completa por teclado.">
+      Used semantic HTML5 and custom CSS for layout and styling. Added JavaScript logic for input validation and age calculation, including leap year handling. Applied smooth animations to result output and ensured full keyboard accessibility.
+    </p>
+  </div>
+</section>
+
+<!-- benefits section -->
+<section class="benefits-section" role="region" aria-labelledby="benefits-heading" aria-label="Age Calculator App Highlights">
+  <h3 id="benefits-heading" data-en="Project Highlights" data-es="Aspectos Destacados del Proyecto">
+    Project Highlights
+  </h3>
+  <ul class="benefits-list" role="list">
+    <li class="slide-left" role="listitem">
+      <i class="fas fa-calendar-day benefit-icon" aria-hidden="true"></i>
+      <span data-en="Accurate age calculation with leap year support"
+            data-es="Cálculo de edad preciso con soporte para años bisiestos">
+        Accurate age calculation with leap year support
+      </span>
+    </li>
+    <li class="slide-right" role="listitem">
+      <i class="fas fa-check-circle benefit-icon" aria-hidden="true"></i>
+      <span data-en="Custom form validation with error feedback"
+            data-es="Validación personalizada de formularios con mensajes de error">
+        Custom form validation with error feedback
+      </span>
+    </li>
+    <li class="slide-left" role="listitem">
+      <i class="fas fa-magic benefit-icon" aria-hidden="true"></i>
+      <span data-en="Animated result output for enhanced UX"
+            data-es="Animación de resultados para mejorar la experiencia de usuario">
+        Animated result output for enhanced UX
+      </span>
+    </li>
+    <li class="slide-right" role="listitem">
+      <i class="fas fa-mobile-alt benefit-icon" aria-hidden="true"></i>
+      <span data-en="Responsive layout with playful styling"
+            data-es="Diseño responsivo con estilo amigable">
+        Responsive layout with playful styling
+      </span>
+    </li>
+  </ul>
+</section>
+
+<!-- gallery section -->
+<section class="gallery-section" role="region" aria-labelledby="gallery-heading" aria-label="Age Calculator App Gallery">
+  <h3 id="gallery-heading" data-en="Project Gallery" data-es="Galería del Proyecto">
+    Project Gallery
+  </h3>
+
+  <div class="wrapper">
+    <div class="slider" role="list" aria-label="Image carousel of age calculator screens">
+
+      <!-- left arrow -->
+      <div class="arrow left" role="button" tabindex="0" aria-label="Previous image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.359 292.359" aria-hidden="true">
+          <path d="M222.979 5.424C219.364 1.807 215.08 0 210.132 0c-4.949 0-9.233 1.807-12.848 5.424L69.378 133.331c-3.615 3.617-5.424 7.898-5.424 12.847s1.809 9.233 5.424 12.847l127.906 127.907c3.614 3.617 7.898 5.428 12.848 5.428 4.948 0 9.232-1.811 12.847-5.428 3.617-3.614 5.427-7.898 5.427-12.847V18.271c-.001-4.949-1.81-9.229-5.427-12.847z"/>
+        </svg>
+      </div>
+
+      <!-- images -->
+      <div class="container-images">
+        <img src="../../assets/images/age-active-states.jpg" alt="Form layout with day, month, and year inputs" class="active" role="listitem">
+        <img src="../../assets/images/age-desktop-completed.jpg" alt="Custom error messages and input styling" role="listitem">
+        <img src="../../assets/images/age-desktop-design.jpg" alt="Animated result output showing years, months, and days" role="listitem">
+        <img src="../../assets/images/age-desktop-error-empty.jpg" alt="Responsive mobile layout of the calculator" role="listitem">
+        <img src="../../assets/images/age-desktop-error-invalid.jpg" alt="Keyboard-accessible form with semantic labels" role="listitem">
+        <img src="../../assets/images/age-desktop-error-whole-form.jpg" alt="Keyboard-accessible form with semantic labels" role="listitem">
+        <img src="../../assets/images/age-desktop-preview.jpg" alt="Keyboard-accessible form with semantic labels" role="listitem">
+        <img src="../../assets/images/age-mobile-design.jpg" alt="Keyboard-accessible form with semantic labels" role="listitem">
+      </div>
+
+      <!-- right arrow -->
+      <div class="arrow right" role="button" tabindex="0" aria-label="Next image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.359 292.359" aria-hidden="true">
+          <path d="M222.979 5.424C219.364 1.807 215.08 0 210.132 0c-4.949 0-9.233 1.807-12.848 5.424L69.378 133.331c-3.615 3.617-5.424 7.898-5.424 12.847s1.809 9.233 5.424 12.847l127.906 127.907c3.614 3.617 7.898 5.428 12.848 5.428 4.948 0 9.232-1.811 12.847-5.428 3.617-3.614 5.427-7.898 5.427-12.847V18.271c-.001-4.949-1.81-9.229-5.427-12.847z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+ <!-- Video -->
+<div class="gallery-video">
+  <iframe width="1060" height="596" 
+    src="https://www.youtube.com/embed/pVwHc9a-S5A" 
+    title="Demo of an age calculator" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</div>
+</section>
+
+
+<!-- team section -->
+<section class="team-section" role="region" aria-labelledby="team-heading" aria-label="Age Calculator App Project Team">
+  <h3 id="team-heading" data-en="Project Team" data-es="Equipo del Proyecto">Project Team</h3>
+  <p data-en="Meet the team members who contributed to this project" 
+     data-es="Conoce a los miembros del equipo que contribuyeron a este proyecto">
+     Meet the team members who contributed to this project
+  </p>
+
+  <ul class="team-list" role="list">
+    <li role="listitem">
+      <i class="fas fa-user-circle team-icon" aria-hidden="true"></i>
+      <span data-en="José Alfonzo – Front-End Developer & Project Lead" 
+            data-es="José Alfonzo – Desarrollador Front-End y Líder del Proyecto">
+        José Alfonzo – Front-End Developer & Project Lead
+      </span>
+    </li>
+  </ul>
+</section>
+
+<!-- CTA section -->
+<section class="cta-section" role="region" aria-labelledby="cta-heading" aria-label="Call to Action Section">
+  <h2 id="cta-heading"
+      data-en="Ready to build something exceptional?"
+      data-es="¿Listo para crear algo excepcional?">
+    Ready to build something exceptional?
+  </h2>
+
+  <p data-en="If this project resonates with your goals, let's collaborate. Reach out for tailored solutions, consultations, or a custom quote."
+     data-es="Si este proyecto se alinea con tus objetivos, colaboremos. Contáctanos para soluciones personalizadas, consultas o una cotización a medida.">
+    If this project resonates with your goals, let's collaborate. Reach out for tailored solutions, consultations, or a custom quote.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="../../contact.html" class="btn primary"
+       data-en="Start your project"
+       data-es="Inicia tu proyecto"
+       aria-label="Start your project by contacting Zonofal">
+      Start your project
+    </a>
+    <a href="../../services.html" class="btn secondary"
+       data-en="Explore services"
+       data-es="Explora servicios"
+       aria-label="Explore Zonofal's services">
+      Explore services
+    </a>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
+  <div class="footer-content">
+
+    <!-- Logo and Newsletter -->
+    <div>
+      <a href="../../index.html" class="logo-footer" aria-label="Zonofal Home">
+        <img src="../../assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img-footer">
+      </a>
+
+      <div class="footer-section newsletter" aria-label="Newsletter Signup">
+        <p data-en="Subscribe to our newsletter for the latest updates on features and releases." data-es="Suscríbete a nuestro boletín para recibir las últimas actualizaciones sobre funciones y lanzamientos.">
+          Subscribe to our newsletter for the latest updates on features and releases.
+        </p>
+        <form action="#" method="post" aria-label="Newsletter Signup Form">
+          <input type="email" id="footer-email" name="email" placeholder="Your Email Here" required aria-required="true" aria-label="Email Address">
+          <button type="submit" data-en="Join" data-es="Unirse" aria-label="Join the newsletter">Join</button>
+        </form>
+        <p>By subscribing, you agree to our privacy policy and consent to receive updates.</p>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-section navigation-links" role="navigation" aria-label="Quick Links">
+      <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+      <ul role="list">
+        <li role="listitem"><a href="../../index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li role="listitem"><a href="../../services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li role="listitem"><a href="../../portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li role="listitem"><a href="../../contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li role="listitem"><a href="../../about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section navigation-links" role="navigation" aria-label="Resources">
+      <h3>Resources</h3>
+      <ul role="list">
+        <li role="listitem"><a href="../../about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li role="listitem"><a href="../../contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li role="listitem"><a href="../../coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li role="listitem"><a href="../../coming-soon-pages.html" data-en="Careers" data-es="Carrers">Careers</a></li>
+        <li role="listitem"><a href="../../coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-section social-media" aria-label="Social Media Links">
+      <h3 data-en="Stay Connected" data-es="Mantente en Linea">Stay Connected</h3>
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alfonzo-535b7b305/" target="_blank" class="social-icon-footer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="social-name">LinkedIn</span>
+        </a>
+        <a href="https://github.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="social-name">GitHub</span>
+        </a>
+        <a href="https://twitter.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <span class="social-name">Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/josealfonzo792/" target="_blank" class="social-icon-footer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/+542657617907" target="_blank" class="social-icon-footer" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="social-name">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Language Selector for Mobile -->
+    <div class="footer-section language-selector mobile-only">
+      <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
+        ES
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+
+    <!-- Divider -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <div class="footer-section credits">
+        <p data-en="© 2025 Zonofal. All Rights Reserved." data-es="© 2025 Zonofal. Todos los derechos reservados.">
+          © 2025 Zonofal. All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="footer-section policies" role="navigation" aria-label="Legal Links">
+        <a href="../legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="../legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="../legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/scripts/script.js"></script>
+</body>
+</html>

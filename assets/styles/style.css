@@ -1,0 +1,1300 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    /* colors */
+    --Primary-Color: hsl(220, 85%, 42%);
+    --Secondary-Color: hsl(0, 0%, 75%); 
+    --Accent-Color: hsl(48, 89%, 60%); 
+    --Text-Color: hsl(0, 0%, 0%); 
+    --Background-Color: hsl(240, 20%, 97%);
+    --Secondary-Background-Color: hsl(0, 0%, 100%);
+    --Error-state: hsl(0, 100%, 50%);
+
+
+    /* font family */
+    --Nunito-font-family: "Nunito", sans-serif;
+    --Inter-font-family: "Inter", sans-serif;
+} 
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* General Layout */
+body {
+    font-family: var(--Inter-font-family);
+    background-color: var(--Background-Color);
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Header */
+/* Smooth hide/show transition */
+header {
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: var(--Primary-Color);
+  
+}
+
+
+/* Hidden state when reaching footer */
+.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* Logo Container */
+.logo {
+    display: inline-block; 
+    cursor: pointer; 
+}
+
+/* Circular Logo Image */
+.logo-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.logo:hover .logo-img {
+  opacity: 0.6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: var(--Background-Color);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Animated border using ::after */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Adjust spacing below text */
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--Accent-Color);
+    transition: width 0.4s ease;
+}
+
+/* On hover, expand the border */
+.nav-links a:hover {
+    color: var(--Accent-Color);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+
+/* testing */
+/* Base styles */
+/* Base layout */
+.nav-desktop {
+   display: flex; 
+   align-items: 
+   center; 
+   gap: 2rem; 
+  }
+
+.nav-mobile, .hamburger-menu {
+   display: none; 
+  }
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 140px;
+  background: var(--Primary-Color);
+  border: none;
+  list-style: none;
+  
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 5rem 4rem; 
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu a {
+  position: relative;
+  text-decoration: none;
+  color: var(--Background-Color);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Animated underline */
+.dropdown-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--Accent-Color);
+  transition: width 0.4s ease;
+}
+
+.dropdown-menu a:hover {
+  color: var(--Accent-Color);
+}
+
+.dropdown-menu a:hover::after {
+  width: 100%;
+}
+
+
+.dropdown-toggle.open #toggle-icon {
+  transform: rotate(45deg);
+}
+
+
+.dropdown-icon {
+  stroke: var(--Accent-Color);
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.open .dropdown-icon {
+  transform: rotate(45deg);
+}
+
+.dropdown-toggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hamburger design */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: var(--Accent-Color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile menu */
+
+
+.nav-mobile.hidden {
+  display: flex;
+}
+
+.hamburger-icon {
+  stroke: var(--Accent-Color);
+  stroke-width: 2;
+  fill: none;
+  transition: all 0.4s ease;
+}
+
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .nav-desktop { display: none; }
+  .hamburger-menu { display: flex; }
+  .nav-mobile { display: flex; }
+  .dropdown-menu { display: none !important; } /* Hide dropdown on mobile */
+}
+
+
+/* testing menu ham */
+.hamburger-icon line {
+  stroke: var(--Accent-Color);
+  stroke-width: 2;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-menu.open .line-top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger-menu.open .line-middle {
+  opacity: 0;
+}
+
+.hamburger-menu.open .line-bottom {
+  transform: translateY(-2px) rotate(-45deg);
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--Primary-Color);
+  padding: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 99;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-mobile.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+.nav-mobile a {
+  position: relative;
+  text-decoration: none;
+  color: var(--Background-Color);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-mobile a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--Accent-Color);
+  transition: width 0.4s ease;
+}
+
+.nav-mobile a:hover {
+  color: var(--Accent-Color);
+}
+
+.nav-mobile a:hover::after {
+  width: 100%;
+}
+
+.nav-mobile ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+
+}
+
+/* Language Selector for desktop */
+/* 🌐 Base styles for both buttons */
+.language-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative; /* Needed for tooltip positioning */
+}
+
+.language-selector button {
+    background: none;
+    border: 1px solid var(--Accent-Color);
+    color: var(--Background-Color);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.language-selector button:hover {
+    background-color: var(--Accent-Color);
+    color: var(--Text-Color);
+}
+
+/* 🎯 Tooltip styles */
+.language-selector .tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: var(--Accent-Color);
+    color: var(--Text-Color);
+    text-align: center;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 0.90rem;
+    font-weight: 600;
+
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.language-selector:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 🖥️ Desktop-only visibility */
+.desktop-only {
+    display: flex;
+}
+
+/* 📱 Mobile-only visibility */
+.mobile-only {
+    display: none;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+
+/* Home Section */
+#home {
+    position: relative;
+    text-align: center;
+    color: var(--Background-Color);
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+}
+
+/* Hero Image */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* Content Over Image */
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--Background-Color);
+    z-index: 2;
+}
+
+/* Smooth Fade-In and Slide-Up Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Apply staggered effect */
+h1.fade-in {
+    animation-delay: 0.5s;
+}
+
+p.fade-in {
+    animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading Styling */
+.home-content h1 {
+    color: var(--Accent-Color);
+    line-height: 1.3;
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Tagline */
+.tagline {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 400;
+    color: var(--Background-Color);
+}
+
+/* Optional Overlay for Hero Image */
+.hero-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+
+/* Base CTA styles */
+.hero-section .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    background: none;
+    color: var(--Accent-Color);
+    border: 1px solid var(--Accent-Color);
+    font-weight: 500;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for all CTA buttons */
+.hero-section .cta-button:hover {
+    background-color: var(--Primary-Color);
+    color: var(--Accent-Color);
+    border: none;
+    
+}
+
+/* Feature Section */
+/* Feature Section (Home) */
+.features-list-home {
+  width: 100%;
+  margin: 4rem auto;
+  padding: 5rem 2rem;
+  background-color: var(--Background-Color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-list-home h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  color: var(--Text-Color);
+  line-height: 1.4;
+}
+
+/* Grid Layout */
+.features-items-home {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Individual Feature Item */
+.feature-item-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--Secondary-Background-Color);
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item-home h3 {
+  font-size: 1.25rem;
+  color: var(--Text-Color);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.feature-item-home p {
+  font-size: 1rem;
+  color: var(--Text-Color);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* Shared CTA Link */
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--Text-Color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.feature-link:hover {
+  color: var(--Primary-Color);
+}
+
+/* Arrow Icon */
+.arrow-icon {
+  font-size: 1rem;
+  color: var(--Primary-Color);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
+}
+
+.feature-link:hover .arrow-icon {
+  transform: translateX(6px);
+  opacity: 0.85;
+}
+
+/* Icon Styling */
+.feature-icon {
+  font-size: 2.2rem;
+  color: var(--Accent-Color);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* benefits section */
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  background-color: var(--Background-Color);
+  align-items: center;
+}
+
+.benefits .content {
+  flex: 1 1 45%;
+  max-width: 600px;
+}
+
+.benefits h2 {
+  font-size: 3rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--Text-Color);
+}
+
+.benefits p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--Text-Color);
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--Text-Color);
+}
+
+.benefits-list i {
+  margin-right: 0.75em;
+  font-size: 1.2rem;
+  color: var(--Accent-Color);
+}
+
+.benefits img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* cta section */
+.cta-section {
+  text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--Text-Color);
+    color: var(--Background-Color);
+    margin-top: 10rem;
+    width: 100%;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn.primary {
+  background: none;
+  border: 1px solid var(--Accent-Color);
+  color: var(--Accent-Color);
+}
+
+.btn.secondary {
+  background: none;
+  border: 1px solid var(--Accent-Color);
+  color: var(--Accent-Color);
+}
+
+.btn:hover {
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
+  border: none;
+}
+
+.btn.secondary:hover {
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
+  border: none;
+}
+
+/* Call to Action */
+a.cta-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    color: var(--Background-Color);
+    background: none;
+    text-decoration: none;
+    border: 1px solid var(--Background-Color);
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+a.cta-button:hover {
+    background: none;
+    color:var(--Accent-Color);
+    border: 1px solid var(--Accent-Color);
+    text-decoration: none;
+}
+
+
+/* Footer Container */
+#footer {
+  background-color: var(--Text-Color);
+  color: var(--Background-Color);
+  padding: 3rem 5rem;
+  text-align: center;
+}
+
+/* Main Footer Layout */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  row-gap: 3rem; /* Adds vertical spacing when items wrap */
+}
+
+/* Left Column: Logo + Newsletter */
+.footer-content > div:first-child {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 280px;
+}
+
+/* Logo footer*/
+.logo-footer .logo-img-footer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease, opacity 0.2s ease;
+}
+
+.logo-footer .logo-img-footer:hover {
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.95);
+  opacity: 0.95;
+}
+
+/* Newsletter Form */
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+  flex: 1 1 0px;
+  padding: 0.6rem;
+  border: none;
+  border-bottom: 1px solid var(--Secondary-Color); /* Bottom border */
+  background: none;
+  border-radius: 0; /* Optional: remove rounded corners for cleaner line */
+  text-align: center;
+  min-width: 180px;
+  color: var(--Background-Color);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Placeholder Styling */
+.newsletter input::placeholder {
+  color: var(--Secondary-Color);
+  font-style: italic;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+
+.newsletter button {
+  flex: 0 0 auto;
+  padding: 0.6rem 1rem;
+  color: var(--Background-Color);
+  font-weight: 500;
+  background: none;
+  border: 1px solid var(--Background-Color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.newsletter button:hover {
+  background: none;
+  color: var(--Accent-Color);
+  border: 1px solid var(--Accent-Color);
+}
+
+/* Right Columns: Quick Links, Resources, Social */
+.footer-right-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 3;
+  justify-content: space-between;
+}
+
+/* Individual Sections */
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-section h3 {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--Accent-Color);
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  font-size: 1rem;
+  color: var(--Background-Color);
+}
+
+.footer-section li, a {
+  text-decoration: none;
+  list-style: none;
+  padding: 5px;
+}
+
+.footer-section a:hover {
+  color: var(--Accent-Color);
+  text-decoration: none;
+}
+
+/* Social Media Links */
+.social-links-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.social-icon-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  color: var(--Background-Color);
+  transition: color 0.3s ease;
+}
+
+.social-icon-footer i {
+  font-size: 1.4rem;
+}
+
+.social-icon-footer:hover {
+  color: var(--Accent-Color);
+}
+
+/* Footer Lists */
+.footer-section ul {
+  display: flex;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: var(--Background-Color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--Accent-Color);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: nowrap; /* Keep everything in one line */
+  justify-content: space-between;
+  align-items: center; /* Vertically center items */
+  gap: 25rem; /* Tighter spacing between credits and links */
+  margin-top: 0rem;
+  padding-top: 0rem;
+}
+
+.footer-bottom .credits,
+.footer-bottom .policies {
+  flex: 0 1 auto; /* Allow natural width, prevent overflow */
+  font-size: 0.9rem;
+  color: var(--Secondary-Color);
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between text and links if needed */
+}
+
+.footer-bottom .credits p {
+  margin: 0; /* Remove extra spacing */
+}
+
+.footer-bottom .policies a {
+  margin-left: 1rem; /* Space between links */
+}
+
+/* to separate each section */
+.section-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--Primary-Color), transparent);
+    margin: 40px 0;
+    width: 100%;
+}
+
+/* Responsive Mobile Nav Links */
+@media (max-width: 768px) {
+  
+
+    /* mobile language selector */
+/* Show on mobile */
+
+ .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    header{
+
+        padding: 15px 10px;
+    }
+
+    /* home section */
+    /* Adjust hero section height */
+    .hero-image-container {
+        height: 90vh; /* Reduced height for smaller screens */
+        
+    }
+
+    /* Resize hero image to better fit mobile view */
+    .hero-image {
+        object-position: center; /* Centers the image focus */
+    }
+
+    /* Reduce font sizes for better fit on small screens */
+    .home-content h1 {
+        font-size: 4rem; /* Slightly smaller font */
+        line-height: 1.2;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+
+    /* features section */
+.features-list-home {
+  padding: 2rem;
+}
+
+.features-items-home {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.feature-item-home {
+  padding: 1rem;
+  text-align: center;
+}
+
+.features-list-home h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-item-home h3 {
+  font-size: 1.1rem;
+}
+
+.feature-item-home p {
+  font-size: 0.9rem;
+}
+
+.feature-link {
+  font-size: 0.95rem;
+}
+
+.arrow-icon {
+  font-size: 0.9rem;
+}
+
+
+
+
+  /* benefits section */
+  .benefits {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .benefits .content {
+    order: 1;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .benefits img {
+    order: 2;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .benefits h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefits p {
+    font-size: 1rem;
+    margin-bottom: 1.50rem;
+  }
+
+  .benefits-list li {
+    justify-content: flex-start;
+  }
+
+ 
+
+/* footer section */
+  #footer {
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  .footer-content > div:first-child {
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter button {
+    width: auto;
+    margin-top: 0.5rem;
+  }
+
+  .footer-right-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    justify-content: center;
+  }
+
+  .footer-section ul {
+    align-items: center;
+  }
+
+  .social-links-footer {
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-bottom .credits,
+  .footer-bottom .policies {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-bottom .policies a {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+}
+
+
+
+
+
+/* for coming soon pages */
+/* Coming Soon Section */
+.coming-soon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: var(--Text-Color);
+  min-height: 90vh;
+}
+
+.coming-soon-container {
+  max-width: 700px;
+  margin: 200px auto;
+}
+
+/* Reserve space for animated heading so animation doesn't affect layout */
+#coming-heading {
+  display: inline-block;
+  min-height: 3.5rem; /* roughly one line of heading text */
+  line-height: 1.2;
+  overflow: hidden;   /* hides overflow during animation */
+  text-align: center;
+}
+
+.coming-soon-section h1 {
+  font-size: 3rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 1.5rem;
+  opacity: 0; /* animation starts hidden */
+  white-space: nowrap; /* keeps "Coming Soon" on one line */
+}
+
+.coming-soon-text {
+  font-size: 1.2rem;
+  font-family: var(--Nunito-font-family);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.cta-button-coming-soon {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--Inter-font-family);
+  color: var(--Text-Color);
+  border: 1px solid var(--Text-Color);
+  background: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button-coming-soon:hover {
+  background-color: var(--Text-Color);
+  color: var(--Secondary-Background-Color);
+}
+
+/* For GSAP letter/word animation */
+#coming-heading .char,
+#coming-heading .word {
+  display: inline-block; /* required for animation transforms */
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .coming-soon-section {
+    padding: 4rem 1.5rem;
+    min-height: 80vh; /* slightly smaller on mobile */
+  }
+
+  .coming-soon-container {
+    margin: 120px auto; /* reduce vertical spacing */
+    max-width: 90%; /* use more screen width */
+  }
+
+  #coming-heading {
+    min-height: 2.5rem; /* reserve less space for smaller font size */
+  }
+
+  .coming-soon-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .coming-soon-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .cta-button-coming-soon {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}

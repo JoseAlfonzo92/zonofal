@@ -1,0 +1,300 @@
+/* ui ux page */
+
+/* introduction section */
+.uxui-header-section {
+  padding: 4rem 2rem;
+  background-color: var(--Background-Color);
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.uxui-header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.uxui-header-container h1 {
+  font-size: 3.5rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.uxui-intro {
+  font-size: 1.1rem;
+  font-family: var(--Nunito-font-family);
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+
+/* feature section */
+
+.ux-ui-main-section {
+  margin: 100px auto;
+  padding: 0 2rem;
+  max-width: 1000px;
+}
+
+/* Individual Feature Item */
+.uxui-feature-item {
+  padding: 4rem 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.uxui-feature-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2{
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.uxui-feature-item h3 {
+  font-size: 2.4rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.uxui-feature-item p {
+  font-size: 1.1rem;
+  font-family: var(--Nunito-font-family);
+  line-height: 1.7;
+  color: var(--Text-Color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.uxui-feature-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.uxui-feature-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+  color: var(--Accent-Color);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+
+
+/* how it works section */
+.process-section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
+}
+
+.process-section h2 {
+  font-size: 3rem;
+  font-family: var(--Inter-font-family);
+  text-align: left;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.process-steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0;
+}
+
+.process-steps li {
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--Accent-Color);
+  background-color: var(--Secondary-Background-Color);
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  box-shadow:  0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(40px);
+}
+
+.process-steps li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.process-steps h3 {
+  font-size: 1.6rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 0.75rem;
+  color: var(--Text-Color);
+}
+
+.process-steps p {
+  font-size: 1.1rem;
+  font-family: var(--Nunito-font-family);
+  color: var(--text-color);
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+
+/* gallery section */
+.gallery-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
+}
+
+.gallery-section h2 {
+  font-size: 3rem;
+  font-family: var(--Inter-font-family);
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  background-color: var(--Secondary-Background-Color);
+  border-left: 4px solid var(--Accent-Color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.gallery-item h3 {
+  font-size: 1.4rem;
+  font-family: var(--Inter-font-family);
+  margin-bottom: 1.5rem;
+  color: var(--Text-Color);
+}
+
+.gallery-item p {
+  font-size: 1rem;
+  font-family: var(--Nunito-font-family);
+  color: var(--Text-Color);
+  line-height: 1.6;
+}
+
+
+
+@media (max-width: 768px) {
+  /* introduction section */
+  .uxui-header-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .uxui-header-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .uxui-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* feature section */
+  .uxui-feature-item {
+    padding: 3rem 0;
+  }
+
+  .uxui-feature-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .uxui-feature-item p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* how it works section */
+  .process-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .process-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-steps li {
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-steps h3 {
+    font-size: 1.4rem;
+  }
+
+  .process-steps p {
+    font-size: 1rem;
+  }
+
+  /* gallery section */
+  .gallery-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-item figcaption {
+    padding: 1rem;
+  }
+
+  .gallery-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-item p {
+    font-size: 0.95rem;
+  }
+
+
+}

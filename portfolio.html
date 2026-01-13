@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Zonofal – Portfolio" data-es="Zonofal – Portafolio">Zonofal</title>
+<link rel="stylesheet" href="assets/styles/style.css">
+<link rel="stylesheet" href="assets/styles/portfolio.css">
+ 
+<!-- google font family nunito-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- google font family inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 7 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- favicon -->
+<!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+
+</head>
+<body>
+
+ <!-- Header Section -->
+<header id="header" role="banner" aria-labelledby="header-title">
+
+  <!-- Logo -->
+  <a href="index.html" class="logo" aria-label="Zonofal Home">
+    <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img">
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+
+      <!-- Dropdown toggle -->
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="more-links" aria-label="Toggle More Links">
+          <svg class="dropdown-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Language Selector -->
+    <div class="language-selector desktop-only">
+      <button class="language-toggle" id="language-toggle" aria-label="Change Language">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (outside nav) -->
+  <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="Additional Links">
+    <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
+    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    <li><a href="index.html" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Mobile Menu" aria-controls="mobile-menu" aria-expanded="false">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+      <line class="line-top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="line-middle" x1="4" y1="12" x2="20" y2="12" />
+      <line class="line-bottom" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <ul>
+      <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="ux-ui.html">UX/UI</a></li>
+      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Portfolio Item Header Section -->
+<section class="portfolio-header-section" role="region" aria-labelledby="portfolio-heading" aria-label="Portfolio Introduction">
+  <div class="portfolio-header-content">
+    <h2 id="portfolio-heading"
+        data-en="Portfolio"
+        data-es="Portafolio">
+      Portfolio
+    </h2>
+    <p class="portfolio-intro"
+       data-en="Explore a curated selection of projects that reflect our approach to modular design, semantic code, and user-centered development. From responsive templates to UX challenges, each piece is built with clarity, accessibility, and performance in mind."
+       data-es="Explora una selección de proyectos que reflejan nuestro enfoque en diseño modular, código semántico y desarrollo centrado en el usuario. Desde plantillas responsivas hasta desafíos de UX, cada pieza está construida con claridad, accesibilidad y rendimiento.">
+      Explore a curated selection of projects that reflect our approach to modular design, semantic code, and user-centered development. From responsive templates to UX challenges, each piece is built with clarity, accessibility, and performance in mind.
+    </p>
+  </div>
+</section>
+
+<hr class="section-divider" aria-hidden="true">
+
+<!-- Portfolio List Section -->
+<section class="portfolio-list-section" role="region" aria-labelledby="portfolio-list-heading" aria-label="Portfolio Projects">
+  <h2 id="portfolio-list-heading" class="visually-hidden"
+      data-en="Portfolio Projects"
+      data-es="Proyectos del Portafolio">
+    Portfolio Projects
+  </h2>
+
+  <div class="portfolio-grid" role="list">
+
+    <!-- Portfolio Item 1 -->
+    <article class="portfolio-item" role="listitem" aria-labelledby="p1-title">
+      <figure>
+        <img src="assets/images/burger-website.jpeg" alt="Preview of Burger Restaurant Website" class="portfolio-thumb" loading="lazy" decoding="async">
+      </figure>
+      <div class="portfolio-info">
+        <h3 id="p1-title" data-en="Burger Restaurant Website" data-es="Sitio Web para Restaurante de Hamburguesas">Burger Restaurant Website</h3>
+        <p data-en="A fully responsive and interactive site featuring a mobile-friendly menu, category filtering, custom video controls, and an automated testimonial carousel. Built with semantic HTML, CSS, and vanilla JavaScript to showcase the restaurant’s offerings and brand personality."
+           data-es="Un sitio totalmente responsivo e interactivo con menú adaptable, filtrado por categorías, controles de video personalizados y carrusel automático de testimonios. Desarrollado con HTML semántico, CSS y JavaScript puro para destacar el menú y la identidad del restaurante.">
+          A fully responsive and interactive site featuring a mobile-friendly menu, category filtering, custom video controls, and an automated testimonial carousel. Built with semantic HTML, CSS, and vanilla JavaScript to showcase the restaurant’s offerings and brand personality.
+        </p>
+        <a href="pages/projects pages/project-burger.html" class="portfolio-button-1" aria-label="View Burger Restaurant Website project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+      </div>
+    </article>
+
+    <!-- Portfolio Item 2 -->
+    <article class="portfolio-item" role="listitem" aria-labelledby="p2-title">
+      <figure>
+        <img src="assets/images/constructed-website.jpeg" alt="Preview of Construction Company Website" class="portfolio-thumb" loading="lazy" decoding="async">
+      </figure>
+      <div class="portfolio-info">
+        <h3 id="p2-title" data-en="Construction Company Website" data-es="Sitio Web de Empresa Constructora">Construction Company Website</h3>
+        <p data-en="A responsive and modern website for a construction company. Styled with a custom color palette and modern typography, it features animated service cards, an interactive projects gallery, client testimonials, and a promotional video. The JavaScript adds a hamburger navigation menu with animation and scroll-triggered service reveals using the Intersection Observer API, ensuring smooth interactivity across devices."
+           data-es="Un sitio web responsivo y moderno para una empresa constructora. Diseñado con una paleta de colores personalizada y tipografía moderna, incluye tarjetas de servicios animadas, una galería de proyectos interactiva, testimonios de clientes y un video promocional. El JavaScript agrega un menú de navegación hamburguesa con animación y revelado de servicios al hacer scroll mediante la API Intersection Observer, garantizando una interactividad fluida en todos los dispositivos.">
+          A responsive and modern website showcasing services, projects, testimonials, and interactivity.
+        </p>
+        <a href="pages/projects pages/construction-website.html" class="portfolio-button-1" aria-label="View Construction Company Website project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+      </div>
+    </article>
+
+    <!-- Portfolio Item 3 -->
+    <article class="portfolio-item" role="listitem" aria-labelledby="p3-title">
+      <figure>
+        <img src="assets/images/desktop-design-advice.jpg" alt="Preview of Advice Generator App" class="portfolio-thumb" loading="lazy" decoding="async">
+      </figure>
+      <div class="portfolio-info">
+        <h3 id="p3-title" data-en="Advice Generator App" data-es="Aplicación Generadora de Consejos">Advice Generator App</h3>
+        <p data-en="A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices."
+           data-es="Una aplicación dinámica para generar consejos desarrollada como parte de un desafío de Frontend Mentor, impulsada por la Advice Slip API. Obtiene y muestra consejos aleatorios con transiciones suaves, diseño responsivo y actualizaciones interactivas activadas por un dado. Estilizada con la fuente Manrope, efectos de neón y HTML semántico, la app ofrece una experiencia limpia y accesible en todos los dispositivos.">
+          A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices.
+        </p>
+        <a href="pages/projects pages/advice-generator.html" class="portfolio-button-1" aria-label="View Advice Generator App project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+      </div>
+    </article>
+
+    <!-- Portfolio Item 4 -->
+    <article class="portfolio-item" role="listitem" aria-labelledby="p4-title">
+      <figure>
+        <img src="assets/images/desktop-design-age.jpg" alt="Preview of Age Calculator App" class="portfolio-thumb" loading="lazy" decoding="async">
+      </figure>
+      <div class="portfolio-info">
+        <h3 id="p4-title" data-en="Age Calculator App" data-es="Aplicación Calculadora de Edad">Age Calculator App</h3>
+        <p data-en="A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input."
+           data-es="Una calculadora de edad responsiva desarrollada para un desafío de Frontend Mentor. Incluye HTML semántico, validación personalizada de formularios y animación de resultados con JavaScript puro. Estilizada con la fuente Poppins, sombras suaves y un diseño amigable, la app calcula la edad en años, meses y días según la entrada del usuario.">
+          A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input.
+        </p>
+        <a href="pages/projects pages/age-calculator.html" class="portfolio-button-1" aria-label="View Age Calculator App project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+      </div>
+    </article>
+
+    <!-- Portfolio Item 5 -->
+    <article class="portfolio-item" role="listitem" aria-labelledby="p5-title">
+      <figure>
+        <img src="assets/images/25 + 5 Clock.jpeg" alt="Preview of 25 + 5 Clock" class="portfolio-thumb" loading="lazy" decoding="async">
+      </figure>
+      <div class="portfolio-info">
+        <h3 id="p5-title" data-en="25 + 5 Clock" data-es="Reloj 25 + 5">25 + 5 Clock</h3>
+        <p data-en="A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows."
+           data-es="Un temporizador estilo Pomodoro construido con React y Babel, con controles de sesión y descanso, interacción por teclado y alertas de audio. Estilizado con una estética digital retro usando la fuente Orbitron, acentos en verde neón y sombras brillantes.">
+          A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows.
+        </p>
+        <a href="pages/projects pages/25-5-clock.html" class="portfolio-button-1" aria-label="View 25 plus 5 Clock project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+      </div>
+    </article>
+
+    <!-- Portfolio Item 6 -->
+    <article class="portfolio-item" role="listitem" aria-labelledby="p6-title">
+      <figure>
+        <img src="assets/images/JavaScript Calculator.jpeg" alt="Preview of JavaScript Calculator" class="portfolio-thumb" loading="lazy" decoding="async">
+      </figure>
+      <div class="portfolio-info">
+        <h3 id="p6-title" data-en="JavaScript Calculator" data-es="Calculadora en JavaScript">JavaScript Calculator</h3>
+        <p data-en="A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation. Styled with Courier New, inset shadows, and gradient buttons, it delivers both nostalgia and precision."
+           data-es="Una calculadora con estilo retro desarrollada con React, Babel y Bootstrap 5, inspirada en las interfaces clásicas de los años 90. Ofrece un diseño responsivo, soporte para teclado y evaluación dinámica en tiempo real. Con tipografía Courier New, sombras internas y botones con degradado, combina nostalgia con funcionalidad moderna.">
+          A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation. Styled with Courier New, inset shadows, and gradient buttons, it delivers both nostalgia and precision.
+        </p>
+        <a href="pages/projects pages/project-calculator.html" class="portfolio-button-1" aria-label="View JavaScript Calculator project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- portfolio item body section -->
+<section class="portfolio-item-section" aria-labelledby="project-title">
+  <div class="portfolio-slider-track">
+    <div class="portfolio-item-container" role="region" aria-label="Modern Burger Restaurant Website Project">
+
+      <!-- Project Title -->
+      <h2 id="project-title"
+          data-en="Modern Burger Restaurant Website"
+          data-es="Sitio Web Moderno para Restaurante de Hamburguesas">
+        Modern Burger Restaurant Website
+      </h2>
+
+      <!-- Project Description -->
+      <p class="portfolio-description"
+         data-en="A fully responsive and interactive website designed for a burger restaurant. It features a mobile-friendly hamburger menu, dynamic category filtering (food, snacks, beverages), a video section with custom play controls, and an automated testimonial carousel. Built with semantic HTML, modular CSS, and vanilla JavaScript, the site delivers a smooth and engaging user experience while highlighting the restaurant’s menu, promotions, and brand personality."
+         data-es="Un sitio web totalmente responsivo e interactivo diseñado para un restaurante de hamburguesas. Incluye un menú móvil tipo hamburguesa, filtrado dinámico de categorías (comida, snacks, bebidas), una sección de video con controles personalizados y un carrusel automático de testimonios. Construido con HTML semántico, CSS modular y JavaScript puro, el sitio ofrece una experiencia fluida y atractiva mientras resalta el menú, las promociones y la identidad de la marca.">
+        A fully responsive and interactive website designed for a burger restaurant. It features a mobile-friendly hamburger menu, dynamic category filtering (food, snacks, beverages), a video section with custom play controls, and an automated testimonial carousel. Built with semantic HTML, modular CSS, and vanilla JavaScript, the site delivers a smooth and engaging user experience while highlighting the restaurant’s menu, promotions, and brand personality.
+      </p>
+
+      <!-- Featured Image -->
+      <div class="portfolio-image-wrapper">
+        <img src="assets/images/burger-website.jpeg"
+             alt="Modern Burger Restaurant Website full preview"
+             class="portfolio-feature-image"
+             loading="lazy" decoding="async">
+      </div>
+
+      <!-- Technologies Used -->
+      <div class="portfolio-tech">
+        <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
+        <ul class="tech-list">
+          <li>HTML5 (semantic structure)</li>
+          <li>CSS3 (modular architecture, Flexbox, responsive design)</li>
+          <li>JavaScript (vanilla: interactive menu, category filtering, video controls, carousel)</li>
+          <li>Accessibility and mobile-first best practices</li>
+          <li>Multilingual support via <code>data-en</code> / <code>data-es</code> attributes</li>
+        </ul>
+      </div>
+
+      <!-- Project Links -->
+      <div class="portfolio-links">
+        <a href="https://josealfonzo92.github.io/burger-site/index.html" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of Modern Burger Restaurant Website" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
+        <a href="https://github.com/JoseAlfonzo92/burger-site.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Modern Burger Restaurant Website" data-en="View Code" data-es="Ver Codigo">View Code</a>
+      </div>
+
+    </div>
+  
+    <!-- Construction Company Website -->
+<div class="portfolio-item-container" role="region" aria-label="Construction Company Website Project">
+
+  <!-- Project Title -->
+  <h2 id="project-title"
+      data-en="Construction Company Website"
+      data-es="Sitio Web de Empresa Constructora">
+    Construction Company Website
+  </h2>
+
+  <!-- Project Description -->
+  <p class="portfolio-description"
+     data-en="A professional, responsive website built for a construction company. It features a hero section with strong call-to-action, detailed services animated with Intersection Observer, a portfolio of recent projects, client testimonials in a slider, and an embedded promotional video. The layout emphasizes accessibility, mobile-first design, and a clean structure for showcasing expertise and trust."
+     data-es="Un sitio web profesional y responsivo creado para una empresa constructora. Incluye una sección principal con una llamada a la acción, servicios detallados animados con Intersection Observer, un portafolio de proyectos recientes, testimonios de clientes en un carrusel y un video promocional incrustado. El diseño enfatiza la accesibilidad, el enfoque mobile-first y una estructura limpia para mostrar experiencia y confianza.">
+    A professional, responsive website designed for a construction company, featuring services, projects, testimonials, and a promotional video.
+  </p>
+
+  <!-- Featured Image -->
+  <div class="portfolio-image-wrapper">
+    <img src="assets/images/constructed-website.jpeg"
+         alt="Construction Company Website full preview"
+         class="portfolio-feature-image"
+         loading="lazy" decoding="async">
+  </div>
+
+  <!-- Technologies Used -->
+  <div class="portfolio-tech">
+    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
+    <ul class="tech-list">
+      <li>HTML5 (semantic structure)</li>
+      <li>CSS3 (responsive design, clean layout)</li>
+      <li>JavaScript (hamburger menu, Intersection Observer animations)</li>
+      <li>Accessibility & mobile-first best practices</li>
+    </ul>
+  </div>
+
+  <!-- Project Links -->
+  <div class="portfolio-links">
+    <a href="https://josealfonzo92.github.io/construction-template-page/" class="portfolio-button" target="_blank" rel="noopener" aria-label="View Construction Company Website project" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
+    <a href="https://github.com/JoseAlfonzo92/construction-template-page.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Construction Company Website" data-en="View Code" data-es="Ver Codigo">View Code</a>
+  </div>
+
+</div>
+
+<!-- Advice generator -->
+<div class="portfolio-item-container" role="region" aria-label="Advice Generator App Project">
+
+  <h2 id="project-title"
+      data-en="Advice Generator App"
+      data-es="Aplicación Generadora de Consejos">
+    Advice Generator App
+  </h2>
+
+  <p class="portfolio-description"
+     data-en="A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices."
+     data-es="Una aplicación dinámica para generar consejos desarrollada como parte de un desafío de Frontend Mentor, impulsada por la Advice Slip API. Obtiene y muestra consejos aleatorios con transiciones suaves, diseño responsivo y actualizaciones interactivas activadas por un dado. Estilizada con la fuente Manrope, efectos de neón y HTML semántico, la app ofrece una experiencia limpia y accesible en todos los dispositivos.">
+    A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices.
+  </p>
+
+  <div class="portfolio-image-wrapper">
+    <img src="assets/images/desktop-design-advice.jpg"
+         alt="Advice Generator App full preview"
+         class="portfolio-feature-image"
+         loading="lazy" decoding="async">
+  </div>
+
+  <div class="portfolio-tech">
+    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
+    <ul class="tech-list">
+      <li>HTML5 (semantic structure)</li>
+      <li>CSS3 (custom styling with neon effects)</li>
+      <li>JavaScript (API integration and DOM updates)</li>
+      <li>Advice Slip API (live advice fetching)</li>
+      <li>Responsive layout & accessibility</li>
+    </ul>
+  </div>
+
+  <div class="portfolio-links">
+    <a href="https://josealfonzo92.github.io/Frontend-Mentor-Advice-Generator-App/" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of Advice Generator App" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
+    <a href="https://github.com/JoseAlfonzo92/Frontend-Mentor-Advice-Generator-App.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Advice Generator App" data-en="View Code" data-es="Ver Codigo">View Code</a>
+  </div>
+
+</div>
+
+<!-- Portfolio Item 4 – Age calculator -->
+<div class="portfolio-item-container" role="region" aria-label="Age Calculator App Project">
+  <h2 data-en="Age Calculator App" data-es="Aplicación Calculadora de Edad">Age Calculator App</h2>
+
+  <p class="portfolio-description"
+     data-en="A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input."
+     data-es="Una calculadora de edad responsiva desarrollada para un desafío de Frontend Mentor. Incluye HTML semántico, validación personalizada de formularios y animación de resultados con JavaScript puro. Estilizada con la fuente Poppins, sombras suaves y un diseño amigable, la app calcula la edad en años, meses y días según la entrada del usuario.">
+    A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input.
+  </p>
+
+  <div class="portfolio-image-wrapper">
+    <img src="assets/images/desktop-design-age.jpg" alt="Age Calculator App preview" class="portfolio-feature-image" loading="lazy" decoding="async">
+  </div>
+
+  <div class="portfolio-tech">
+    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
+    <ul class="tech-list">
+      <li>HTML5 (semantic structure)</li>
+      <li>CSS3 (custom styling with soft shadows)</li>
+      <li>JavaScript (form validation and age logic)</li>
+      <li>Frontend Mentor challenge integration</li>
+      <li>Responsive layout & accessibility</li>
+    </ul>
+  </div>
+
+  <div class="portfolio-links">
+    <a href="https://josealfonzo92.github.io/age-calculator-app/" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of Age Calculator App" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
+    <a href="https://github.com/JoseAlfonzo92/age-calculator-app.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Age Calculator App" data-en="View Code" data-es="Ver Codigo">View Code</a>
+  </div>
+</div>
+
+
+
+<!-- Portfolio Item 5 – 25 + 5 clock -->
+<div class="portfolio-item-container" role="region" aria-label="25 + 5 Clock Project">
+  <h2 data-en="25 + 5 Clock" data-es="Reloj 25 + 5">25 + 5 Clock</h2>
+
+  <p class="portfolio-description"
+     data-en="A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows. This project is part of the freeCodeCamp Front End Development Libraries certification, which includes five hands-on projects using Bootstrap, jQuery, Sass, React, and Redux."
+     data-es="Un temporizador estilo Pomodoro construido con React y Babel, con controles de sesión y descanso, interacción por teclado y alertas de audio. Estilizado con una estética digital retro usando la fuente Orbitron, acentos en verde neón y sombras brillantes. Este proyecto forma parte de la certificación de freeCodeCamp en Bibliotecas de Desarrollo Front-End, que incluye cinco proyectos prácticos con Bootstrap, jQuery, Sass, React y Redux.">
+    A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows. This project is part of the freeCodeCamp Front End Development Libraries certification, which includes five hands-on projects using Bootstrap, jQuery, Sass, React, and Redux.
+  </p>
+
+  <div class="portfolio-image-wrapper">
+    <img src="assets/images/25 + 5 Clock.jpeg" alt="25 + 5 Clock preview" class="portfolio-feature-image" loading="lazy" decoding="async">
+  </div>
+
+  <div class="portfolio-tech">
+    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
+    <ul class="tech-list">
+      <li>React 18 (state management and rendering)</li>
+      <li>Babel (JSX compilation)</li>
+      <li>Custom CSS (retro UI styling)</li>
+      <li>Orbitron font (digital aesthetic)</li>
+      <li>Audio API for session alerts</li>
+    </ul>
+  </div>
+
+  <div class="portfolio-links">
+    <a href="https://codepen.io/JoseAlfonzo92/pen/EajRaEg" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of 25 + 5 Clock" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
+    <a href="https://github.com/JoseAlfonzo92/25-5-clock" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of 25 + 5 Clock" data-en="View Code" data-es="Ver Codigo">View Code</a>
+  </div>
+</div>
+
+<!-- Portfolio Item 6 – JavaScript Calculator Section -->
+<div class="portfolio-item-container" role="region" aria-label="JavaScript Calculator Project">
+  <h2 data-en="JavaScript Calculator" data-es="Calculadora en JavaScript">JavaScript Calculator</h2>
+
+  <p class="portfolio-description"
+     data-en="A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation."
+     data-es="Una calculadora con estilo retro desarrollada con React, Babel y Bootstrap 5, inspirada en las interfaces clásicas de los años 90. Ofrece diseño responsivo, soporte para teclado y evaluación dinámica en tiempo real.">
+    A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation.
+  </p>
+
+  <div class="portfolio-image-wrapper">
+    <img src="assets/images/JavaScript Calculator.jpeg" alt="JavaScript Calculator preview" class="portfolio-feature-image" loading="lazy" decoding="async">
+  </div>
+
+  <div class="portfolio-tech">
+    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
+    <ul class="tech-list">
+      <li>React 18 (component logic and state)</li>
+      <li>Babel (client-side JSX compilation)</li>
+      <li>Bootstrap 5 (responsive layout)</li>
+      <li>Custom CSS (retro styling with gradients and shadows)</li>
+      <li>Keyboard event handling and input sanitization</li>
+    </ul>
+  </div>
+
+  <div class="portfolio-links">
+    <a href="https://codepen.io/JoseAlfonzo92/pen/yyNjKyK" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of JavaScript Calculator" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
+    <a href="https://github.com/JoseAlfonzo92/javascript-calculator" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of JavaScript Calculator" data-en="View Code" data-es="Ver Codigo">View Code</a>
+  </div>
+</div>
+
+</div>
+
+<div class="portfolio-slider-controls" role="navigation" aria-label="Portfolio Slider Controls">
+  <button class="slider-prev" aria-label="Previous project">&#10094;</button>
+  <button class="slider-next" aria-label="Next project">&#10095;</button>
+</div>
+</section>
+
+<!-- CTA section -->
+<section class="cta-section" role="region" aria-labelledby="cta-heading" aria-label="Call to Action Section">
+  <div class="cta-container">
+    <h2 id="cta-heading" 
+        data-en="Let’s Build Something Great Together" 
+        data-es="Construyamos Algo Genial Juntos">
+      Let’s Build Something Great Together
+    </h2>
+
+    <p class="cta-text" 
+       data-en="Whether you're planning a new project or need expert advice, we're here to help. Let's talk about how we can bring your ideas to life." 
+       data-es="Ya sea que estés planeando un nuevo proyecto o necesites asesoramiento experto, estamos aquí para ayudarte. Hablemos sobre cómo podemos dar vida a tus ideas.">
+      Whether you're planning a new project or need expert advice, we're here to help. Let's talk about how we can bring your ideas to life.
+    </p>
+
+    <a href="contact.html" class="cta-button" 
+       data-en="Start a Conversation" 
+       data-es="Iniciar una Conversación"
+       aria-label="Start a conversation about your project">
+      Start a Conversation
+    </a>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
+  <div class="footer-content">
+
+    <!-- div to locate the logo and newsletter to the left -->
+  <!-- Logo and Newsletter -->
+    <div>
+      <!-- Footer Logo -->
+      <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
+        <img src="assets/images/logo zonofal 3.png" alt="Zonofal Logo" class="logo-img-footer">
+      </a>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-section newsletter" aria-labelledby="newsletter-heading">
+        <h3 id="newsletter-heading" class="visually-hidden"></h3>
+        <p 
+          data-en="Subscribe to our newsletter for the latest updates on features and releases." 
+          data-es="Suscríbete a nuestro boletín para recibir las últimas actualizaciones sobre funciones y lanzamientos.">
+          Subscribe to our newsletter for the latest updates on features and releases.
+        </p>
+
+        <form action="#" method="post" aria-label="Newsletter Signup Form">
+          <label for="email-input" class="visually-hidden"></label>
+          <input 
+            type="email" 
+            id="email-input" 
+            name="email" 
+            placeholder="Your Email Here" 
+            required 
+            data-en="Your Email Here" 
+            data-es="Tu correo electrónico aquí"
+          >
+          <button type="submit" 
+            data-en="Join" 
+            data-es="Unirse" 
+            aria-label="Join the newsletter">
+            Join
+          </button>
+        </form>
+
+        <p 
+          data-en="By subscribing, you agree to our privacy policy and consent to receive updates." 
+          data-es="Al suscribirte, aceptas nuestra política de privacidad y das tu consentimiento para recibir actualizaciones.">
+          By subscribing, you agree to our privacy policy and consent to receive updates.
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-section navigation-links" role="navigation" aria-label="Quick Links">
+      <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section navigation-links" role="navigation" aria-label="Resources">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carrers">Careers</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-section social-media" aria-label="Social Media Links">
+      <h3 data-en="Stay Connected" data-es="Mantente en Linea">Stay Connected</h3>
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alfonzo-535b7b305/" target="_blank" class="social-icon-footer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="social-name">LinkedIn</span>
+        </a>
+        <a href="https://github.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="social-name">GitHub</span>
+        </a>
+        <a href="https://twitter.com/JoseAlfonzo92" target="_blank" class="social-icon-footer" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <span class="social-name">Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/josealfonzo792/" target="_blank" class="social-icon-footer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/+542657617907" target="_blank" class="social-icon-footer" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="social-name">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Language Selector for Mobile -->
+    <div class="footer-section language-selector mobile-only">
+      <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
+        ES
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+
+    <!-- to separate the sections -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <!-- Credits -->
+      <div class="footer-section credits">
+        <p data-en="© 2025 Zonofal. All Rights Reserved." data-es="© 2025 Zonofal. Todos los derechos reservados.">
+          © 2025 Zonofal. All Rights Reserved.
+        </p>
+      </div>
+
+      <!-- Privacy Policy and Terms of Service -->
+      <div class="footer-section policies" role="navigation" aria-label="Legal Links">
+        <a href="pages/legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="pages/legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="pages/legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>
