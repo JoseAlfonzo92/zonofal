@@ -1,7 +1,7 @@
 // Wait for the DOM to fully load before running the script
 document.addEventListener("DOMContentLoaded", () => {
 
-  // CACHE ELEMENTS
+  // Cache elements
   const translatableElements = document.querySelectorAll("[data-en]");
   const langButtons = document.querySelectorAll(".language-toggle");
   const faqButtons = document.querySelectorAll(".faq-question");
@@ -13,19 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".slider");
   const images = document.querySelectorAll(".slider .container-images img");
   const arrows = document.querySelectorAll(".slider .arrow");
-  const cookieForm = document.getElementById("cookie-form");
-  const messageBox = document.getElementById("cookie-message");
   const hamburger = document.getElementById('hamburger-menu');
   const mobileMenu = document.getElementById('mobile-menu');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
   const dropdownMenu = document.getElementById('more-links');
 
-  // LANGUAGE SETUP
+  // Language setup
   let currentLanguage = localStorage.getItem("preferredLanguage") || 
                         (navigator.language.startsWith("es") ? "es" : "en");
   document.documentElement.lang = currentLanguage;
 
-  // LANGUAGE SWITCH FUNCTION 
+  // Language switching function
   function switchLanguage(lang) {
     currentLanguage = lang;
     document.documentElement.lang = lang;
@@ -58,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update toggle button labels
     langButtons.forEach(btn => btn.textContent = lang === "en" ? "ES" : "EN");
 
+     updateComparisonLanguage(lang);
+
     // Update thank-you message
     const thankYou = document.getElementById("thank-you-message");
     if (thankYou && thankYou.style.display === "block") {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // LANGUAGE TOGGLE BUTTONS
+  // Language toggle button event listeners
   langButtons.forEach(button => {
     button.addEventListener("click", () => {
       const newLang = currentLanguage === "en" ? "es" : "en";
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial setup
   switchLanguage(currentLanguage);
 
-  //  CONTACT FORM VALIDATION 
+  //  Contact form validation and submission
   if (contactForm) {
     contactForm.addEventListener("submit", e => {
       e.preventDefault();
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
- // FAQ TOGGLE
+ // FAQ toggle
 faqButtons.forEach(button => {
   button.addEventListener('click', () => {
     const expanded = button.getAttribute('aria-expanded') === 'true';
@@ -181,7 +181,7 @@ faqButtons.forEach(button => {
         answer.style.opacity = '0';
         setTimeout(() => {
           answer.hidden = true;
-        }, 400); // match CSS transition duration
+        }, 400); 
       }
     }
 
@@ -193,7 +193,7 @@ faqButtons.forEach(button => {
 });
 
 
-  // DESKTOP DROPDOWN MENU
+  // Desktop dropdown menu
   if (dropdownToggle && dropdownMenu) {
     dropdownToggle.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -211,7 +211,7 @@ faqButtons.forEach(button => {
     });
   }
 
-  // HAMBURGER MENU (MOBILE)
+  // Hamburger menu for mobile
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -227,7 +227,7 @@ faqButtons.forEach(button => {
     });
   }
 
-  // SCROLL REVEAL ANIMATIONS
+  // Scroll reveal animations using Intersection Observer
   const revealOnScroll = (selector) => {
     const elements = document.querySelectorAll(selector);
     if (!elements.length) return;
@@ -260,7 +260,7 @@ faqButtons.forEach(button => {
     ].forEach(revealOnScroll);
   }, 500);
 
-  // PORTFOLIO SLIDER
+  // Portfolio slider
   let currentIndex = 0;
   const updateSlider = () => {
     if (sliderTrack) sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -292,7 +292,7 @@ faqButtons.forEach(button => {
     });
   }
 
-  // IMAGE GALLERY SLIDER
+  // Image gallery slider
   if (slider && images.length) {
     const totalImages = images.length;
     const getActiveIndex = () => [...images].findIndex(img => img.classList.contains("active"));
@@ -324,31 +324,12 @@ faqButtons.forEach(button => {
     });
   }
 
-  // COOKIE FORM
-  if (cookieForm) {
-    cookieForm.addEventListener("submit", e => {
-      e.preventDefault();
-      const preferences = {
-        analytics: document.getElementById("analytics-cookies").checked,
-        preference: document.getElementById("preference-cookies").checked,
-        marketing: document.getElementById("marketing-cookies").checked,
-      };
-      localStorage.setItem("cookiePreferences", JSON.stringify(preferences));
-      const lang = document.documentElement.lang === "es" ? "es" : "en";
-      const message = {
-        en: "Your cookie preferences have been saved.",
-        es: "Tus preferencias de cookies han sido guardadas."
-      };
-      messageBox.textContent = message[lang];
-      messageBox.classList.add("visible");
-      setTimeout(() => messageBox.classList.remove("visible"), 5000);
-    });
-  }
+  
 
-}); // END DOMContentLoaded
+}); // End DOMContentLoaded
 
 
-// HEADER SCROLL BEHAVIOR 
+// Header scroll behavior 
 const header = document.getElementById("header");
 const navLinks = document.querySelector(".nav-links");
 const footer = document.querySelector("footer");
@@ -390,3 +371,101 @@ window.addEventListener("scroll", () => {
   }
 });
 handleScrollStyling();
+
+
+
+const cards = document.querySelectorAll('.pricing-card');
+
+function getLang() {
+  return document.documentElement.lang === 'es' ? 'es' : 'en';
+}
+
+function closeCard(card) {
+  card.classList.remove('expanded');
+
+  card.querySelectorAll('.extra-feature').forEach(el => {
+    el.style.height = '0px';
+  });
+
+  const btn = card.querySelector('.toggle-features');
+  if (btn) {
+    btn.textContent = btn.dataset[getLang()];
+    btn.setAttribute('aria-expanded', 'false');
+  }
+}
+
+cards.forEach(card => {
+  const button = card.querySelector('.toggle-features');
+
+  button.addEventListener('click', () => {
+    const isExpanded = card.classList.toggle('expanded');
+    const lang = getLang();
+
+    // Accordion behavior
+    cards.forEach(other => {
+      if (other !== card) closeCard(other);
+    });
+
+    // Animate features
+    card.querySelectorAll('.extra-feature').forEach(el => {
+      if (isExpanded) {
+        el.style.height = el.scrollHeight + 'px';
+      } else {
+        el.style.height = '0px';
+      }
+    });
+
+    // Button label
+    button.textContent = isExpanded
+      ? (lang === 'es'
+          ? 'Ver menos características'
+          : 'Show fewer features')
+      : button.dataset[lang];
+
+    button.setAttribute('aria-expanded', isExpanded);
+  });
+});
+
+
+
+function updateComparisonLanguage(lang) {
+
+  // Feature labels
+  document
+    .querySelectorAll('.pricing-comparison .feature-label')
+    .forEach(label => {
+      if (label.dataset[lang]) {
+        label.textContent = label.dataset[lang];
+      }
+    });
+
+  // Cell values
+  document
+    .querySelectorAll('.pricing-comparison .cell[data-en]')
+    .forEach(cell => {
+      cell.textContent = cell.dataset[lang];
+    });
+
+  // Tooltips
+  document
+    .querySelectorAll('.pricing-comparison .cell.feature')
+    .forEach(cell => {
+      const tooltip = cell.querySelector('.comparison-tooltip');
+      if (!tooltip) return;
+
+      tooltip.textContent =
+        lang === 'es'
+          ? cell.dataset.tipEs
+          : cell.dataset.tipEn;
+    });
+
+  // Mobile plan labels
+  document
+    .querySelectorAll('.pricing-comparison .cell[data-plan-en]')
+    .forEach(cell => {
+      cell.dataset.plan =
+        lang === 'es'
+          ? cell.dataset.planEs
+          : cell.dataset.planEn;
+    });
+}

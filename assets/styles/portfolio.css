@@ -237,7 +237,7 @@
 
 
 
-/* testing */
+
 .portfolio-item-section {
   position: relative;
   overflow: hidden;
@@ -249,22 +249,22 @@
 .portfolio-item-section .portfolio-slider-track {
   display: flex;
   transition: transform 0.5s ease;
-  width: 100%; /* Adjust based on number of slides */
+  width: 100%; 
 }
 
 .portfolio-item-container {
   flex: 0 0 100%;
   padding: 1rem;
   box-sizing: border-box;
-  scroll-snap-align: start; /* Enable snap scrolling */
+  scroll-snap-align: start; 
 }
 
 .portfolio-slider-track {
   display: flex;
   transition: transform 0.5s ease;
-  width: 300%; /* Adjust based on number of slides */
-  scroll-snap-type: x mandatory; /* Enable snap scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  width: 300%; 
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch; 
 }
 
 /* Position buttons absolutely inside the section */
@@ -277,7 +277,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
-  pointer-events: none; /* allow buttons to float without blocking content */
+  pointer-events: none; 
 }
 
 .slider-prev,
@@ -289,7 +289,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   border-radius: 4px;
-  pointer-events: auto; /* re-enable interaction */
+  pointer-events: auto; 
   z-index: 2;
 }
 

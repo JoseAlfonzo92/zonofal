@@ -1,4 +1,3 @@
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -125,9 +124,6 @@ header {
 }
 
 
-
-/* testing */
-/* Base styles */
 /* Base layout */
 .nav-desktop {
    display: flex; 
@@ -259,8 +255,6 @@ header {
   .dropdown-menu { display: none !important; } /* Hide dropdown on mobile */
 }
 
-
-/* testing menu ham */
 .hamburger-icon line {
   stroke: var(--Accent-Color);
   stroke-width: 2;
@@ -343,7 +337,7 @@ header {
 }
 
 /* Language Selector for desktop */
-/* 🌐 Base styles for both buttons */
+/* Base styles for both buttons */
 .language-selector {
     display: flex;
     align-items: center;
@@ -369,7 +363,7 @@ header {
     color: var(--Text-Color);
 }
 
-/* 🎯 Tooltip styles */
+/* Tooltip styles */
 .language-selector .tooltip-text {
     visibility: hidden;
     width: 100px;
@@ -395,12 +389,12 @@ header {
     opacity: 1;
 }
 
-/* 🖥️ Desktop-only visibility */
+/*  Desktop-only visibility */
 .desktop-only {
     display: flex;
 }
 
-/* 📱 Mobile-only visibility */
+/*  Mobile-only visibility */
 .mobile-only {
     display: none;
 }
@@ -478,6 +472,10 @@ p.fade-in {
     animation-delay: 1s;
 }
 
+.cta-button .fade-in{
+    animation-delay:  1.5s;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -491,11 +489,12 @@ p.fade-in {
 
 /* Heading Styling */
 .home-content h1 {
-    color: var(--Accent-Color);
-    line-height: 1.3;
-    font-size: 5.5rem;
-    font-weight: 700;
-    margin: 0;
+  color: var(--Secondary-Background-Color);
+  line-height: 1.3;
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* Tagline */
@@ -504,9 +503,10 @@ p.fade-in {
     margin-top: 10px;
     font-weight: 400;
     color: var(--Background-Color);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Optional Overlay for Hero Image */
+/*  Overlay for Hero Image */
 .hero-image-container::before {
     content: "";
     position: absolute;
@@ -521,27 +521,27 @@ p.fade-in {
 
 /* Base CTA styles */
 .hero-section .cta-button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 1.6rem;
-    background: none;
-    color: var(--Accent-Color);
-    border: 1px solid var(--Accent-Color);
-    font-weight: 500;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--Secondary-Background-Color);
+  color: var(--Text-Color);
+  border: 1px solid var(--Text-Color);
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover effect for all CTA buttons */
 .hero-section .cta-button:hover {
-    background-color: var(--Primary-Color);
-    color: var(--Accent-Color);
-    border: none;
-    
+  background-color: var(--Text-Color);
+  color: var(--Secondary-Background-Color);
+  border: 1px solid var(--Text-Color);
+  transform: translateY(-2px);
 }
 
-/* Feature Section */
+
 /* Feature Section (Home) */
 .features-list-home {
   width: 100%;
@@ -730,52 +730,52 @@ p.fade-in {
   font-weight: 600;
   text-decoration: none;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .btn.primary {
   background: none;
-  border: 1px solid var(--Accent-Color);
-  color: var(--Accent-Color);
+  border: 1px solid var(--Secondary-Background-Color);
+  color: var(--Secondary-Background-Color);
 }
 
 .btn.secondary {
   background: none;
-  border: 1px solid var(--Accent-Color);
-  color: var(--Accent-Color);
+  border: 1px solid var(--Secondary-Background-Color);
+  color: var(--Secondary-Background-Color);
 }
 
 .btn:hover {
   background-color: var(--Background-Color);
   color: var(--Text-Color);
-  border: none;
+  border: 1px solid var(--Background-Color);
 }
 
 .btn.secondary:hover {
   background-color: var(--Background-Color);
   color: var(--Text-Color);
-  border: none;
+  border: 1px solid var(--Background-Color);
 }
 
 /* Call to Action */
 a.cta-button {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    font-weight: 500;
-    color: var(--Background-Color);
-    background: none;
-    text-decoration: none;
-    border: 1px solid var(--Background-Color);
-    border-radius: 5px;
-    margin-top: 1rem;
-    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  color: var(--Background-Color);
+  background: none;
+  text-decoration: none;
+  border: 1px solid var(--Background-Color);
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 a.cta-button:hover {
-    background: none;
-    color:var(--Accent-Color);
-    border: 1px solid var(--Accent-Color);
-    text-decoration: none;
+  background: var(--Secondary-Background-Color);
+  color: var(--Text-Color);
+  border: 1px solid var(--Text-Color);
+  text-decoration: none;
 }
 
 
@@ -822,7 +822,7 @@ a.cta-button:hover {
 }
 
 /* Newsletter Form */
-.newsletter form {
+/* .newsletter form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -833,18 +833,18 @@ a.cta-button:hover {
   flex: 1 1 0px;
   padding: 0.6rem;
   border: none;
-  border-bottom: 1px solid var(--Secondary-Color); /* Bottom border */
+  border-bottom: 1px solid var(--Secondary-Color); 
   background: none;
-  border-radius: 0; /* Optional: remove rounded corners for cleaner line */
+  border-radius: 0; 
   text-align: center;
   min-width: 180px;
   color: var(--Background-Color);
   font-size: 1rem;
   font-weight: 400;
 }
-
+ */
 /* Placeholder Styling */
-.newsletter input::placeholder {
+/* .newsletter input::placeholder {
   color: var(--Secondary-Color);
   font-style: italic;
   opacity: 0.8;
@@ -868,7 +868,7 @@ a.cta-button:hover {
   background: none;
   color: var(--Accent-Color);
   border: 1px solid var(--Accent-Color);
-}
+} */
 
 /* Right Columns: Quick Links, Resources, Social */
 .footer-right-columns {
@@ -961,31 +961,36 @@ a.cta-button:hover {
 
 .footer-bottom {
   display: flex;
-  flex-wrap: nowrap; /* Keep everything in one line */
+  flex-wrap: nowrap; 
   justify-content: space-between;
-  align-items: center; /* Vertically center items */
-  gap: 25rem; /* Tighter spacing between credits and links */
+  align-items: center; 
+  gap: 25rem; 
   margin-top: 0rem;
   padding-top: 0rem;
 }
 
 .footer-bottom .credits,
 .footer-bottom .policies {
-  flex: 0 1 auto; /* Allow natural width, prevent overflow */
+  flex: 0 1 auto; 
   font-size: 0.9rem;
   color: var(--Secondary-Color);
   line-height: 1.6;
   display: flex;
   align-items: center;
-  gap: 1rem; /* Space between text and links if needed */
+  gap: 1rem; 
 }
 
 .footer-bottom .credits p {
-  margin: 0; /* Remove extra spacing */
+  margin: 0; 
 }
 
 .footer-bottom .policies a {
-  margin-left: 1rem; /* Space between links */
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom .policies a:hover {
+  color: var(--Accent-Color);
 }
 
 /* to separate each section */
@@ -1136,7 +1141,7 @@ a.cta-button:hover {
     text-align: center;
   }
 
-  .newsletter form {
+ /*  .newsletter form {
     flex-direction: column;
     align-items: center;
   }
@@ -1150,7 +1155,7 @@ a.cta-button:hover {
     width: auto;
     margin-top: 0.5rem;
   }
-
+ */
   .footer-right-columns {
     flex-direction: column;
     align-items: center;

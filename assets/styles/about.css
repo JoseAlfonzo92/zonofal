@@ -120,7 +120,7 @@
 .history-timeline-column {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -249,7 +249,7 @@
 .role {
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--Primary-Color);
+  color: var(--Text-Color);
   margin-bottom: 1rem;
 }
 
@@ -264,11 +264,17 @@
 .member-socials a {
   color: var(--Text-Color);
   font-size: 1.3rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .member-socials a:hover {
   color: var(--Accent-Color);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -365,7 +371,7 @@
 
 /* Accordion toggle logic */
 .faq-question[aria-expanded="true"] + .faq-answer {
-  max-height: 500px; /* adjust based on expected content height */
+  max-height: 500px; 
   opacity: 1;
 }
 

@@ -99,7 +99,10 @@
 </header>
 
 <!-- Intro Section -->
-<section id="contact-intro" class="contact-intro-section" role="region" aria-labelledby="contact-intro-heading" aria-label="Contact Introduction">
+<section id="contact-intro"
+  class="contact-intro-section"
+  aria-labelledby="contact-intro-heading">
+
   <div class="intro-content">
     <h2 id="contact-intro-heading" 
         data-en="Let’s start a conversation" 
@@ -108,54 +111,64 @@
     </h2>
 
     <p 
-      data-en="Whether you have a project in mind, a question, or simply wish to connect. We’d be delighted to hear from you. Feel free to fill out the form or reach out directly, and let’s create something exceptional together." 
+      data-en="Whether you have a project in mind, a question, or simply wish to connect, we’d be delighted to hear from you. Feel free to fill out the form or reach out directly, and let’s create something exceptional together." 
       data-es="Ya sea que tengas un proyecto en mente, una pregunta o simplemente desees ponerte en contacto. Estaremos encantados de saber de ti. No dudes en completar el formulario o escribirnos directamente, y creemos algo excepcional juntos.">
-      Whether you have a project in mind, a question, or simply wish to connect. We’d be delighted to hear from you. Feel free to fill out the form or reach out directly, and let’s create something exceptional together.
+      Whether you have a project in mind, a question, or simply wish to connect, we’d be delighted to hear from you. Feel free to fill out the form or reach out directly, and let’s create something exceptional together.
     </p>
   </div>
 </section>
 
+
 <hr class="section-divider" aria-hidden="true">
 
 <!-- Contact Info Section -->
-<section id="contact-info" class="contact-info-section" role="region" aria-labelledby="contact-info-heading" aria-label="Contact Information Section">
+<section id="contact-info"
+  class="contact-info-section"
+  aria-labelledby="contact-info-heading">
+
   <div class="contact-info-layout">
 
     <!-- Left Column: Contact Details -->
     <div class="contact-info-grid">
 
       <!-- Address -->
-      <address class="contact-info-item" aria-label="Office Address">
+      <address class="contact-info-item">
         <i class="fas fa-map-marker-alt contact-icon" aria-hidden="true"></i>
         <h3 data-en="Address" data-es="Dirección">Address</h3>
         <p>
           <span data-en="Paraguay 817" data-es="Paraguay 817">Paraguay 817</span><br>
-          <span data-en="Villa Mercedes, San Luis, Argentina" data-es="Villa Mercedes, San Luis, Argentina">Villa Mercedes, San Luis, Argentina</span>
+          <span data-en="Villa Mercedes, San Luis, Argentina"
+                data-es="Villa Mercedes, San Luis, Argentina">
+            Villa Mercedes, San Luis, Argentina
+          </span>
         </p>
       </address>
 
       <!-- Phone -->
-      <div class="contact-info-item" role="region" aria-label="Phone Number">
+      <div class="contact-info-item">
         <i class="fas fa-phone contact-icon" aria-hidden="true"></i>
         <h3 data-en="Phone" data-es="Teléfono">Phone</h3>
         <p>
-          <a href="tel:+5492657617907" aria-label="Call Zonofal at +54 9 2657 617907">+54 9 2657 617907</a>
+          <a href="tel:+5492657617907">+54 9 2657 617907</a>
         </p>
       </div>
 
       <!-- Email -->
-      <div class="contact-info-item" role="region" aria-label="Email Address">
+      <div class="contact-info-item">
         <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
         <h3 data-en="Email" data-es="Correo Electrónico">Email</h3>
         <p>
-          <a href="mailto:zonofal@gmail.com" aria-label="Email Zonofal at zonofal@gmail.com">Zonofal@gmail.com</a>
+          <a href="mailto:zonofal@gmail.com">zonofal@gmail.com</a>
         </p>
       </div>
+
     </div>
 
     <!-- Right Column: Heading -->
     <div class="contact-info-heading-wrapper">
-      <h2 id="contact-info-heading" data-en="Contact Information" data-es="Información de Contacto">
+      <h2 id="contact-info-heading"
+          data-en="Contact Information"
+          data-es="Información de Contacto">
         Contact Information
       </h2>
     </div>
@@ -163,15 +176,22 @@
   </div>
 </section>
 
+
 <!-- Contact Section -->
-<section id="contact" role="region" aria-labelledby="contact-heading" aria-label="Contact Form Section">
-  <h2 id="contact-heading" data-en="Contact Us" data-es="Contáctanos">Contact Us</h2>
+<section id="contact" aria-labelledby="contact-heading">
+
+  <h2 id="contact-heading"
+      data-en="Contact Us"
+      data-es="Contáctanos">
+    Contact Us
+  </h2>
 
   <div class="contact-content">
+
     <!-- Left Message Text -->
     <div class="contact-message">
-      <p class="intro-text" 
-         data-en="We’re always eager to hear about new ideas. Please don’t hesitate to get in touch, ask questions, or initiate a project." 
+      <p class="intro-text"
+         data-en="We’re always eager to hear about new ideas. Please don’t hesitate to get in touch, ask questions, or initiate a project."
          data-es="Siempre nos entusiasma conocer nuevas ideas. No dudes en ponerte en contacto, hacer preguntas o iniciar un proyecto.">
         We’re always eager to hear about new ideas. Please don’t hesitate to get in touch, ask questions, or initiate a project.
       </p>
@@ -179,46 +199,87 @@
 
     <!-- Right Contact Form -->
     <div class="form-wrapper">
-      <form id="contact-form" action="https://formsubmit.co/josealfonzo792@gmail.com" method="POST" novalidate aria-describedby="form-instructions">
+      <form id="contact-form"
+            action="https://formsubmit.co/josealfonzo792@gmail.com"
+            method="POST"
+            novalidate>
+
         <input type="hidden" name="_subject" value="New Contact Form Submission">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="">
         <input type="text" name="_honey" style="display:none" aria-hidden="true">
-        
+
         <!-- Name -->
-        <label for="name" class="visually-hidden" data-en="Name" data-es="Nombre">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" data-en="Your Name" data-es="Tu Nombre" required aria-required="true">
+        <label for="name" class="visually-hidden"
+               data-en="Name"
+               data-es="Nombre">Name</label>
+        <input type="text"
+               id="name"
+               name="name"
+               placeholder="Your Name"
+               data-en="Your Name"
+               data-es="Tu Nombre"
+               required>
 
         <!-- Email -->
-        <label for="email" class="visually-hidden" data-en="Email" data-es="Correo Electronico">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" data-en="Your Email" data-es="Tu Correo" required aria-required="true">
+        <label for="email" class="visually-hidden"
+               data-en="Email"
+               data-es="Correo Electrónico">Email</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="Your Email"
+               data-en="Your Email"
+               data-es="Tu Correo"
+               required>
 
         <!-- Phone (Optional) -->
-        <label for="phone" class="visually-hidden" data-en="Phone" data-es="Teléfono">Phone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)" data-en="Your Phone" data-es="Tu Teléfono">
+        <label for="phone" class="visually-hidden"
+               data-en="Phone"
+               data-es="Teléfono">Phone</label>
+        <input type="tel"
+               id="phone"
+               name="phone"
+               placeholder="Your Phone (Optional)"
+               data-en="Your Phone (Optional)"
+               data-es="Tu Teléfono (Opcional)">
 
         <!-- Message -->
-        <label for="message" class="visually-hidden" data-en="Message" data-es="Mensaje">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" data-en="Your Message" data-es="Tu Mensaje" required aria-required="true"></textarea>
+        <label for="message" class="visually-hidden"
+               data-en="Message"
+               data-es="Mensaje">Message</label>
+        <textarea id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  data-en="Your Message"
+                  data-es="Tu Mensaje"
+                  required></textarea>
 
         <!-- Submit Button -->
-        <button type="submit" data-en="Send Message" data-es="Enviar Mensaje" aria-label="Send your message">Send Message</button>
+        <button type="submit"
+                data-en="Send Message"
+                data-es="Enviar Mensaje">
+          Send Message
+        </button>
       </form>
 
       <!-- Thank You Message -->
-      <div id="thank-you-message" style="display: none;" aria-live="polite"
-           data-en="Your message has been sent successfully. We’ll get back to you as soon as possible." 
-           data-es="Tu mensaje ha sido enviado exitosamente. Nos pondremos en contacto contigo lo antes posible.">
+      <div id="thank-you-message"
+           style="display: none;"
+           aria-live="polite">
 
         <h3 data-en="Thank You!" data-es="¡Gracias!">Thank You!</h3>
-        <p data-en="Your message has been sent successfully. We’ll get back to you as soon as possible." 
+
+        <p data-en="Your message has been sent successfully. We’ll get back to you as soon as possible."
            data-es="Tu mensaje ha sido enviado exitosamente. Nos pondremos en contacto contigo lo antes posible.">
           Your message has been sent successfully. We’ll get back to you as soon as possible.
         </p>
       </div>
     </div>
+
   </div>
 </section>
+
 
 <!-- Location & Availability Section -->
 <section id="location" class="location-section" role="region" aria-labelledby="location-heading" aria-label="Location and Availability">
@@ -228,67 +289,31 @@
     Location & Availability
   </h2>
 
-  <p data-en="We work remotely from San Luis, Argentina. Available for consultations and collaborations worldwide." 
-     data-es="Trabajamos de forma remota desde San Luis, Argentina. Disponibles para consultas y colaboraciones globales.">
-    We work remotely from San Luis, Argentina. Available for consultations and collaborations worldwide.
+  <p data-en="We work remotely from Villa Mercedes, San Luis, Argentina. Available for consultations and collaborations worldwide." 
+     data-es="Trabajamos de forma remota desde Villa Mercedes, San Luis, Argentina. Disponibles para consultas y colaboraciones globales.">
+    We work remotely from Villa Mercedes, San Luis, Argentina. Available for consultations and collaborations worldwide.
   </p>
 </section>
 
-<!-- CTA Message Section -->
-<section id="contact-cta-message" class="cta-message-section" role="region" aria-labelledby="cta-message-heading" aria-label="Project Inquiry Call to Action">
-  <div class="cta-message-content">
-    <h2 id="cta-message-heading" 
-        data-en="Have a project in mind?" 
-        data-es="¿Tienes un proyecto en mente?">
-      Have a project in mind?
+<!-- Privacy Commitment Section -->
+<section id="privacy-commitment" class="privacy-section" role="region" aria-label="Privacy commitment">
+  <div class="privacy-content">
+
+    <h2
+      data-en="No newsletters. No tracking."
+      data-es="Sin correos informativos. Sin rastreo.">
+      No newsletters. No tracking.
     </h2>
 
-    <p data-en="Let’s talk! We’d be delighted to hear about your ideas and explore how we can bring them to life." 
-       data-es="¡Hablemos! Nos encantaría conocer tus ideas y explorar cómo podemos hacerlas realidad.">
-      Let’s talk! We’d be delighted to hear about your ideas and explore how we can bring them to life.
+    <p
+      data-en="We don’t collect emails for marketing or send newsletters. If you want to get in touch, simply use the contact form above."
+      data-es="No recopilamos correos para marketing ni enviamos correos informativos. Si deseas contactarnos, utiliza el formulario de arriba.">
+      We don’t collect emails for marketing or send newsletters. If you want to get in touch, simply use the contact form above.
     </p>
 
-    <a href="#contact-form" class="cta-link-button"
-       data-en="Start the Conversation" 
-       data-es="Inicia la Conversación"
-       aria-label="Start the conversation about your project">
-      Start the Conversation
-    </a>
   </div>
 </section>
 
-<!-- Newsletter Section -->
-<section id="newsletter" class="newsletter-section" role="region" aria-labelledby="newsletter-heading" aria-label="Newsletter Subscription">
-  <div class="newsletter-content">
-    <h2 id="newsletter-heading" 
-        data-en="Stay in the loop" 
-        data-es="Mantente informado">
-      Stay in the loop
-    </h2>
-
-    <p id="newsletter-description" 
-       data-en="Subscribe to our newsletter for updates on new projects, insights, and practical tips." 
-       data-es="Suscríbete a nuestro boletín para recibir actualizaciones sobre nuevos proyectos, ideas y consejos prácticos.">
-      Subscribe to our newsletter for updates on new projects, insights, and practical tips.
-    </p>
-
-    <form class="newsletter-form" aria-label="Newsletter Signup" aria-describedby="newsletter-description">
-      <label for="email" class="visually-hidden"
-             data-en="Email address" 
-             data-es="Correo electrónico">
-        Email address
-      </label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" aria-label="Email address">
-      
-      <button type="submit" class="newsletter-button"
-              data-en="Subscribe" 
-              data-es="Suscribirse"
-              aria-label="Subscribe to newsletter">
-        Subscribe
-      </button>
-    </form>
-  </div>
-</section>
 
 
 
@@ -303,8 +328,19 @@
         <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zonofal_3_kku3mr.png" alt="Zonofal Logo" class="logo-img-footer">
       </a>
 
+
+      <!-- Brand Statement -->
+<div class="footer-section footer-message" aria-labelledby="brand-footer-heading">
+  
+
+  <p
+    data-en="Zonofal is built with a privacy-first mindset, focusing on simplicity, accessibility, and user trust."
+    data-es="Zonofal está construido con un enfoque centrado en la privacidad, priorizando simplicidad, accesibilidad y confianza.">
+    Zonofal is built with a privacy-first mindset, focusing on simplicity, accessibility, and user trust.
+  </p>
+</div>
       <!-- Newsletter Signup -->
-      <div class="footer-section newsletter" aria-labelledby="newsletter-heading">
+    <!--   <div class="footer-section newsletter" aria-labelledby="newsletter-heading">
         <h3 id="newsletter-heading" class="visually-hidden"></h3>
         <p 
           data-en="Subscribe to our newsletter for the latest updates on features and releases." 
@@ -336,7 +372,7 @@
           data-es="Al suscribirte, aceptas nuestra política de privacidad y das tu consentimiento para recibir actualizaciones.">
           By subscribing, you agree to our privacy policy and consent to receive updates.
         </p>
-      </div>
+      </div> -->
     </div>
 
     <!-- Navigation Links -->
@@ -404,8 +440,8 @@
     <!-- Footer Bottom Section -->
     <div class="footer-bottom">
       <div class="footer-section credits">
-        <p data-en="© 2025 Zonofal. All Rights Reserved." data-es="© 2025 Zonofal. Todos los derechos reservados.">
-          © 2025 Zonofal. All Rights Reserved.
+        <p data-en="© 2026 Zonofal. All Rights Reserved." data-es="© 2026 Zonofal. Todos los derechos reservados.">
+          © 2026 Zonofal. All Rights Reserved.
         </p>
       </div>
       <div class="footer-section policies" role="navigation" aria-label="Legal Links">

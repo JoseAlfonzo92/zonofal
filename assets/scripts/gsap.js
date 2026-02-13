@@ -43,4 +43,3 @@ document.fonts.ready.then(() => {
 
   observer.observe(heading); // Start observing the heading
 });
-
