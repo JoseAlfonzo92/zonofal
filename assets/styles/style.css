@@ -497,6 +497,7 @@ p.fade-in {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+
 /* Tagline */
 .tagline {
     font-size: 1.5rem;
@@ -1002,13 +1003,18 @@ a.cta-button:hover {
     width: 100%;
 }
 
-/* Responsive Mobile Nav Links */
+/*  Section footer Divider */
+.section-footer-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--Primary-Color), transparent);
+  width: 100%;
+
+}
+
+
 @media (max-width: 768px) {
   
-
-    /* mobile language selector */
-/* Show on mobile */
-
  .desktop-only {
         display: none;
     }
@@ -1025,21 +1031,19 @@ a.cta-button:hover {
         padding: 15px 10px;
     }
 
-    /* home section */
-    /* Adjust hero section height */
+
     .hero-image-container {
-        height: 90vh; /* Reduced height for smaller screens */
+        height: 90vh; 
         
     }
 
-    /* Resize hero image to better fit mobile view */
     .hero-image {
-        object-position: center; /* Centers the image focus */
+        object-position: center; 
     }
 
-    /* Reduce font sizes for better fit on small screens */
+
     .home-content h1 {
-        font-size: 4rem; /* Slightly smaller font */
+        font-size: 4rem; 
         line-height: 1.2;
     }
 
@@ -1141,21 +1145,7 @@ a.cta-button:hover {
     text-align: center;
   }
 
- /*  .newsletter form {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .newsletter input[type="email"] {
-    width: 100%;
-    text-align: center;
-  }
-
-  .newsletter button {
-    width: auto;
-    margin-top: 0.5rem;
-  }
- */
   .footer-right-columns {
     flex-direction: column;
     align-items: center;
@@ -1221,12 +1211,12 @@ a.cta-button:hover {
   margin: 200px auto;
 }
 
-/* Reserve space for animated heading so animation doesn't affect layout */
+
 #coming-heading {
   display: inline-block;
-  min-height: 3.5rem; /* roughly one line of heading text */
+  min-height: 3.5rem; 
   line-height: 1.2;
-  overflow: hidden;   /* hides overflow during animation */
+  overflow: hidden;   
   text-align: center;
 }
 
@@ -1234,8 +1224,8 @@ a.cta-button:hover {
   font-size: 3rem;
   font-family: var(--Inter-font-family);
   margin-bottom: 1.5rem;
-  opacity: 0; /* animation starts hidden */
-  white-space: nowrap; /* keeps "Coming Soon" on one line */
+  opacity: 0; 
+  white-space: nowrap; 
 }
 
 .coming-soon-text {
@@ -1267,24 +1257,24 @@ a.cta-button:hover {
 /* For GSAP letter/word animation */
 #coming-heading .char,
 #coming-heading .word {
-  display: inline-block; /* required for animation transforms */
+  display: inline-block; 
 }
 
 
-/* Mobile adjustments */
+
 @media (max-width: 768px) {
   .coming-soon-section {
     padding: 4rem 1.5rem;
-    min-height: 80vh; /* slightly smaller on mobile */
+    min-height: 80vh; 
   }
 
   .coming-soon-container {
-    margin: 120px auto; /* reduce vertical spacing */
-    max-width: 90%; /* use more screen width */
+    margin: 120px auto; 
+    max-width: 90%; 
   }
 
   #coming-heading {
-    min-height: 2.5rem; /* reserve less space for smaller font size */
+    min-height: 2.5rem; 
   }
 
   .coming-soon-section h1 {
