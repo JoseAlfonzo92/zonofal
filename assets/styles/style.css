@@ -1007,10 +1007,10 @@ a.cta-button:hover {
 .section-footer-divider {
   border: none;
   height: 2px;
-  background: linear-gradient(to right, transparent, var(--Primary-Color), transparent);
+  background: linear-gradient(to right, var(--Text-Color), var(--Primary-Color), var(--Text-Color));
   width: 100%;
-
 }
+
 
 
 @media (max-width: 768px) {
