@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 <!-- Font Awesome 7 CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- favicon -->
 <!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
@@ -117,341 +117,359 @@
 
 <hr class="section-divider" aria-hidden="true">
 
-<!-- Portfolio List Section -->
-<section class="portfolio-list-section" role="region" aria-labelledby="portfolio-list-heading" aria-label="Portfolio Projects">
-  <h2 id="portfolio-list-heading" class="visually-hidden"
-      data-en="Portfolio Projects"
-      data-es="Proyectos del Portafolio">
-    Portfolio Projects
-  </h2>
+<section class="portfolio-list-section" role="region" aria-labelledby="portfolio-list-heading">
 
-  <div class="portfolio-grid" role="list">
+  <h2 id="portfolio-list-heading" data-en="Portfolio Projects" data-es="Proyectos del Portafolio">
+  Portfolio Projects
+</h2>
 
-    <!-- Portfolio Item 1 -->
-    <article class="portfolio-item" role="listitem" aria-labelledby="p1-title">
-      <figure>
-        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921325/burger-website_wmfw62.jpg" alt="Preview of Burger Restaurant Website" class="portfolio-thumb" loading="lazy" decoding="async">
-      </figure>
-      <div class="portfolio-info">
-        <h3 id="p1-title" data-en="Burger Restaurant Website" data-es="Sitio Web para Restaurante de Hamburguesas">Burger Restaurant Website</h3>
-        <p data-en="A fully responsive and interactive site featuring a mobile-friendly menu, category filtering, custom video controls, and an automated testimonial carousel. Built with semantic HTML, CSS, and vanilla JavaScript to showcase the restaurant’s offerings and brand personality."
-           data-es="Un sitio totalmente responsivo e interactivo con menú adaptable, filtrado por categorías, controles de video personalizados y carrusel automático de testimonios. Desarrollado con HTML semántico, CSS y JavaScript para destacar el menú y la identidad del restaurante.">
-          A fully responsive and interactive site featuring a mobile-friendly menu, category filtering, custom video controls, and an automated testimonial carousel. Built with semantic HTML, CSS, and vanilla JavaScript to showcase the restaurant’s offerings and brand personality.
-        </p>
-        <a href="pages/projects pages/project-burger.html" class="portfolio-button-1" aria-label="View Burger Restaurant Website project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
-      </div>
-    </article>
+<div class="portfolio-grid" role="list">
 
-    <!-- Portfolio Item 2 -->
-    <article class="portfolio-item" role="listitem" aria-labelledby="p2-title">
-      <figure>
-        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921334/constructed-website_hy7ndr.jpg" alt="Preview of Construction Company Website" class="portfolio-thumb" loading="lazy" decoding="async">
-      </figure>
-      <div class="portfolio-info">
-        <h3 id="p2-title" data-en="Construction Company Website" data-es="Sitio Web de Empresa Constructora">Construction Company Website</h3>
-        <p data-en="A responsive and modern website for a construction company. Styled with a custom color palette and modern typography, it features animated service cards, an interactive projects gallery, client testimonials, and a promotional video. The JavaScript adds a hamburger navigation menu with animation and scroll-triggered service reveals using the Intersection Observer API, ensuring smooth interactivity across devices."
-           data-es="Un sitio web responsivo y moderno para una empresa constructora. Diseñado con una paleta de colores personalizada y tipografía moderna, incluye tarjetas de servicios animadas, una galería de proyectos interactiva, testimonios de clientes y un video promocional. El JavaScript agrega un menú de navegación hamburguesa con animación y revelado de servicios al hacer scroll mediante la API Intersection Observer, garantizando una interactividad fluida en todos los dispositivos.">
-          A responsive and modern website showcasing services, projects, testimonials, and interactivity.
-        </p>
-        <a href="pages/projects pages/construction-website.html" class="portfolio-button-1" aria-label="View Construction Company Website project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
-      </div>
-    </article>
+  <!-- ITEM -->
+  <article class="portfolio-item" role="listitem" aria-labelledby="project-burger-title">
+    <figure>
+      <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921325/burger-website_wmfw62.jpg"
+           alt="Homepage of Burger Restaurant Website"
+           class="portfolio-thumb"
+           loading="lazy"
+           decoding="async">
+    </figure>
 
-    <!-- Portfolio Item 3 -->
-    <article class="portfolio-item" role="listitem" aria-labelledby="p3-title">
-      <figure>
-        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921336/desktop-design-advice_yue3nl.jpg" alt="Preview of Advice Generator App" class="portfolio-thumb" loading="lazy" decoding="async">
-      </figure>
-      <div class="portfolio-info">
-        <h3 id="p3-title" data-en="Advice Generator App" data-es="Aplicación Generadora de Consejos">Advice Generator App</h3>
-        <p data-en="A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices."
-           data-es="Una aplicación dinámica para generar consejos desarrollada como parte de un desafío de Frontend Mentor, impulsada por la Advice Slip API. Obtiene y muestra consejos aleatorios con transiciones suaves, diseño responsivo y actualizaciones interactivas activadas por un dado. Estilizada con la fuente Manrope, efectos de neón y HTML semántico, la app ofrece una experiencia limpia y accesible en todos los dispositivos.">
-          A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices.
-        </p>
-        <a href="pages/projects pages/advice-generator.html" class="portfolio-button-1" aria-label="View Advice Generator App project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
-      </div>
-    </article>
+    <div class="portfolio-info">
+      <h3 id="project-burger-title"
+          data-en="Burger Restaurant Website"
+          data-es="Sitio web de Restaurante Burger">
+        Burger Restaurant Website
+      </h3>
 
-    <!-- Portfolio Item 4 -->
-    <article class="portfolio-item" role="listitem" aria-labelledby="p4-title">
-      <figure>
-        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921315/age-desktop-design_zthhjm.jpg" alt="Preview of Age Calculator App" class="portfolio-thumb" loading="lazy" decoding="async">
-      </figure>
-      <div class="portfolio-info">
-        <h3 id="p4-title" data-en="Age Calculator App" data-es="Aplicación Calculadora de Edad">Age Calculator App</h3>
-        <p data-en="A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input."
-           data-es="Una calculadora de edad responsiva desarrollada para un desafío de Frontend Mentor. Incluye HTML semántico, validación personalizada de formularios y animación de resultados con JavaScript puro. Estilizada con la fuente Poppins, sombras suaves y un diseño amigable, la app calcula la edad en años, meses y días según la entrada del usuario.">
-          A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input.
-        </p>
-        <a href="pages/projects pages/age-calculator.html" class="portfolio-button-1" aria-label="View Age Calculator App project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
-      </div>
-    </article>
-
-    <!-- Portfolio Item 5 -->
-    <article class="portfolio-item" role="listitem" aria-labelledby="p5-title">
-      <figure>
-        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921297/25_5_Clock_p57sxt.jpg" alt="Preview of 25 + 5 Clock" class="portfolio-thumb" loading="lazy" decoding="async">
-      </figure>
-      <div class="portfolio-info">
-        <h3 id="p5-title" data-en="25 + 5 Clock" data-es="Reloj 25 + 5">25 + 5 Clock</h3>
-        <p data-en="A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows."
-           data-es="Un temporizador estilo Pomodoro construido con React y Babel, con controles de sesión y descanso, interacción por teclado y alertas de audio. Estilizado con una estética digital retro usando la fuente Orbitron, acentos en verde neón y sombras brillantes.">
-          A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows.
-        </p>
-        <a href="pages/projects pages/25-5-clock.html" class="portfolio-button-1" aria-label="View 25 plus 5 Clock project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
-      </div>
-    </article>
-
-    <!-- Portfolio Item 6 -->
-    <article class="portfolio-item" role="listitem" aria-labelledby="p6-title">
-      <figure>
-        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921347/JavaScript_Calculator_jcwsp4.jpg" alt="Preview of JavaScript Calculator" class="portfolio-thumb" loading="lazy" decoding="async">
-      </figure>
-      <div class="portfolio-info">
-        <h3 id="p6-title" data-en="JavaScript Calculator" data-es="Calculadora en JavaScript">JavaScript Calculator</h3>
-        <p data-en="A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation. Styled with Courier New, inset shadows, and gradient buttons, it delivers both nostalgia and precision."
-           data-es="Una calculadora con estilo retro desarrollada con React, Babel y Bootstrap 5, inspirada en las interfaces clásicas de los años 90. Ofrece un diseño responsivo, soporte para teclado y evaluación dinámica en tiempo real. Con tipografía Courier New, sombras internas y botones con degradado, combina nostalgia con funcionalidad moderna.">
-          A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation. Styled with Courier New, inset shadows, and gradient buttons, it delivers both nostalgia and precision.
-        </p>
-        <a href="pages/projects pages/project-calculator.html" class="portfolio-button-1" aria-label="View JavaScript Calculator project" data-en="View Project" data-es="Ver Proyecto">View Project</a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- portfolio item body section -->
-<section class="portfolio-item-section" aria-labelledby="project-title">
-  <div class="portfolio-slider-track">
-    <div class="portfolio-item-container" role="region" aria-label="Modern Burger Restaurant Website Project">
-
-      <!-- Project Title -->
-      <h2 id="project-title"
-          data-en="Modern Burger Restaurant Website"
-          data-es="Sitio Web Moderno para Restaurante de Hamburguesas">
-        Modern Burger Restaurant Website
-      </h2>
-
-      <!-- Project Description -->
-      <p class="portfolio-description"
-         data-en="A fully responsive and interactive website designed for a burger restaurant. It features a mobile-friendly hamburger menu, dynamic category filtering (food, snacks, beverages), a video section with custom play controls, and an automated testimonial carousel. Built with semantic HTML, modular CSS, and vanilla JavaScript, the site delivers a smooth and engaging user experience while highlighting the restaurant’s menu, promotions, and brand personality."
-         data-es="Un sitio web totalmente responsivo e interactivo diseñado para un restaurante de hamburguesas. Incluye un menú móvil tipo hamburguesa, filtrado dinámico de categorías (comida, snacks, bebidas), una sección de video con controles personalizados y un carrusel automático de testimonios. Construido con HTML semántico, CSS modular y JavaScript, el sitio ofrece una experiencia fluida y atractiva mientras resalta el menú, las promociones y la identidad de la marca.">
-        A fully responsive and interactive website designed for a burger restaurant. It features a mobile-friendly hamburger menu, dynamic category filtering (food, snacks, beverages), a video section with custom play controls, and an automated testimonial carousel. Built with semantic HTML, modular CSS, and vanilla JavaScript, the site delivers a smooth and engaging user experience while highlighting the restaurant’s menu, promotions, and brand personality.
+      <!-- SHORT description only -->
+      <p data-en="Responsive restaurant UI with filtering, video features, and modern UX."
+         data-es="Interfaz de restaurante responsive con filtrado, funciones de video y UX moderna.">
+        Responsive restaurant UI with filtering, video features, and modern UX.
       </p>
 
-      <!-- Featured Image -->
-      <div class="portfolio-image-wrapper">
-        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921325/burger-website_wmfw62.jpg"
-             alt="Modern Burger Restaurant Website full preview"
-             class="portfolio-feature-image"
-             loading="lazy" decoding="async">
+      <!-- OPTIONAL TAGS -->
+      <div class="portfolio-tags" role="list" aria-label="Technologies used">
+        <span role="listitem">HTML</span>
+        <span role="listitem">CSS</span>
+        <span role="listitem">JavaScript</span>
       </div>
 
-      <!-- Technologies Used -->
-      <div class="portfolio-tech">
-        <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
-        <ul class="tech-list">
-          <li data-en="HTML5 (semantic structure)" data-es="HTML5 (estructura semántica)">HTML5 (semantic structure)</li>
-          <li data-en="CSS3 (modular architecture, Flexbox, responsive design)" data-es="CSS3 (arquitectura modular, Flexbox, diseño responsivo)">CSS3 (modular architecture, Flexbox, responsive design)</li>
-          <li data-en="JavaScript (vanilla: interactive menu, category filtering, video controls, carousel)" data-es="JavaScript (vanilla: menú interactivo, filtrado de categorías, controles de video, carrusel)">JavaScript (vanilla: interactive menu, category filtering, video controls, carousel)</li>
-          <li data-en="Accessibility and mobile-first best practices" data-es="Accesibilidad y prácticas mobile-first">Accessibility and mobile-first best practices</li>
-
-        </ul>
-      </div>
-
-      <!-- Project Links -->
-      <div class="portfolio-links">
-        <a href="https://josealfonzo92.github.io/burger-site/index.html" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of Modern Burger Restaurant Website" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
-        <a href="https://github.com/JoseAlfonzo92/burger-site.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Modern Burger Restaurant Website" data-en="View Code" data-es="Ver Codigo">View Code</a>
-      </div>
-
+      <a href="pages/projects pages/project-burger.html"
+         class="portfolio-button-1"
+         aria-label="View Burger Restaurant Website project"
+         data-en="View Project"
+         data-es="Ver Proyecto">
+        View Project
+      </a>
     </div>
-  
-    <!-- Construction Company Website -->
-<div class="portfolio-item-container" role="region" aria-label="Construction Company Website Project">
+  </article>
 
-  <!-- Project Title -->
-  <h2 id="project-title"
-      data-en="Construction Company Website"
-      data-es="Sitio Web de Empresa Constructora">
-    Construction Company Website
-  </h2>
-
-  <!-- Project Description -->
-  <p class="portfolio-description"
-     data-en="A professional, responsive website built for a construction company. It features a hero section with strong call-to-action, detailed services animated with Intersection Observer, a portfolio of recent projects, client testimonials in a slider, and an embedded promotional video. The layout emphasizes accessibility, mobile-first design, and a clean structure for showcasing expertise and trust."
-     data-es="Un sitio web profesional y responsivo creado para una empresa constructora. Incluye una sección principal con una llamada a la acción, servicios detallados animados con Intersection Observer, un portafolio de proyectos recientes, testimonios de clientes en un carrusel y un video promocional incrustado. El diseño enfatiza la accesibilidad, el enfoque mobile-first y una estructura limpia para mostrar experiencia y confianza.">
-    A professional, responsive website designed for a construction company, featuring services, projects, testimonials, and a promotional video.
-  </p>
-
-  <!-- Featured Image -->
-  <div class="portfolio-image-wrapper">
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-construction1-title">
+  <figure>
     <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921334/constructed-website_hy7ndr.jpg"
-         alt="Construction Company Website full preview"
-         class="portfolio-feature-image"
-         loading="lazy" decoding="async">
+         alt="Homepage of Construction Company Website"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-construction1-title"
+        data-en="Construction Company Website"
+        data-es="Sitio web de Empresa de Construcción">
+      Construction Company Website
+    </h3>
+
+    <p data-en="Modern business website showcasing services, projects, and client trust."
+       data-es="Sitio web moderno que destaca servicios, proyectos y confianza de clientes.">
+      Modern business website showcasing services, projects, and client trust.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">HTML</span>
+      <span role="listitem">CSS</span>
+      <span role="listitem">JavaScript</span>
+    </div>
+
+    <a href="pages/projects pages/construction-website.html"
+       class="portfolio-button-1"
+       aria-label="View Construction Company Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
   </div>
+</article>
 
-  <!-- Technologies Used -->
-  <div class="portfolio-tech">
-    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
-    <ul class="tech-list">
-      <li data-en="HTML5 (semantic structure)" data-es="HTML5 (estructura semántica)">HTML5 (semantic structure)</li>
-      <li data-en="CSS3 (responsive design, clean layout)" data-es="CSS3 (diseño responsivo, diseño limpio)">CSS3 (responsive design, clean layout)</li>
-      <li data-en="JavaScript (hamburger menu, Intersection Observer animations)" data-es="JavaScript (menú hamburguesa, animaciones con Intersection Observer)">JavaScript (hamburger menu, Intersection Observer animations)</li>
-      <li data-en="Accessibility & mobile-first best practices" data-es="Accesibilidad y prácticas mobile-first">Accessibility & mobile-first best practices</li>
-    </ul>
-  </div>
-
-  <!-- Project Links -->
-  <div class="portfolio-links">
-    <a href="https://josealfonzo92.github.io/construction-template-page/" class="portfolio-button" target="_blank" rel="noopener" aria-label="View Construction Company Website project" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
-    <a href="https://github.com/JoseAlfonzo92/construction-template-page.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Construction Company Website" data-en="View Code" data-es="Ver Codigo">View Code</a>
-  </div>
-
-</div>
-
-<!-- Advice generator -->
-<div class="portfolio-item-container" role="region" aria-label="Advice Generator App Project">
-
-  <h2 id="project-title"
-      data-en="Advice Generator App"
-      data-es="Aplicación Generadora de Consejos">
-    Advice Generator App
-  </h2>
-
-  <p class="portfolio-description"
-     data-en="A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices."
-     data-es="Una aplicación dinámica para generar consejos desarrollada como parte de un desafío de Frontend Mentor, impulsada por la Advice Slip API. Obtiene y muestra consejos aleatorios con transiciones suaves, diseño responsivo y actualizaciones interactivas activadas por un dado. Estilizada con la fuente Manrope, efectos de neón y HTML semántico, la app ofrece una experiencia limpia y accesible en todos los dispositivos.">
-    A dynamic advice generator built for a Frontend Mentor challenge, powered by the Advice Slip API. It fetches and displays random advice with smooth transitions, responsive layout, and interactive dice-triggered updates. Styled with Manrope font, neon hover effects, and semantic HTML, the app delivers a clean, accessible experience across devices.
-  </p>
-
-  <div class="portfolio-image-wrapper">
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-advice-title">
+  <figure>
     <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921336/desktop-design-advice_yue3nl.jpg"
-         alt="Advice Generator App full preview"
-         class="portfolio-feature-image"
-         loading="lazy" decoding="async">
+         alt="Advice Generator App interface displaying a random advice card"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-advice-title"
+        data-en="Advice Generator App"
+        data-es="App Generadora de Consejos">
+      Advice Generator App
+    </h3>
+
+    <p data-en="Interactive app that fetches random advice with smooth UI transitions."
+       data-es="App interactiva que obtiene consejos aleatorios con transiciones de interfaz suaves.">
+      Interactive app that fetches random advice with smooth UI transitions.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">API</span>
+      <span role="listitem">Responsive</span>
+    </div>
+
+    <a href="pages/projects pages/advice-generator.html"
+       class="portfolio-button-1"
+       aria-label="View Advice Generator App project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-age-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921315/age-desktop-design_zthhjm.jpg"
+         alt="Age Calculator App interface showing calculated age results"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-age-title"
+        data-en="Age Calculator App"
+        data-es="App Calculadora de Edad">
+      Age Calculator App
+    </h3>
+
+    <p data-en="Calculates age with custom validation and animated results."
+       data-es="Calcula la edad con validación personalizada y resultados animados.">
+      Calculates age with custom validation and animated results.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">Forms</span>
+      <span role="listitem">UI</span>
+    </div>
+
+    <a href="pages/projects pages/age-calculator.html"
+       class="portfolio-button-1"
+       aria-label="View Age Calculator App project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-clock-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921297/25_5_Clock_p57sxt.jpg"
+         alt="25 plus 5 clock Pomodoro timer interface showing session and break controls"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-clock-title"
+        data-en="25 + 5 Clock"
+        data-es="Reloj 25 + 5">
+      25 + 5 Clock
+    </h3>
+
+    <p data-en="Pomodoro timer with session control and keyboard interaction."
+       data-es="Temporizador Pomodoro con control de sesión y navegación por teclado.">
+      Pomodoro timer with session control and keyboard interaction.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">React</span>
+      <span role="listitem">Timer</span>
+      <span role="listitem">UX</span>
+    </div>
+
+    <a href="pages/projects pages/25-5-clock.html"
+       class="portfolio-button-1"
+       aria-label="View 25 plus 5 Clock project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-calculator-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921347/JavaScript_Calculator_jcwsp4.jpg"
+         alt="JavaScript calculator interface with retro design and keypad"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-calculator-title"
+        data-en="JavaScript Calculator"
+        data-es="Calculadora de JavaScript">
+      JavaScript Calculator
+    </h3>
+
+    <p data-en="Retro-style calculator with real-time evaluation and keyboard support."
+       data-es="Calculadora de estilo retro con evaluación en tiempo real y soporte para teclado.">
+      Retro-style calculator with real-time evaluation and keyboard support.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">React</span>
+      <span role="listitem">Bootstrap</span>
+      <span role="listitem">Logic</span>
+    </div>
+
+    <a href="pages/projects pages/project-calculator.html"
+       class="portfolio-button-1"
+       aria-label="View JavaScript Calculator project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-barber-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1769005878/main-image_jbetwv.jpg"
+         alt="Barbershop website homepage showing modern layout and branding"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-barber-title"
+        data-en="Barbershop Website"
+        data-es="Sitio Web de Barbería">
+      Barbershop Website
+    </h3>
+
+    <p data-en="Modern business website showcasing services, projects, and client trust."
+       data-es="Sitio web moderno que destaca servicios, proyectos y confianza de clientes.">
+      Clean and modern business site with strong branding and smooth navigation.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">HTML</span>
+      <span role="listitem">CSS</span>
+      <span role="listitem">UX</span>
+    </div>
+
+    <a href="pages/projects pages/project-barber.html"
+       class="portfolio-button-1"
+       aria-label="View Barbershop Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-construction2-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1771957027/main-image-workers_x6wygh.png"
+         alt="Construction website layout featuring workers and structured content sections"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-construction2-title"
+        data-en="Construction Website"
+        data-es="Sitio Web de Construcción">
+      Construction Website
+    </h3>
+
+    <p data-en="Structured layout focused on usability, hierarchy, and clean UI."
+       data-es="Diseño estructurado enfocado en usabilidad, jerarquía y UI limpia.">
+      Structured layout focused on usability, hierarchy, and clean UI.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">Grid</span>
+      <span role="listitem">Flexbox</span>
+      <span role="listitem">Responsive</span>
+    </div>
+
+    <a href="pages/projects pages/project-construction.html"
+       class="portfolio-button-1"
+       aria-label="View Construction Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-cinema-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1769525983/events-9_sr8r7g.jpg"
+         alt="Cinema website interface with streaming-style layout and movie content sections"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-cinema-title"
+        data-en="Cinema Website"
+        data-es="Sitio Web de Cine">
+      Cinema Website
+    </h3>
+
+    <p data-en="Immersive streaming-style UI with animations and interactive carousels."
+       data-es="UI de estilo de transmisión inmersiva con animaciones y carruseles interactivos.">
+      Immersive streaming-style UI with animations and interactive carousels.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">GSAP</span>
+      <span role="listitem">Animations</span>
+    </div>
+
+    <a href="pages/projects pages/project-cine.html"
+       class="portfolio-button-1"
+       aria-label="View Cinema Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
   </div>
 
-  <div class="portfolio-tech">
-    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
-    <ul class="tech-list">
-      <li data-en="HTML5 (semantic structure)" data-es="HTML5 (estructura semántica)">HTML5 (semantic structure)</li>
-      <li data-en="CSS3 (custom styling with neon effects)" data-es="CSS3 (estilo personalizado con efectos neón)">CSS3 (custom styling with neon effects)</li>
-      <li data-en="JavaScript (API integration and DOM updates)" data-es="JavaScript (integración de API y actualizaciones de DOM)">JavaScript (API integration and DOM updates)</li>
-      <li data-en="Advice Slip API (live advice fetching)" data-es="Advice Slip API (obtención de consejos en vivo)">Advice Slip API (live advice fetching)</li>
-      <li data-en="Responsive layout & accessibility" data-es="Diseño responsivo y accesibilidad">Responsive layout & accessibility</li>
-    </ul>
-  </div>
-
-  <div class="portfolio-links">
-    <a href="https://josealfonzo92.github.io/Frontend-Mentor-Advice-Generator-App/" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of Advice Generator App" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
-    <a href="https://github.com/JoseAlfonzo92/Frontend-Mentor-Advice-Generator-App.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Advice Generator App" data-en="View Code" data-es="Ver Codigo">View Code</a>
-  </div>
-
-</div>
-
-<!-- Portfolio Item 4 – Age calculator -->
-<div class="portfolio-item-container" role="region" aria-label="Age Calculator App Project">
-  <h2 data-en="Age Calculator App" data-es="Aplicación Calculadora de Edad">Age Calculator App</h2>
-
-  <p class="portfolio-description"
-     data-en="A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input."
-     data-es="Una calculadora de edad responsiva desarrollada para un desafío de Frontend Mentor. Incluye HTML semántico, validación personalizada de formularios y animación de resultados con JavaScript. Estilizada con la fuente Poppins, sombras suaves y un diseño amigable, la app calcula la edad en años, meses y días según la entrada del usuario.">
-    A responsive age calculator built for a Frontend Mentor challenge. It features semantic HTML, custom form validation, and animated result output using vanilla JavaScript. Styled with Poppins font, soft shadows, and a playful layout, the app calculates age in years, months, and days based on user input.
-  </p>
-
-  <div class="portfolio-image-wrapper">
-    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921315/age-desktop-design_zthhjm.jpg" alt="Age Calculator App preview" class="portfolio-feature-image" loading="lazy" decoding="async">
-  </div>
-
-  <div class="portfolio-tech">
-    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
-    <ul class="tech-list">
-      <li data-en="HTML5 (semantic structure)" data-es="HTML5 (estructura semántica)">HTML5 (semantic structure)</li>
-      <li data-en="CSS3 (custom styling with soft shadows)" data-es="CSS3 (estilo personalizado con sombras suaves)">CSS3 (custom styling with soft shadows)</li>
-      <li data-en="JavaScript (form validation and age logic)" data-es="JavaScript (validación de formularios y lógica de edad)">JavaScript (form validation and age logic)</li>
-      <li data-en="Frontend Mentor challenge integration" data-es="Integración de desafío Frontend Mentor">Frontend Mentor challenge integration</li>
-      <li data-en="Responsive layout & accessibility" data-es="Diseño responsivo y accesibilidad">Responsive layout & accessibility</li>
-    </ul>
-  </div>
-
-  <div class="portfolio-links">
-    <a href="https://josealfonzo92.github.io/age-calculator-app/" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of Age Calculator App" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
-    <a href="https://github.com/JoseAlfonzo92/age-calculator-app.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of Age Calculator App" data-en="View Code" data-es="Ver Codigo">View Code</a>
-  </div>
-</div>
-
-
-
-<!-- Portfolio Item 5 – 25 + 5 clock -->
-<div class="portfolio-item-container" role="region" aria-label="25 + 5 Clock Project">
-  <h2 data-en="25 + 5 Clock" data-es="Reloj 25 + 5">25 + 5 Clock</h2>
-
-  <p class="portfolio-description"
-     data-en="A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows. This project is part of the freeCodeCamp Front End Development Libraries certification, which includes five hands-on projects using Bootstrap, jQuery, Sass, React, and Redux."
-     data-es="Un temporizador estilo Pomodoro construido con React y Babel, con controles de sesión y descanso, interacción por teclado y alertas de audio. Estilizado con una estética digital retro usando la fuente Orbitron, acentos en verde neón y sombras brillantes. Este proyecto forma parte de la certificación de freeCodeCamp en Bibliotecas de Desarrollo Front-End, que incluye cinco proyectos prácticos con Bootstrap, jQuery, Sass, React y Redux.">
-    A Pomodoro-style timer built with React and Babel, featuring session and break controls, keyboard interaction, and audio alerts. Styled with a retro digital aesthetic using Orbitron font, neon green accents, and glowing shadows. This project is part of the freeCodeCamp Front End Development Libraries certification, which includes five hands-on projects using Bootstrap, jQuery, Sass, React, and Redux.
-  </p>
-
-  <div class="portfolio-image-wrapper">
-    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921297/25_5_Clock_p57sxt.jpg" alt="25 + 5 Clock preview" class="portfolio-feature-image" loading="lazy" decoding="async">
-  </div>
-
-  <div class="portfolio-tech">
-    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
-    <ul class="tech-list">
-      <li data-en="React 18 (state management and rendering)" data-es="React 18 (gestión de estado y renderizado)">React 18 (state management and rendering)</li>
-      <li data-en="Babel (JSX compilation)" data-es="Babel (compilación de JSX)">Babel (JSX compilation)</li>
-      <li data-en="Custom CSS (retro UI styling)" data-es="CSS personalizado (estilo retro de UI)">Custom CSS (retro UI styling)</li>
-      <li data-en="Orbitron font (digital aesthetic)" data-es="Fuente Orbitron (estética digital)">Orbitron font (digital aesthetic)</li>
-      <li data-en="Audio API for session alerts" data-es="Audio API para alertas de sesión">Audio API for session alerts</li>
-    </ul>
-  </div>
-
-  <div class="portfolio-links">
-    <a href="https://codepen.io/JoseAlfonzo92/pen/EajRaEg" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of 25 + 5 Clock" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
-    <a href="https://github.com/JoseAlfonzo92/25-5-clock-freecodecamp.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of 25 + 5 Clock" data-en="View Code" data-es="Ver Codigo">View Code</a>
-  </div>
-</div>
-
-<!-- Portfolio Item 6 – JavaScript Calculator Section -->
-<div class="portfolio-item-container" role="region" aria-label="JavaScript Calculator Project">
-  <h2 data-en="JavaScript Calculator" data-es="Calculadora en JavaScript">JavaScript Calculator</h2>
-
-  <p class="portfolio-description"
-     data-en="A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation."
-     data-es="Una calculadora con estilo retro desarrollada con React, Babel y Bootstrap 5, inspirada en las interfaces clásicas de los años 90. Ofrece diseño responsivo, soporte para teclado y evaluación dinámica en tiempo real.">
-    A retro-styled calculator built with React, Babel, and Bootstrap 5—designed to evoke the tactile charm of 90s interfaces. It features responsive layout, keyboard support, and dynamic input handling with real-time evaluation.
-  </p>
-
-  <div class="portfolio-image-wrapper">
-    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921347/JavaScript_Calculator_jcwsp4.jpg" alt="JavaScript Calculator preview" class="portfolio-feature-image" loading="lazy" decoding="async">
-  </div>
-
-  <div class="portfolio-tech">
-    <h3 data-en="Technologies Used" data-es="Tecnologías Utilizadas">Technologies Used</h3>
-    <ul class="tech-list">
-      <li data-en="React 18 (component logic and state)" data-es="React 18 (lógica de componentes y estado)">React 18 (component logic and state)</li>
-      <li data-en="Babel (client-side JSX compilation)" data-es="Babel (compilación de JSX del lado del cliente)">Babel (client-side JSX compilation)</li>
-      <li data-en="Bootstrap 5 (responsive layout)" data-es="Bootstrap 5 (diseño responsivo)">Bootstrap 5 (responsive layout)</li>
-      <li data-en="Custom CSS (retro styling with gradients and shadows)" data-es="CSS personalizado (estilo retro con gradientes y sombras)">Custom CSS (retro styling with gradients and shadows)</li>
-      <li data-en="Keyboard event handling and input sanitization" data-es="Manejo de eventos de teclado y sanitización de entrada">Keyboard event handling and input sanitization</li>
-    </ul>
-  </div>
-
-  <div class="portfolio-links">
-    <a href="https://codepen.io/JoseAlfonzo92/pen/yyNjKyK" class="portfolio-button" target="_blank" rel="noopener" aria-label="View demo of JavaScript Calculator" data-en="View Demo" data-es="Ver Demostración">View Demo</a>
-    <a href="https://github.com/JoseAlfonzo92/javascript-calculator-freecodecamp.git" class="portfolio-button" target="_blank" rel="noopener" aria-label="View source code of JavaScript Calculator" data-en="View Code" data-es="Ver Codigo">View Code</a>
-  </div>
-</div>
-
-</div>
-
-<div class="portfolio-slider-controls" role="navigation" aria-label="Portfolio Slider Controls">
-  <button class="slider-prev" aria-label="Previous project">&#10094;</button>
-  <button class="slider-next" aria-label="Next project">&#10095;</button>
-</div>
 </section>
 
 <!-- CTA section -->

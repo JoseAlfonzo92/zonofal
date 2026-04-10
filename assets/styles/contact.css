@@ -140,7 +140,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 50px auto;
-  height: 900px;
+  min-height: 900px; /* 👈 allows flexibility */
   padding: 30px;
   background-color: var(--Background-Color);
   border-radius: 8px;
@@ -581,4 +581,89 @@ textarea.error {
   }
 
 
+}
+
+
+
+
+
+/* Animations */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Transition container */
+.contact-content {
+  transition: all 0.4s ease;
+}
+
+/* Fade out left + form */
+.contact-content.success-state .contact-message,
+.contact-content.success-state form {
+  animation: fadeOut 0.4s ease forwards;
+}
+
+.contact-content.success-state .contact-message,
+.contact-content.success-state form {
+  display: none; 
+}
+
+/* Switch to centered layout */
+.contact-content.success-state {
+  display: flex;                
+  flex-direction: column;
+  justify-content: center;     
+  align-items: center;          
+  text-align: center;
+  min-height: 500px;
+}
+
+/* Hide elements after animation */
+.contact-content.success-state .contact-message,
+.contact-content.success-state form {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Thank you message base */
+#thank-you-message {
+  opacity: 0;
+  transform: translateY(10px);
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#thank-you-message {
+  display: none;
+}
+
+#thank-you-message.show {
+  display: block;
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+
+/* Improve typography */
+#thank-you-message h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#thank-you-message p {
+  font-size: 1.1rem;
+  line-height: 1.5;
 }

@@ -46,7 +46,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 15px 40px;
+  padding: 5px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -735,9 +735,9 @@ p.fade-in {
 }
 
 .btn.primary {
-  background: none;
-  border: 1px solid var(--Secondary-Background-Color);
-  color: var(--Secondary-Background-Color);
+  background-color: var(--Background-Color);
+  
+  color: var(--Text-Color);
 }
 
 .btn.secondary {
@@ -747,8 +747,8 @@ p.fade-in {
 }
 
 .btn:hover {
-  background-color: var(--Background-Color);
-  color: var(--Text-Color);
+  background: none;
+  color: var(--Background-Color);
   border: 1px solid var(--Background-Color);
 }
 
@@ -795,7 +795,7 @@ a.cta-button:hover {
   justify-content: center;
   gap: 2rem;
   margin: 0 auto;
-  row-gap: 3rem; /* Adds vertical spacing when items wrap */
+  row-gap: 3rem; 
 }
 
 /* Left Column: Logo + Newsletter */
@@ -1028,7 +1028,7 @@ a.cta-button:hover {
 
     header{
 
-        padding: 15px 10px;
+        padding: 5px 10px;
     }
 
 

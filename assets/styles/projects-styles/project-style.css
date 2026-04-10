@@ -35,6 +35,42 @@
   margin-top: 1rem;
 }
 
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 6px;
+  font-family: var(--Inter-font-family);
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid var(--Text-Color);
+  color: var(--Text-Color);
+  transition: all 0.3s ease;
+}
+
+.project-btn.primary {
+  background-color: var(--Text-Color);
+  color: var(--Background-Color);
+  border: none;
+}
+
+.project-btn.primary:hover {
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
+  border: 1px solid var(--Text-Color);
+}
+
+.project-btn.secondary:hover {
+  background-color: var(--Text-Color);
+  color: var(--Background-Color);
+}
+
 /* project item body section */
 .project-item-body {
   max-width: 900px;
@@ -178,7 +214,7 @@
 /* wrapper */
 .wrapper {
   padding: 100px 0;
-  width: 900px; /* bigger desktop */
+  width: 900px; 
   margin: 0 auto;
 }
 
@@ -186,7 +222,7 @@
 .slider {
   position: relative;
   display: flex;
-  justify-content: center; /* center content */
+  justify-content: center; 
   align-items: center;
 }
 
@@ -289,7 +325,7 @@
 
 
 /* video styles */
-.gallery-video video {
+/* .gallery-video video {
   margin-top: 50px;
   width: 100%;
   max-width: 800px;
@@ -298,11 +334,50 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.gallery-video {
+  width: 100%;
+  max-width: 900px; 
+  margin: 3rem auto;
 }
+
+.gallery-video iframe {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  /* max-width: 100%; */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 .gallery-video video:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
+
+
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 /* team section */
@@ -505,6 +580,3 @@
 
 
 }
-
-
-

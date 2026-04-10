@@ -97,71 +97,154 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial setup
   switchLanguage(currentLanguage);
 
-  //  Contact form validation and submission
-  if (contactForm) {
-    contactForm.addEventListener("submit", e => {
-      e.preventDefault();
-      const form = e.target;
-      let valid = true;
+ // Contact form validation and submission
+if (contactForm) {
+  contactForm.addEventListener("submit", e => {
+    e.preventDefault();
 
-      // Clear previous errors
-      form.querySelectorAll(".error-message").forEach(msg => msg.remove());
-      form.querySelectorAll("input, textarea").forEach(field => field.classList.remove("error"));
+    const form = e.target;
+    let valid = true;
 
-      const requiredFields = ["name", "email", "message"];
-      requiredFields.forEach(id => {
-        const field = form.querySelector(`#${id}`);
-        if (!field.value.trim()) {
-          valid = false;
-          field.classList.add("error");
-          const error = document.createElement("div");
-          error.className = "error-message";
-          const label = field.dataset[currentLanguage] || field.name;
-          error.textContent = currentLanguage === "es"
-            ? `${label} es obligatorio.`
-            : `${label} is required.`;
-          field.insertAdjacentElement("afterend", error);
-        }
-      });
+    const submitBtn = form.querySelector("button[type='submit']");
 
-      const email = form.querySelector("#email");
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (email.value && !emailRegex.test(email.value)) {
+    // Clear previous errors
+    form.querySelectorAll(".error-message").forEach(msg => msg.remove());
+    form.querySelectorAll("input, textarea").forEach(field => {
+      field.classList.remove("error");
+      field.removeAttribute("aria-invalid");
+      field.removeAttribute("aria-describedby");
+    });
+
+    const requiredFields = ["name", "email", "message"];
+
+    requiredFields.forEach(id => {
+      const field = form.querySelector(`#${id}`);
+
+      if (!field.value.trim()) {
         valid = false;
-        email.classList.add("error");
+
+        field.classList.add("error");
+        field.setAttribute("aria-invalid", "true");
+
         const error = document.createElement("div");
         error.className = "error-message";
-        error.textContent = currentLanguage === "es"
+
+        const errorId = `${id}-error`;
+        error.id = errorId;
+
+        const label =
+          field.dataset[currentLanguage] ||
+          field.placeholder ||
+          field.name;
+
+        error.textContent =
+          currentLanguage === "es"
+            ? `${label} es obligatorio.`
+            : `${label} is required.`;
+
+        field.setAttribute("aria-describedby", errorId);
+        field.insertAdjacentElement("afterend", error);
+      }
+    });
+
+    // Email validation
+    const email = form.querySelector("#email");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email.value && !emailRegex.test(email.value)) {
+      valid = false;
+
+      email.classList.add("error");
+      email.setAttribute("aria-invalid", "true");
+
+      const error = document.createElement("div");
+      error.className = "error-message";
+
+      const errorId = "email-error";
+      error.id = errorId;
+
+      error.textContent =
+        currentLanguage === "es"
           ? "Por favor ingrese una dirección de correo válida."
           : "Please enter a valid email address.";
-        email.insertAdjacentElement("afterend", error);
-      }
 
-      if (valid) {
-        fetch(form.action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        })
-        .then(() => {
-          form.style.display = "none";
-          const thankYou = document.getElementById("thank-you-message");
-          if (thankYou) {
-            thankYou.textContent = currentLanguage === "es"
-              ? "¡Gracias! Tu mensaje ha sido enviado."
-              : "Thank you! Your message has been sent.";
-            thankYou.style.display = "block";
-          }
-        })
-        .catch(() => {
-          alert(currentLanguage === "es"
+      email.setAttribute("aria-describedby", errorId);
+      email.insertAdjacentElement("afterend", error);
+    }
+
+    // Focus first error
+    if (!valid) {
+      form.querySelector(".error")?.focus();
+      return;
+    }
+
+    // Disable button while sending
+    submitBtn.disabled = true;
+    submitBtn.textContent =
+      currentLanguage === "es" ? "Enviando..." : "Sending...";
+
+    // Submit form
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    })
+     .then(() => {
+  const container = document.querySelector(".contact-content");
+  const thankYou = document.getElementById("thank-you-message");
+
+  // Trigger layout transition
+  container.classList.add("success-state");
+
+  const title = thankYou.querySelector("h3");
+  const message = thankYou.querySelector("p");
+
+  if (currentLanguage === "es") {
+    if (title) title.textContent = "¡Gracias!";
+    if (message)
+      message.textContent =
+        "Tu mensaje ha sido enviado correctamente.";
+  } else {
+    if (title) title.textContent = "Thank you!";
+    if (message)
+      message.textContent =
+        "Your message has been sent successfully.";
+  }
+
+  // Show message (no display:none)
+  thankYou.classList.add("show");
+})
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent =
+          currentLanguage === "es"
+            ? "Enviar Mensaje"
+            : "Send Message";
+
+        alert(
+          currentLanguage === "es"
             ? "Algo salió mal. Por favor intenta nuevamente más tarde."
-            : "Something went wrong. Please try again later.");
-        });
+            : "Something went wrong. Please try again later."
+        );
+      });
+  });
+
+  // Optional: live email validation on blur
+  const email = contactForm.querySelector("#email");
+  if (email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    email.addEventListener("blur", () => {
+      if (email.value && !emailRegex.test(email.value)) {
+        email.classList.add("error");
+        email.setAttribute("aria-invalid", "true");
+      } else {
+        email.classList.remove("error");
+        email.removeAttribute("aria-invalid");
       }
     });
   }
-
+}
  // FAQ toggle
 faqButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -261,7 +344,7 @@ faqButtons.forEach(button => {
   }, 500);
 
   // Portfolio slider
-  let currentIndex = 0;
+ /*  let currentIndex = 0;
   const updateSlider = () => {
     if (sliderTrack) sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
   };
@@ -275,10 +358,10 @@ faqButtons.forEach(button => {
       currentIndex = (currentIndex + 1) % slides.length;
       updateSlider();
     });
-  }
+  } */
 
   // Touch swipe support
-  let startX = 0;
+  /* let startX = 0;
   if (sliderTrack) {
     sliderTrack.addEventListener('touchstart', e => startX = e.touches[0].clientX);
     sliderTrack.addEventListener('touchend', e => {
@@ -290,7 +373,7 @@ faqButtons.forEach(button => {
         updateSlider();
       }
     });
-  }
+  } */
 
   // Image gallery slider
   if (slider && images.length) {
@@ -326,7 +409,7 @@ faqButtons.forEach(button => {
 
   
 
-}); // End DOMContentLoaded
+});
 
 
 // Header scroll behavior 

@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 <!-- Font Awesome 7 CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- favicon -->
 <!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
@@ -158,7 +158,7 @@
         <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
         <h3 data-en="Email" data-es="Correo Electrónico">Email</h3>
         <p>
-          <a href="mailto:zonofal@gmail.com">zonofal@gmail.com</a>
+          <a href="mailto:hello@zonofal.com">hello@zonofal.com</a>
         </p>
       </div>
 
@@ -200,14 +200,16 @@
     <!-- Right Contact Form -->
     <div class="form-wrapper">
       <form id="contact-form"
-            action="https://formsubmit.co/josealfonzo792@gmail.com"
+            action="https://formsubmit.co/hello@zonofal.com"
             method="POST"
             novalidate>
 
+        <!-- FormSubmit Config -->
         <input type="hidden" name="_subject" value="New Contact Form Submission">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_captcha" value="true"> 
+        <input type="hidden" name="_template" value="table"> 
         <input type="hidden" name="_next" value="">
-        <input type="text" name="_honey" style="display:none" aria-hidden="true">
+        <input type="text" name="_honey" hidden aria-hidden="true"> 
 
         <!-- Name -->
         <label for="name" class="visually-hidden"
@@ -219,6 +221,7 @@
                placeholder="Your Name"
                data-en="Your Name"
                data-es="Tu Nombre"
+               autocomplete="name"
                required>
 
         <!-- Email -->
@@ -231,6 +234,7 @@
                placeholder="Your Email"
                data-en="Your Email"
                data-es="Tu Correo"
+               autocomplete="email"
                required>
 
         <!-- Phone (Optional) -->
@@ -242,7 +246,8 @@
                name="phone"
                placeholder="Your Phone (Optional)"
                data-en="Your Phone (Optional)"
-               data-es="Tu Teléfono (Opcional)">
+               data-es="Tu Teléfono (Opcional)"
+               autocomplete="tel">
 
         <!-- Message -->
         <label for="message" class="visually-hidden"
@@ -261,12 +266,14 @@
                 data-es="Enviar Mensaje">
           Send Message
         </button>
+
       </form>
 
       <!-- Thank You Message -->
       <div id="thank-you-message"
-           style="display: none;"
-           aria-live="polite">
+     class="hidden"
+     aria-live="polite"
+     role="status">
 
         <h3 data-en="Thank You!" data-es="¡Gracias!">Thank You!</h3>
 
@@ -279,7 +286,6 @@
 
   </div>
 </section>
-
 
 <!-- Location & Availability Section -->
 <section id="location" class="location-section" role="region" aria-labelledby="location-heading" aria-label="Location and Availability">
