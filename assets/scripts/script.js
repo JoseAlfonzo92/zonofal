@@ -185,10 +185,9 @@ if (contactForm) {
 
     // Submit form
     fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" }
-    })
+  method: "POST",
+  body: new URLSearchParams(new FormData(form))
+})
      .then(() => {
   const container = document.querySelector(".contact-content");
   const thankYou = document.getElementById("thank-you-message");
