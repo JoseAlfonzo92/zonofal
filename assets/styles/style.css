@@ -525,8 +525,8 @@ p.fade-in {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.8rem 1.6rem;
-  background: var(--Secondary-Background-Color);
-  color: var(--Text-Color);
+  background: var(--Text-Color);
+  color: var(--Background-Color);
   border: 1px solid var(--Text-Color);
   font-weight: 500;
   border-radius: 5px;
@@ -536,8 +536,8 @@ p.fade-in {
 
 /* Hover effect for all CTA buttons */
 .hero-section .cta-button:hover {
-  background-color: var(--Text-Color);
-  color: var(--Secondary-Background-Color);
+  background-color: var(--Background-Color);
+  color: var(--Text-Color);
   border: 1px solid var(--Text-Color);
   transform: translateY(-2px);
 }
