@@ -1,5 +1,4 @@
 /* ui ux page */
-
 /* introduction section */
 .uxui-header-section {
   padding: 4rem 2rem;
@@ -30,9 +29,6 @@
   max-width: 800px;
   margin: 0 auto;
 }
-
-
-
 
 /* feature section */
 
@@ -97,8 +93,6 @@ h2{
   margin-bottom: 0.75rem;
   text-align: center;
 }
-
-
 
 /* how it works section */
 .process-section {
@@ -191,8 +185,6 @@ h2{
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .gallery-item img {
   width: 100%;
   height: 250px;
@@ -217,8 +209,6 @@ h2{
   color: var(--Text-Color);
   line-height: 1.6;
 }
-
-
 
 @media (max-width: 768px) {
   /* introduction section */
@@ -295,6 +285,4 @@ h2{
   .gallery-item p {
     font-size: 0.95rem;
   }
-
-
 }

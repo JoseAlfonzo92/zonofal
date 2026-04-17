@@ -1,6 +1,5 @@
 /* web development page */
 /* introduction section */
-
 .webdev-header-section {
   padding: 4rem 2rem;
   background-color: var(--Background-Color);
@@ -30,10 +29,6 @@
   max-width: 800px;
   margin: 0 auto;
 }
-
-
-
-
 
 /* feature section */
 
@@ -107,8 +102,6 @@ h2{
   opacity: 1;
   transform: translateY(0);
 }
-
-
 
 /* how it works section */
 

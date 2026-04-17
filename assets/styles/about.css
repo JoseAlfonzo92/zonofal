@@ -1,6 +1,4 @@
-
 /* about us introduction section */
-
 .about-content {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -74,7 +72,6 @@
   text-align: center;
   margin-bottom: 0.75rem;
 }
-
 
 /* about us section  */
 .about-history-section {
@@ -166,9 +163,6 @@
   opacity: 1;
   transform: translateY(var(--step-offset, 0)) scale(1);
 }
-
-
-
 
 /* team section */
 /* .team-section {
@@ -273,10 +267,7 @@
 }
  */
 
-
-
-
-/* FAQs section */
+ /* FAQs section */
 .faqs-section {
   max-width: 800px;
   margin: 10rem auto;
@@ -363,7 +354,6 @@
   transform: scaleX(1);
 }
 
-
 /* Accordion toggle logic */
 .faq-question[aria-expanded="true"] + .faq-answer {
   max-height: 500px; 
@@ -390,11 +380,9 @@
   transition: transform 0.3s ease;
 }
 
-
 @media (max-width: 768px) {
 
   /* introduction section */
-
   .about-content {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -452,9 +440,7 @@
     text-align: center;
   }
 
-
   /* about us section */
-
   .about-history-section {
     padding: 3rem 1.5rem;
     margin-top: 60px;
@@ -501,7 +487,6 @@
   .timeline-item p {
     font-size: 0.95rem;
   }
-
 
   /* team section */
   
@@ -581,14 +566,11 @@
   .faqs-link {
     font-size: 0.95rem;
   }
-
-
 }
-
 
 /* testing */
 
-/* Founder Card (single container now) */
+/* Founder Card single container now */
 /* Founder Section */
 .founder-section {
   padding: 4rem 2rem;
@@ -675,7 +657,6 @@
   border-radius: 25px;
   padding: 0.5rem;
 }
-
 
 .founder-socials a:hover {
   color: var(--Accent-Color);
