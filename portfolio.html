@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zonofal - Portfolio | Explore a curated selection of projects that reflect our approach to modular design, semantic code, and user-centered development. From responsive templates to UX challenges, each piece is built with clarity, accessibility, and performance in mind.">
+<title data-en="Zonofal – Portfolio" data-es="Zonofal – Portafolio">Zonofal</title>
+<link rel="stylesheet" href="assets/styles/style.css">
+<link rel="stylesheet" href="assets/styles/portfolio.css">
+ 
+<!-- google font family nunito-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- google font family inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 7 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- favicon -->
+<!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+
+</head>
+<body>
+
+ <!-- Header Section -->
+<header id="header" role="banner" aria-labelledby="header-title">
+
+  <!-- Logo -->
+  <a href="index.html" class="logo" aria-label="Zonofal Home">
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zonofal_3_kku3mr.png" alt="Zonofal Logo" class="logo-img">
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-links">
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+
+      <!-- Dropdown toggle -->
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="more-links" aria-label="Toggle More Links">
+          <svg class="dropdown-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Language Selector -->
+    <div class="language-selector desktop-only">
+      <button class="language-toggle" id="language-toggle" aria-label="Change Language">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="visually-hidden">Change Language</span>
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (outside nav) -->
+  <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="Additional Links">
+    <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
+    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    <li><a href="index.html" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Mobile Menu" aria-controls="mobile-menu" aria-expanded="false">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+      <line class="line-top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="line-middle" x1="4" y1="12" x2="20" y2="12" />
+      <line class="line-bottom" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <ul>
+      <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="ux-ui.html">UX/UI</a></li>
+      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Portfolio Item Header Section -->
+<section class="portfolio-header-section" role="region" aria-labelledby="portfolio-heading" aria-label="Portfolio Introduction">
+  <div class="portfolio-header-content">
+    <h2 id="portfolio-heading"
+        data-en="Portfolio"
+        data-es="Portafolio">
+      Portfolio
+    </h2>
+    <p class="portfolio-intro"
+       data-en="Explore a curated selection of projects that reflect our approach to modular design, semantic code, and user-centered development. From responsive templates to UX challenges, each piece is built with clarity, accessibility, and performance in mind."
+       data-es="Explora una selección de proyectos que reflejan nuestro enfoque en diseño modular, código semántico y desarrollo centrado en el usuario. Desde plantillas responsivas hasta desafíos de UX, cada pieza está construida con claridad, accesibilidad y rendimiento.">
+      Explore a curated selection of projects that reflect our approach to modular design, semantic code, and user-centered development. From responsive templates to UX challenges, each piece is built with clarity, accessibility, and performance in mind.
+    </p>
+  </div>
+</section>
+
+<hr class="section-divider" aria-hidden="true">
+
+<section class="portfolio-list-section" role="region" aria-labelledby="portfolio-list-heading">
+
+  <h2 id="portfolio-list-heading" data-en="Portfolio Projects" data-es="Proyectos del Portafolio">
+  Portfolio Projects
+</h2>
+
+<div class="portfolio-grid" role="list">
+
+  <!-- ITEM -->
+  <article class="portfolio-item" role="listitem" aria-labelledby="project-burger-title">
+    <figure>
+      <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921325/burger-website_wmfw62.jpg"
+           alt="Homepage of Burger Restaurant Website"
+           class="portfolio-thumb"
+           loading="lazy"
+           decoding="async">
+    </figure>
+
+    <div class="portfolio-info">
+      <h3 id="project-burger-title"
+          data-en="Burger Restaurant Website"
+          data-es="Sitio web de Restaurante Burger">
+        Burger Restaurant Website
+      </h3>
+
+      <!-- SHORT description only -->
+      <p data-en="Responsive restaurant UI with filtering, video features, and modern UX."
+         data-es="Interfaz de restaurante responsive con filtrado, funciones de video y UX moderna.">
+        Responsive restaurant UI with filtering, video features, and modern UX.
+      </p>
+
+      <!-- OPTIONAL TAGS -->
+      <div class="portfolio-tags" role="list" aria-label="Technologies used">
+        <span role="listitem">HTML</span>
+        <span role="listitem">CSS</span>
+        <span role="listitem">JavaScript</span>
+      </div>
+
+      <a href="pages/projects pages/project-burger.html"
+         class="portfolio-button-1"
+         aria-label="View Burger Restaurant Website project"
+         data-en="View Project"
+         data-es="Ver Proyecto">
+        View Project
+      </a>
+    </div>
+  </article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-construction1-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921334/constructed-website_hy7ndr.jpg"
+         alt="Homepage of Construction Company Website"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-construction1-title"
+        data-en="Construction Company Website"
+        data-es="Sitio web de Empresa de Construcción">
+      Construction Company Website
+    </h3>
+
+    <p data-en="Modern business website showcasing services, projects, and client trust."
+       data-es="Sitio web moderno que destaca servicios, proyectos y confianza de clientes.">
+      Modern business website showcasing services, projects, and client trust.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">HTML</span>
+      <span role="listitem">CSS</span>
+      <span role="listitem">JavaScript</span>
+    </div>
+
+    <a href="pages/projects pages/construction-website.html"
+       class="portfolio-button-1"
+       aria-label="View Construction Company Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-advice-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921336/desktop-design-advice_yue3nl.jpg"
+         alt="Advice Generator App interface displaying a random advice card"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-advice-title"
+        data-en="Advice Generator App"
+        data-es="App Generadora de Consejos">
+      Advice Generator App
+    </h3>
+
+    <p data-en="Interactive app that fetches random advice with smooth UI transitions."
+       data-es="App interactiva que obtiene consejos aleatorios con transiciones de interfaz suaves.">
+      Interactive app that fetches random advice with smooth UI transitions.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">API</span>
+      <span role="listitem">Responsive</span>
+    </div>
+
+    <a href="pages/projects pages/advice-generator.html"
+       class="portfolio-button-1"
+       aria-label="View Advice Generator App project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-age-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921315/age-desktop-design_zthhjm.jpg"
+         alt="Age Calculator App interface showing calculated age results"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-age-title"
+        data-en="Age Calculator App"
+        data-es="App Calculadora de Edad">
+      Age Calculator App
+    </h3>
+
+    <p data-en="Calculates age with custom validation and animated results."
+       data-es="Calcula la edad con validación personalizada y resultados animados.">
+      Calculates age with custom validation and animated results.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">Forms</span>
+      <span role="listitem">UI</span>
+    </div>
+
+    <a href="pages/projects pages/age-calculator.html"
+       class="portfolio-button-1"
+       aria-label="View Age Calculator App project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-clock-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921297/25_5_Clock_p57sxt.jpg"
+         alt="25 plus 5 clock Pomodoro timer interface showing session and break controls"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-clock-title"
+        data-en="25 + 5 Clock"
+        data-es="Reloj 25 + 5">
+      25 + 5 Clock
+    </h3>
+
+    <p data-en="Pomodoro timer with session control and keyboard interaction."
+       data-es="Temporizador Pomodoro con control de sesión y navegación por teclado.">
+      Pomodoro timer with session control and keyboard interaction.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">React</span>
+      <span role="listitem">Timer</span>
+      <span role="listitem">UX</span>
+    </div>
+
+    <a href="pages/projects pages/25-5-clock.html"
+       class="portfolio-button-1"
+       aria-label="View 25 plus 5 Clock project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-calculator-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921347/JavaScript_Calculator_jcwsp4.jpg"
+         alt="JavaScript calculator interface with retro design and keypad"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-calculator-title"
+        data-en="JavaScript Calculator"
+        data-es="Calculadora de JavaScript">
+      JavaScript Calculator
+    </h3>
+
+    <p data-en="Retro-style calculator with real-time evaluation and keyboard support."
+       data-es="Calculadora de estilo retro con evaluación en tiempo real y soporte para teclado.">
+      Retro-style calculator with real-time evaluation and keyboard support.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">React</span>
+      <span role="listitem">Bootstrap</span>
+      <span role="listitem">Logic</span>
+    </div>
+
+    <a href="pages/projects pages/project-calculator.html"
+       class="portfolio-button-1"
+       aria-label="View JavaScript Calculator project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-barber-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1769005878/main-image_jbetwv.jpg"
+         alt="Barbershop website homepage showing modern layout and branding"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-barber-title"
+        data-en="Barbershop Website"
+        data-es="Sitio Web de Barbería">
+      Barbershop Website
+    </h3>
+
+    <p data-en="Modern business website showcasing services, projects, and client trust."
+       data-es="Sitio web moderno que destaca servicios, proyectos y confianza de clientes.">
+      Clean and modern business site with strong branding and smooth navigation.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">HTML</span>
+      <span role="listitem">CSS</span>
+      <span role="listitem">UX</span>
+    </div>
+
+    <a href="pages/projects pages/project-barber.html"
+       class="portfolio-button-1"
+       aria-label="View Barbershop Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-construction2-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1771957027/main-image-workers_x6wygh.png"
+         alt="Construction website layout featuring workers and structured content sections"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-construction2-title"
+        data-en="Construction Website"
+        data-es="Sitio Web de Construcción">
+      Construction Website
+    </h3>
+
+    <p data-en="Structured layout focused on usability, hierarchy, and clean UI."
+       data-es="Diseño estructurado enfocado en usabilidad, jerarquía y UI limpia.">
+      Structured layout focused on usability, hierarchy, and clean UI.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">Grid</span>
+      <span role="listitem">Flexbox</span>
+      <span role="listitem">Responsive</span>
+    </div>
+
+    <a href="pages/projects pages/project-construction.html"
+       class="portfolio-button-1"
+       aria-label="View Construction Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+<!-- ITEM -->
+<article class="portfolio-item" role="listitem" aria-labelledby="project-cinema-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1769525983/events-9_sr8r7g.jpg"
+         alt="Cinema website interface with streaming-style layout and movie content sections"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-cinema-title"
+        data-en="Cinema Website"
+        data-es="Sitio Web de Cine">
+      Cinema Website
+    </h3>
+
+    <p data-en="Immersive streaming-style UI with animations and interactive carousels."
+       data-es="UI de estilo de transmisión inmersiva con animaciones y carruseles interactivos.">
+      Immersive streaming-style UI with animations and interactive carousels.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">GSAP</span>
+      <span role="listitem">Animations</span>
+    </div>
+
+    <a href="pages/projects pages/project-cine.html"
+       class="portfolio-button-1"
+       aria-label="View Cinema Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+<!-- ITEM -->
+ <article class="portfolio-item" role="listitem" aria-labelledby="project-realestate-title">
+  <figure>
+    <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1776967817/real-state-screenshot-1_c9gm8m.png"
+         alt="Real estate website with property listings, carousel and modern UI"
+         class="portfolio-thumb"
+         loading="lazy"
+         decoding="async">
+  </figure>
+
+  <div class="portfolio-info">
+    <h3 id="project-realestate-title"
+        data-en="Real Estate Website"
+        data-es="Sitio Web Inmobiliario">
+      Real Estate Website
+    </h3>
+
+    <p data-en="Modern real estate platform with property search, carousel, and interactive UI components."
+       data-es="Plataforma inmobiliaria moderna con búsqueda de propiedades, carrusel y componentes interactivos.">
+      Modern real estate platform with property search, carousel, and interactive UI components.
+    </p>
+
+    <div class="portfolio-tags" role="list" aria-label="Technologies used">
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">CSS</span>
+      <span role="listitem">Responsive Design</span>
+    </div>
+
+    <a href="pages/projects pages/real-state-project.html"
+       class="portfolio-button-1"
+       aria-label="View Real Estate Website project"
+       data-en="View Project"
+       data-es="Ver Proyecto">
+      View Project
+    </a>
+  </div>
+</article>
+
+  </div>
+
+</section>
+
+<!-- CTA section -->
+<section class="cta-section" role="region" aria-labelledby="cta-heading" aria-label="Call to Action Section">
+  <div class="cta-container">
+    <h2 id="cta-heading" 
+        data-en="Let’s Build Something Great Together" 
+        data-es="Construyamos Algo Genial Juntos">
+      Let’s Build Something Great Together
+    </h2>
+
+    <p class="cta-text" 
+       data-en="Whether you're planning a new project or need expert advice, we're here to help. Let's talk about how we can bring your ideas to life." 
+       data-es="Ya sea que estés planeando un nuevo proyecto o necesites asesoramiento experto, estamos aquí para ayudarte. Hablemos sobre cómo podemos dar vida a tus ideas.">
+      Whether you're planning a new project or need expert advice, we're here to help. Let's talk about how we can bring your ideas to life.
+    </p>
+
+    <a href="contact.html" class="cta-button" 
+       data-en="Start a Conversation" 
+       data-es="Iniciar una Conversación"
+       aria-label="Start a conversation about your project">
+      Start a Conversation
+    </a>
+  </div>
+</section>
+
+<hr class="section-footer-divider" aria-hidden="true">
+
+<!-- Footer Section -->
+<footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
+  <div class="footer-content">
+
+    <!-- div to locate the logo and newsletter to the left -->
+  <!-- Logo and Newsletter -->
+    <div>
+      <!-- Footer Logo -->
+      <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
+        <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zonofal_3_kku3mr.png" alt="Zonofal Logo" class="logo-img-footer">
+      </a>
+
+
+     <!-- Brand Statement -->
+<div class="footer-section footer-message" aria-labelledby="brand-footer-heading">
+  <p
+    data-en="Zonofal is built with privacy and transparency in mind. Your information is only used when you choose to contact us. We never sell your personal data."
+    data-es="Zonofal está construido pensando en la privacidad y la transparencia. Tu información solo se utiliza cuando decidís contactarnos; nunca vendemos tus datos personales.">
+    Zonofal is built with privacy and transparency in mind. Your information is only used when you choose to contact us. We never sell your personal data.
+  </p>
+</div>
+      
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-section navigation-links" role="navigation" aria-label="Quick Links">
+      <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section navigation-links" role="navigation" aria-label="Resources">
+      <h3 data-en="Resources" data-es="Recursos">Resources</h3>
+      <ul>
+        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carreras">Careers</a></li>
+        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      </ul>
+    </div>
+
+  <!-- Social Media Links -->
+    <div class="footer-section social-media" aria-labelledby="social-heading">
+      <h3 id="social-heading" data-en="Stay Connected" data-es="Mantente en Línea">Stay Connected</h3>
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-alfonzo-09a808404/" target="_blank" class="social-icon-footer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="social-name">LinkedIn</span>
+        </a>
+        <a href="https://www.facebook.com/Zonofal" target="_blank" class="social-icon-footer" aria-label="Facebook">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          <span class="social-name">Facebook</span>
+        </a>
+        
+        <a href="https://www.instagram.com/" target="_blank" class="social-icon-footer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/542657651038?text=Hola%20quiero%20consultar%20sobre%20desarrollo%20web" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-icon-footer" 
+          aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span class="social-name">WhatsApp</span>
+        </a>
+        <a href="https://x.com/zonofal80241" target="_blank" class="social-icon-footer" aria-label="X">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          <span class="social-name">X</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Language Selector for Mobile -->
+    <div class="footer-section language-selector mobile-only">
+      <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
+        ES
+      </button>
+      <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
+    </div>
+
+    <!-- to separate the sections -->
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <!-- Credits -->
+      <div class="footer-section credits">
+        <p data-en="© 2026 Zonofal. All Rights Reserved." data-es="© 2026 Zonofal. Todos los derechos reservados.">
+          © 2026 Zonofal. All Rights Reserved.
+        </p>
+      </div>
+
+      <!-- Privacy Policy and Terms of Service -->
+      <div class="footer-section policies" role="navigation" aria-label="Legal Links">
+        <a href="pages/legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="pages/legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="pages/legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>
