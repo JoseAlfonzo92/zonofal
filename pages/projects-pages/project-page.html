@@ -3,9 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zonofal - Coming Soon Page | This page is currently under development. Stay tuned for updates and get in touch for more information.">
-<title data-en="Zonofal – Coming Soon" data-es="Zonofal – Proximamente">Zonofal</title>
-<link rel="stylesheet" href="assets/styles/style.css">
+<title data-en="${project.title.en} | Project | Zonofal"
+       data-es="${project.title.es} | Proyecto | Zonofal">
+  ${project.title[lang]} | Project | Zonofal
+</title>
+
+<meta name="description" content="${(project.shortSummary[lang] || project.summary[lang]).slice(0,160)}">
+
+<link rel="canonical" href="https://zonofal.com/pages/projects/${project.slug}.html">
+
+<meta property="og:title" content="${project.title[lang]} | Zonofal">
+<meta name="description" content="${(project.shortSummary[lang] || project.summary[lang]).slice(0,160)}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zonofal.com/pages/projects/${project.slug}.html">
+<meta property="og:image" content="${project.heroImage.src}">
+<meta property="og:image:alt" content="${project.heroImage.alt[lang]}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${project.title[lang]} | Zonofal">
+<meta name="twitter:description" content="${(project.shortSummary[lang] || project.summary[lang]).slice(0,160)}">
+<meta name="twitter:image" content="${project.heroImage.src}">
+
+<meta name="robots" content="index, follow">
+
+
+<link rel="stylesheet" href="../../assets/styles/style.css">
+<link rel="stylesheet" href="../../assets/styles/projects-styles/project-style.css">
 
 <!-- google font family nunito-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,27 +45,28 @@
 
 <!-- favicon -->
 <!-- <link rel="icon" href="images/favicon-logo.png" type="image/x-icon"> -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+<link rel="icon" href="../../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="../../assets/favicon/site.webmanifest">
 
 </head>
 <body>
 
   <!-- Header Section -->
-<header id="header" role="banner" aria-label="Main Site Header">
+<header id="header" role="banner" aria-labelledby="header-title">
+
   <!-- Logo -->
-  <a href="index.html" class="logo" aria-label="Zonofal Home">
+  <a href="../../index.html" class="logo" aria-label="Zonofal Home">
     <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zonofal_3_kku3mr.png" alt="Zonofal Logo" class="logo-img">
   </a>
 
   <!-- Desktop Navigation -->
   <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
     <ul class="nav-links">
-      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
-      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
-      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="../main-pages/portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="../main-pages/services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="../main-pages/contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
 
       <!-- Dropdown toggle -->
       <li class="nav-dropdown">
@@ -58,7 +82,7 @@
     <!-- Language Selector -->
     <div class="language-selector desktop-only">
       <button class="language-toggle" id="language-toggle" aria-label="Change Language">
-        <i class="fas fa-globe" aria-hidden="true"></i>
+        ES
         <span class="visually-hidden">Change Language</span>
       </button>
       <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
@@ -67,10 +91,10 @@
 
   <!-- Dropdown Menu (outside nav) -->
   <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="Additional Links">
-    <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
-    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
-    <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
-    <li><a href="#home" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
+    <li><a href="../main-pages/about.html" data-en="About Us" data-es="Sobre Nosotros" role="menuitem">About Us</a></li>
+    <li><a href="../main-pages/ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="../main-pages/web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
+    <li><a href="../../index.html" data-en="Home" data-es="Inicio" role="menuitem">Home</a></li>
   </ul>
 
   <!-- Mobile Hamburger -->
@@ -85,55 +109,61 @@
   <!-- Mobile Menu -->
   <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
     <ul>
-      <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
-      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
-      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
-      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
-      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
-      <li><a href="ux-ui.html">UX/UI</a></li>
-      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+      <li><a href="../../index.html" data-en="Home" data-es="Inicio">Home</a></li>
+      <li><a href="../main-pages/about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="../main-pages/portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="../main-pages/services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="../main-pages/contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="../main-pages/ux-ui.html" role="menuitem">UX/UI</a></li>
+      <li><a href="../main-pages/web-dev.html" data-en="Web Development" data-es="Desarrollo Web" role="menuitem">Web Development</a></li>
     </ul>
   </nav>
 </header>
 
-
-<hr class="section-divider" aria-hidden="true">
-
-<main class="coming-soon-section" role="main" aria-labelledby="coming-heading">
-  <div class="coming-soon-container">
-    <h1  class="split" data-en="Coming Soon" data-es="Próximamente">
-      Coming Soon
-    </h1>
-
-    <p class="coming-soon-text"
-       data-en="This page is currently under development. Stay tuned for updates!"
-       data-es="Esta página está en desarrollo. ¡Mantente atento a las novedades!">
-      This page is currently under development. Stay tuned for updates!
-    </p>
-
-    <a href="contact.html" class="cta-button-coming-soon"
-       data-en="Get in touch"
-       data-es="Contáctanos"
-       aria-label="Get in touch to learn more or ask questions">
-      Get in touch
-    </a>
-  </div>
+<main id="project-content">
+  <!-- All project content will be injected here by JavaScript -->
 </main>
 
-<hr class="section-divider" aria-hidden="true">
+<!-- CTA section -->
+<section class="cta-section" role="region" aria-labelledby="cta-heading" aria-label="Call to Action Section">
+  <h2 id="cta-heading"
+      data-en="Ready to build something exceptional?"
+      data-es="¿Listo para crear algo excepcional?">
+    Ready to build something exceptional?
+  </h2>
 
+  <p data-en="If this project resonates with your goals, let's collaborate. Reach out for tailored solutions, consultations, or a custom quote."
+     data-es="Si este proyecto se alinea con tus objetivos, colaboremos. Contáctanos para soluciones personalizadas, consultas o una cotización a medida.">
+    If this project resonates with your goals, let's collaborate. Reach out for tailored solutions, consultations, or a custom quote.
+  </p>
 
-  <!-- Footer Section -->
+  <div class="cta-buttons">
+    <a href="../main-pages/contact.html" class="btn primary"
+       data-en="Start your project"
+       data-es="Inicia tu proyecto"
+       aria-label="Start your project by contacting Zonofal">
+      Start your project
+    </a>
+    <a href="../main-pages/services.html" class="btn secondary"
+       data-en="Explore services"
+       data-es="Explora servicios"
+       aria-label="Explore Zonofal's services">
+      Explore services
+    </a>
+  </div>
+</section>
+
+<hr class="section-footer-divider" aria-hidden="true">
+
+<!-- Footer Section -->
 <footer id="footer" role="contentinfo" aria-labelledby="footer-heading">
   <div class="footer-content">
 
-  <!-- Logo and Newsletter -->
+    <!-- Logo -->
     <div>
-      <!-- Footer Logo -->
-      <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
+      <a href="../../index.html" class="logo-footer" aria-label="Zonofal Home">
         <img src="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zonofal_3_kku3mr.png" alt="Zonofal Logo" class="logo-img-footer">
       </a>
-
 
      <!-- Brand Statement -->
 <div class="footer-section footer-message" aria-labelledby="brand-footer-heading">
@@ -143,33 +173,33 @@
     Zonofal is built with privacy and transparency in mind. Your information is only used when you choose to contact us. We never sell your personal data.
   </p>
 </div>
- 
+    
     </div>
 
     <!-- Navigation Links -->
     <div class="footer-section navigation-links" role="navigation" aria-label="Quick Links">
       <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
-      <ul>
-        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
-        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
-        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
-        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
-        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <ul role="list">
+        <li role="listitem"><a href="../../index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li role="listitem"><a href="../main-pages/services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li role="listitem"><a href="../main-pages/portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li role="listitem"><a href="../main-pages/contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li role="listitem"><a href="../main-pages/about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
       </ul>
     </div>
 
     <div class="footer-section navigation-links" role="navigation" aria-label="Resources">
-      <h3>Resources</h3>
-      <ul>
-        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
-        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
-        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
-        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carreras">Careers</a></li>
-        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+      <h3 data-en="Resources" data-es="Recursos">Resources</h3>
+      <ul role="list">
+        <li role="listitem"><a href="../main-pages/about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li role="listitem"><a href="../main-pages/contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li role="listitem"><a href="../main-pages/coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li role="listitem"><a href="../main-pages/coming-soon-pages.html" data-en="Jobs" data-es="Empleos">Jobs</a></li>
+        <li role="listitem"><a href="../main-pages/coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
       </ul>
     </div>
 
-  <!-- Social Media Links -->
+ <!-- Social Media Links -->
     <div class="footer-section social-media" aria-labelledby="social-heading">
       <h3 id="social-heading" data-en="Stay Connected" data-es="Mantente en Línea">Stay Connected</h3>
       <div class="social-links-footer">
@@ -204,7 +234,7 @@
     <!-- Language Selector for Mobile -->
     <div class="footer-section language-selector mobile-only">
       <button class="language-toggle" id="language-toggle-footer" aria-label="Change Language">
-        <i class="fas fa-globe" aria-hidden="true"></i>
+        ES
         <span class="visually-hidden">Change Language</span>
       </button>
       <span class="tooltip-text" data-en="Change Language" data-es="Cambiar Idioma">Change Language</span>
@@ -220,22 +250,17 @@
           © 2026 Zonofal. All Rights Reserved.
         </p>
       </div>
+
       <div class="footer-section policies" role="navigation" aria-label="Legal Links">
-        <a href="pages/legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
-        <a href="pages/legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
-        <a href="pages/legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
+        <a href="../legal-pages/privacy-policy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="../legal-pages/terms-of-service.html" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        <a href="../legal-pages/cookie-settings.html" data-en="Cookie Settings" data-es="Configuración de Cookies">Cookie Settings</a>
       </div>
     </div>
   </div>
 </footer>
 
-
-<!-- file and cdn links to gsap animations -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-<script src="assets/scripts/gsap.js"></script>
-
-<!-- main js file -->
-<script src="assets/scripts/script.js"></script>
+<script type="module" src="../../assets/scripts/project.js"></script>
+<script src="../../assets/scripts/script.js"></script>
 </body>
 </html>

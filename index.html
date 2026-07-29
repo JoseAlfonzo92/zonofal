@@ -3,8 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zonofal - Expert Front-End Development Services | UX/UI Design | Web Development | Consulting">
-<title data-en="Zonofal – Home" data-es="Zonofal – Inicio">Zonofal</title>
+<meta
+name="description"
+content="Zonofal creates modern, responsive websites with expert front-end development, UX/UI design, and web consulting to help businesses grow online.">
+<title data-en="UX/UI Design and Front-End Web Development | Zonofal" data-es="Diseño UX/UI y Desarrollo Web Front-End | Zonofal">UX/UI Design and Front-End Web Development | Zonofal</title>
+<link rel="canonical" href="https://zonofal.com/">
+<meta property="og:title"
+content="Front-End Development & UX/UI Design | Zonofal">
+
+<meta property="og:description"
+content="Modern websites focused on speed, accessibility and user experience.">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://zonofal.com/">
+
+<meta property="og:image"
+content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zonofal_3_kku3mr.png">
+
 <link rel="stylesheet" href="assets/styles/style.css">
 
 <!-- google font family nunito-->
@@ -27,6 +45,50 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="manifest" href="assets/favicon/site.webmanifest">
 
+<!-- Structured Data (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://zonofal.com/#organization",
+      "name": "Zonofal",
+      "url": "https://zonofal.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zonofal_3_kku3mr.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jos%C3%A9-alfonzo-09a808404/",
+        "https://www.facebook.com/Zonofal",
+        "https://x.com/zonofal80241"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://zonofal.com/#service",
+      "name": "Zonofal",
+      "url": "https://zonofal.com",
+      "description": "Front-end development, UX/UI design, web development, and consulting services focused on fast, accessible, and modern websites.",
+      "provider": {
+        "@id": "https://zonofal.com/#organization"
+      },
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zonofal.com/#website",
+      "url": "https://zonofal.com",
+      "name": "Zonofal",
+      "publisher": {
+        "@id": "https://zonofal.com/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -41,13 +103,13 @@
   <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
     <ul class="nav-links">
       <li>
-        <a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="./pages/main-pages/portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
       </li>
       <li>
-        <a href="services.html" data-en="Services" data-es="Servicios">Services</a>
+        <a href="./pages/main-pages/services.html" data-en="Services" data-es="Servicios">Services</a>
       </li>
       <li>
-        <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+        <a href="./pages/main-pages/contact.html" data-en="Contact" data-es="Contacto">Contact</a>
       </li>
 
       <!-- Dropdown toggle -->
@@ -72,9 +134,9 @@
 
   <!-- Dropdown Menu (outside nav) -->
   <ul id="more-links" class="dropdown-menu hidden" role="menu" aria-label="More Links">
-    <li><a href="about.html" role="menuitem" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
-    <li><a href="ux-ui.html" role="menuitem">UX/UI</a></li>
-    <li><a href="web-dev.html" role="menuitem" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+    <li><a href="./pages/main-pages/about.html" role="menuitem" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+    <li><a href="./pages/main-pages/ux-ui.html" role="menuitem">UX/UI</a></li>
+    <li><a href="./pages/main-pages/web-dev.html" role="menuitem" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
     <li><a href="#home" role="menuitem" data-en="Home" data-es="Inicio">Home</a></li>
   </ul>
 
@@ -91,12 +153,12 @@
   <nav class="nav-mobile hidden" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
     <ul>
       <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
-      <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
-      <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
-      <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
-      <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
-      <li><a href="ux-ui.html">UX/UI</a></li>
-      <li><a href="web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
+      <li><a href="./pages/main-pages/about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+      <li><a href="./pages/main-pages/portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+      <li><a href="./pages/main-pages/services.html" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="./pages/main-pages/contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="./pages/main-pages/ux-ui.html">UX/UI</a></li>
+      <li><a href="./pages/main-pages/web-dev.html" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
     </ul>
   </nav>
 </header>
@@ -122,7 +184,7 @@
 
 
 
-    <a href="contact.html" 
+    <a href="./pages/main-pages/contact.html" 
        class="cta-button hero-cta-button fade-in" 
        data-en="Contact Us" 
        data-es="Contáctanos" 
@@ -154,7 +216,7 @@
         data-es="Nuestros servicios de desarrollo web garantizan que tu sitio sea adaptable, rápido y fácil de usar">
         Our web development services ensure your site is responsive, fast, and user-friendly
       </p>
-      <a href="ux-ui.html" class="feature-link" 
+      <a href="./pages/main-pages/ux-ui.html" class="feature-link" 
          data-en="Learn more" 
          data-es="Ver más" 
          aria-label="Learn more about UX/UI design solutions">
@@ -174,7 +236,7 @@
         data-es="Ofrecemos consultoría personalizada para mejorar tus estrategias y el rendimiento de tu front-end">
         We provide tailored consulting to enhance your front-end strategies and performance
       </p>
-      <a href="services.html" class="feature-link" 
+      <a href="./pages/main-pages/services.html" class="feature-link" 
          data-en="Explore Services" 
          data-es="Explorar servicios" 
          aria-label="Explore our front-end consulting services">
@@ -194,7 +256,7 @@
         data-es="Desde el concepto hasta el lanzamiento, cubrimos cada aspecto del desarrollo">
         From concept to launch, we cover every aspect of development
       </p>
-      <a href="web-dev.html" class="feature-link" 
+      <a href="./pages/main-pages/web-dev.html" class="feature-link" 
          data-en="Get started" 
          data-es="Empezar ahora" 
          aria-label="Get started with our web development services">
@@ -261,13 +323,13 @@
   </p>
 
   <div class="cta-buttons">
-    <a href="contact.html" class="btn primary"
+    <a href="./pages/main-pages/contact.html" class="btn primary"
        data-en="Get started"
        data-es="Comenzar"
        aria-label="Get started with a personalized consultation">
       Get started
     </a>
-    <a href="services.html" class="btn secondary"
+    <a href="./pages/main-pages/services.html" class="btn secondary"
        data-en="Learn more"
        data-es="Más información"
        aria-label="Learn more about our services">
@@ -283,7 +345,7 @@
   <h2 id="footer-heading" class="visually-hidden"></h2>
   <div class="footer-content">
     
-    <!-- Logo and Newsletter -->
+    <!-- Logo -->
     <div>
       <!-- Footer Logo -->
       <a href="index.html" class="logo-footer" aria-label="Zonofal Home">
@@ -307,21 +369,21 @@
       <h3 id="quick-links-heading" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
       <ul>
         <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
-        <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
-        <li><a href="portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
-        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
-        <li><a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+        <li><a href="./pages/main-pages/services.html" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="./pages/main-pages/portfolio.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+        <li><a href="./pages/main-pages/contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="./pages/main-pages/about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
       </ul>
     </div>
 
     <div class="footer-section navigation-links" aria-labelledby="resources-heading">
       <h3 id="resources-heading" data-en="Resources" data-es="Recursos">Resources</h3>
       <ul>
-        <li><a href="about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
-        <li><a href="contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
-        <li><a href="coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
-        <li><a href="coming-soon-pages.html" data-en="Careers" data-es="Carreras">Careers</a></li>
-        <li><a href="coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
+        <li><a href="./pages/main-pages/about.html#faqs-section" data-en="FAQs" data-es="FAQs">FAQs</a></li>
+        <li><a href="./pages/main-pages/contact.html#contact" data-en="Support" data-es="Soporte">Support</a></li>
+        <li><a href="./pages/main-pages/coming-soon-pages.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+        <li><a href="./pages/main-pages/coming-soon-pages.html" data-en="Jobs" data-es="Empleos">Jobs</a></li>
+        <li><a href="./pages/main-pages/coming-soon-pages.html" data-en="Events" data-es="Eventos">Events</a></li>
       </ul>
     </div>
 

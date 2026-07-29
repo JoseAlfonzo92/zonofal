@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // Cache elements
-  const translatableElements = document.querySelectorAll("[data-en]");
+  //const translatableElements = document.querySelectorAll("[data-en]");
   const langButtons = document.querySelectorAll(".language-toggle");
   const faqButtons = document.querySelectorAll(".faq-question");
   const contactForm = document.getElementById("contact-form");
@@ -10,17 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector('.slider-prev');
   const nextBtn = document.querySelector('.slider-next');
   const slides = document.querySelectorAll('.portfolio-item-section .portfolio-item-container');
-  const slider = document.querySelector(".slider");
-  const images = document.querySelectorAll(".slider .container-images img");
-  const arrows = document.querySelectorAll(".slider .arrow");
+  //const slider = document.querySelector(".slider");
+  //const images = document.querySelectorAll(".slider .container-images img");
+  //const arrows = document.querySelectorAll(".slider .arrow");
   const hamburger = document.getElementById('hamburger-menu');
   const mobileMenu = document.getElementById('mobile-menu');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
   const dropdownMenu = document.getElementById('more-links');
 
   // Language setup
-  let currentLanguage = localStorage.getItem("preferredLanguage") || 
-                        (navigator.language.startsWith("es") ? "es" : "en");
+  let currentLanguage = localStorage.getItem("preferredLanguage") || (navigator.language.startsWith("es") ? "es" : "en");
   document.documentElement.lang = currentLanguage;
 
   // Language switching function
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("preferredLanguage", lang);
 
     // Update all elements with data-en / data-es attributes
-    translatableElements.forEach(el => {
+    document.querySelectorAll("[data-en]").forEach(el => {
       const newText = el.dataset[lang];
       if (!newText) return;
 
@@ -84,6 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
           : "Please enter a valid email address.";
       }
     });
+
+    
   }
 
   // Language toggle button event listeners
@@ -98,184 +99,184 @@ document.addEventListener("DOMContentLoaded", () => {
   switchLanguage(currentLanguage);
 
  // Contact form validation and submission
-if (contactForm) {
-  contactForm.addEventListener("submit", e => {
-    e.preventDefault();
+    if (contactForm) {
+      contactForm.addEventListener("submit", e => {
+        e.preventDefault();
 
-    const form = e.target;
-    let valid = true;
+        const form = e.target;
+        let valid = true;
 
-    const submitBtn = form.querySelector("button[type='submit']");
+        const submitBtn = form.querySelector("button[type='submit']");
 
-    // Clear previous errors
-    form.querySelectorAll(".error-message").forEach(msg => msg.remove());
-    form.querySelectorAll("input, textarea").forEach(field => {
-      field.classList.remove("error");
-      field.removeAttribute("aria-invalid");
-      field.removeAttribute("aria-describedby");
-    });
+        // Clear previous errors
+        form.querySelectorAll(".error-message").forEach(msg => msg.remove());
+        form.querySelectorAll("input, textarea").forEach(field => {
+          field.classList.remove("error");
+          field.removeAttribute("aria-invalid");
+          field.removeAttribute("aria-describedby");
+        });
 
-    const requiredFields = ["name", "email", "message"];
+        const requiredFields = ["name", "email", "message"];
 
-    requiredFields.forEach(id => {
-      const field = form.querySelector(`#${id}`);
+        requiredFields.forEach(id => {
+          const field = form.querySelector(`#${id}`);
 
-      if (!field.value.trim()) {
-        valid = false;
+          if (!field.value.trim()) {
+            valid = false;
 
-        field.classList.add("error");
-        field.setAttribute("aria-invalid", "true");
+            field.classList.add("error");
+            field.setAttribute("aria-invalid", "true");
 
-        const error = document.createElement("div");
-        error.className = "error-message";
+            const error = document.createElement("div");
+            error.className = "error-message";
 
-        const errorId = `${id}-error`;
-        error.id = errorId;
+            const errorId = `${id}-error`;
+            error.id = errorId;
 
-        const label =
-          field.dataset[currentLanguage] ||
-          field.placeholder ||
-          field.name;
+            const label =
+              field.dataset[currentLanguage] ||
+              field.placeholder ||
+              field.name;
 
-        error.textContent =
-          currentLanguage === "es"
-            ? `${label} es obligatorio.`
-            : `${label} is required.`;
+            error.textContent =
+              currentLanguage === "es"
+                ? `${label} es obligatorio.`
+                : `${label} is required.`;
 
-        field.setAttribute("aria-describedby", errorId);
-        field.insertAdjacentElement("afterend", error);
-      }
-    });
+            field.setAttribute("aria-describedby", errorId);
+            field.insertAdjacentElement("afterend", error);
+          }
+        });
 
-    // Email validation
-    const email = form.querySelector("#email");
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Email validation
+        const email = form.querySelector("#email");
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (email.value && !emailRegex.test(email.value)) {
-      valid = false;
+        if (email.value && !emailRegex.test(email.value)) {
+          valid = false;
 
-      email.classList.add("error");
-      email.setAttribute("aria-invalid", "true");
+          email.classList.add("error");
+          email.setAttribute("aria-invalid", "true");
 
-      const error = document.createElement("div");
-      error.className = "error-message";
+          const error = document.createElement("div");
+          error.className = "error-message";
 
-      const errorId = "email-error";
-      error.id = errorId;
+          const errorId = "email-error";
+          error.id = errorId;
 
-      error.textContent =
-        currentLanguage === "es"
-          ? "Por favor ingrese una dirección de correo válida."
-          : "Please enter a valid email address.";
+          error.textContent =
+            currentLanguage === "es"
+              ? "Por favor ingrese una dirección de correo válida."
+              : "Please enter a valid email address.";
 
-      email.setAttribute("aria-describedby", errorId);
-      email.insertAdjacentElement("afterend", error);
-    }
+          email.setAttribute("aria-describedby", errorId);
+          email.insertAdjacentElement("afterend", error);
+        }
 
-    // Focus first error
-    if (!valid) {
-      form.querySelector(".error")?.focus();
-      return;
-    }
+        // Focus first error
+        if (!valid) {
+          form.querySelector(".error")?.focus();
+          return;
+        }
 
-    // Disable button while sending
-    submitBtn.disabled = true;
-    submitBtn.textContent =
-      currentLanguage === "es" ? "Enviando..." : "Sending...";
-
-    // Submit form
-    fetch(form.action, {
-  method: "POST",
-  body: new URLSearchParams(new FormData(form))
-})
-     .then(() => {
-  const container = document.querySelector(".contact-content");
-  const thankYou = document.getElementById("thank-you-message");
-
-  // Trigger layout transition
-  container.classList.add("success-state");
-
-  const title = thankYou.querySelector("h3");
-  const message = thankYou.querySelector("p");
-
-  if (currentLanguage === "es") {
-    if (title) title.textContent = "¡Gracias!";
-    if (message)
-      message.textContent =
-        "Tu mensaje ha sido enviado correctamente.";
-  } else {
-    if (title) title.textContent = "Thank you!";
-    if (message)
-      message.textContent =
-        "Your message has been sent successfully.";
-  }
-
-  // Show message (no display:none)
-  thankYou.classList.add("show");
-})
-      .catch(() => {
-        submitBtn.disabled = false;
+        // Disable button while sending
+        submitBtn.disabled = true;
         submitBtn.textContent =
-          currentLanguage === "es"
-            ? "Enviar Mensaje"
-            : "Send Message";
+          currentLanguage === "es" ? "Enviando..." : "Sending...";
 
-        alert(
-          currentLanguage === "es"
-            ? "Algo salió mal. Por favor intenta nuevamente más tarde."
-            : "Something went wrong. Please try again later."
-        );
+        // Submit form
+        fetch(form.action, {
+          method: "POST",
+          body: new URLSearchParams(new FormData(form))
+        })
+        .then(() => {
+          const container = document.querySelector(".contact-content");
+          const thankYou = document.getElementById("thank-you-message");
+
+          // Trigger layout transition
+          container.classList.add("success-state");
+
+          const title = thankYou.querySelector("h3");
+          const message = thankYou.querySelector("p");
+
+          if (currentLanguage === "es") {
+            if (title) title.textContent = "¡Gracias!";
+            if (message)
+              message.textContent =
+                "Tu mensaje ha sido enviado correctamente.";
+          } else {
+            if (title) title.textContent = "Thank you!";
+            if (message)
+              message.textContent =
+                "Your message has been sent successfully.";
+          }
+
+          // Show message (no display:none)
+          thankYou.classList.add("show");
+        })
+          .catch(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent =
+              currentLanguage === "es"
+                ? "Enviar Mensaje"
+                : "Send Message";
+
+            alert(
+              currentLanguage === "es"
+                ? "Algo salió mal. Por favor intenta nuevamente más tarde."
+                : "Something went wrong. Please try again later."
+            );
+          });
       });
-  });
 
-  // Optional: live email validation on blur
-  const email = contactForm.querySelector("#email");
-  if (email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // Optional: live email validation on blur
+      const email = contactForm.querySelector("#email");
+      if (email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    email.addEventListener("blur", () => {
-      if (email.value && !emailRegex.test(email.value)) {
-        email.classList.add("error");
-        email.setAttribute("aria-invalid", "true");
-      } else {
-        email.classList.remove("error");
-        email.removeAttribute("aria-invalid");
+        email.addEventListener("blur", () => {
+          if (email.value && !emailRegex.test(email.value)) {
+            email.classList.add("error");
+            email.setAttribute("aria-invalid", "true");
+          } else {
+            email.classList.remove("error");
+            email.removeAttribute("aria-invalid");
+          }
+        });
       }
+    }
+    
+    // FAQ toggle
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+
+        const answer = document.getElementById(button.getAttribute('aria-controls'));
+        const icon = button.querySelector('.faq-toggle-icon');
+
+        if (answer) {
+          if (!expanded) {
+            answer.hidden = false;
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.style.opacity = '1';
+          } else {
+            answer.style.maxHeight = '0';
+            answer.style.opacity = '0';
+            setTimeout(() => {
+              answer.hidden = true;
+            }, 400); 
+          }
+        }
+
+        if (icon) {
+          icon.classList.toggle('fa-chevron-down', expanded);
+          icon.classList.toggle('fa-chevron-up', !expanded);
+        }
+      });
     });
-  }
-}
- // FAQ toggle
-faqButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!expanded));
 
-    const answer = document.getElementById(button.getAttribute('aria-controls'));
-    const icon = button.querySelector('.faq-toggle-icon');
-
-    if (answer) {
-      if (!expanded) {
-        answer.hidden = false;
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        answer.style.opacity = '1';
-      } else {
-        answer.style.maxHeight = '0';
-        answer.style.opacity = '0';
-        setTimeout(() => {
-          answer.hidden = true;
-        }, 400); 
-      }
-    }
-
-    if (icon) {
-      icon.classList.toggle('fa-chevron-down', expanded);
-      icon.classList.toggle('fa-chevron-up', !expanded);
-    }
-  });
-});
-
-
-  // Desktop dropdown menu
+    // Desktop dropdown menu
   if (dropdownToggle && dropdownMenu) {
     dropdownToggle.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -341,75 +342,9 @@ faqButtons.forEach(button => {
       ".slide-right"
     ].forEach(revealOnScroll);
   }, 500);
-
-  // Portfolio slider
- /*  let currentIndex = 0;
-  const updateSlider = () => {
-    if (sliderTrack) sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-  };
-
-  if (prevBtn && nextBtn && slides.length) {
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlider();
-    });
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlider();
-    });
-  } */
-
-  // Touch swipe support
-  /* let startX = 0;
-  if (sliderTrack) {
-    sliderTrack.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-    sliderTrack.addEventListener('touchend', e => {
-      const deltaX = e.changedTouches[0].clientX - startX;
-      if (Math.abs(deltaX) > 50) {
-        currentIndex = deltaX < 0
-          ? (currentIndex + 1) % slides.length
-          : (currentIndex - 1 + slides.length) % slides.length;
-        updateSlider();
-      }
-    });
-  } */
-
-  // Image gallery slider
-  if (slider && images.length) {
-    const totalImages = images.length;
-    const getActiveIndex = () => [...images].findIndex(img => img.classList.contains("active"));
-
-    const updateSlide = (newIndex, transitionClass) => {
-      const currentIndex = getActiveIndex();
-      const currentImage = images[currentIndex];
-      if (newIndex >= totalImages) newIndex = 0;
-      if (newIndex < 0) newIndex = totalImages - 1;
-      const nextImage = images[newIndex];
-      nextImage.classList.add(transitionClass);
-      void nextImage.offsetWidth;
-      currentImage.classList.add(transitionClass);
-      nextImage.classList.add("active");
-      nextImage.classList.remove(transitionClass);
-      setTimeout(() => {
-        currentImage.classList.remove("active", "to_left", "to_right");
-      }, 500);
-    };
-
-    arrows.forEach(arrow => {
-      arrow.addEventListener("click", () => {
-        const isLeft = arrow.classList.contains("left");
-        const currentIndex = getActiveIndex();
-        const newIndex = isLeft ? currentIndex - 1 : currentIndex + 1;
-        const transition = isLeft ? "to_right" : "to_left";
-        updateSlide(newIndex, transition);
-      });
-    });
-  }
-
   
 
 });
-
 
 // Header scroll behavior 
 const header = document.getElementById("header");
@@ -453,8 +388,6 @@ window.addEventListener("scroll", () => {
   }
 });
 handleScrollStyling();
-
-
 
 const cards = document.querySelectorAll('.pricing-card');
 
@@ -507,8 +440,6 @@ cards.forEach(card => {
     button.setAttribute('aria-expanded', isExpanded);
   });
 });
-
-
 
 function updateComparisonLanguage(lang) {
 

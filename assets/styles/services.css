@@ -245,6 +245,7 @@
   }
 }
 
+/* Price section */
 .pricing-section {
   background-color: var(--Background-Color);
   padding: 4rem 2rem;
@@ -261,18 +262,18 @@
   color: var(--Text-Color);
 }
 
-
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1.25fr 1fr; 
+  grid-template-columns:
+    minmax(280px, 1fr)
+    minmax(320px, 1.15fr)
+    minmax(280px, 1fr);
+  
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: stretch;           
-  grid-auto-rows: 1fr;            
-  padding: 0 1rem;
-  width: 100%;
-  overflow: visible;
+  max-width: 1150px;
+  margin-inline: auto;
+  align-items: stretch;
+  padding-inline: 1rem;
 }
 
 .pricing-card {
@@ -301,23 +302,127 @@
 
 /* Card content */
 .pricing-card h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: var(--Inter-font-family);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
 }
 
-.pricing-card .price {
+/* Plan subtitle */
+
+.plan-subtitle {
+  margin: 0 0 1rem;
+  font-family: var(--Nunito-font-family);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--Text-Color);
+  opacity: 0.75;
+  min-height: 3rem;
+}
+
+/* Pricing intro */
+.pricing-intro {
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+.pricing-intro p {
+  font-family: var(--Nunito-font-family);
+  font-size: clamp(1rem, 1vw + 0.8rem, 1.05rem);
+  line-height: 1.7;
+  color: var(--Text-Color);
+  opacity: 0.9;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.plan-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--Text-Color);
+  color: var(--Background-Color);
+  font-family: var(--Inter-font-family);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Pricing Box */
+
+.pricing-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.75rem 0 2rem;
+}
+
+.pricing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.price-amount {
   display: block;
   font-family: var(--Inter-font-family);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--Secondary-Color);
-  margin: 0 0 1.25rem 0;
-  line-height: 1.2;
-  white-space: normal;
-  word-break: break-word;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--Text-Color);
+  line-height: 1.1;
+}
+
+.price-period {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 0.15rem;
+}
+
+.price-label {
+  margin-top: 0.4rem;
+  font-family: var(--Nunito-font-family);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--Text-Color);
+  opacity: 0.8;
+}
+
+.pricing-separator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.pricing-separator::before,
+.pricing-separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.pricing-separator span {
+  flex-shrink: 1;
   max-width: 100%;
-  align-self: flex-start;
+  padding: 0 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--Text-Color);
+  opacity: 0.75;
+
+  /* Prevent overflow */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .pricing-card ul {
@@ -348,14 +453,12 @@
   font-size: 1rem;
 }
 
-
 .pricing-card .plan-note {
   margin-top: 1rem;
   font-size: 0.95rem;
   color: rgba(0,0,0,0.6);
   align-self: flex-start;
 }
-
 
 .pricing-footnote {
   margin-top: 1.75rem;
@@ -368,12 +471,36 @@
   line-height: 1.45;
 }
 
-/* html, body { max-width: 100%; } */
+.promo-banner {
+  margin: 2rem auto;
+  padding: 1rem 4.5rem;
+  background-color: var(--Secondary-Color);
+  color: var(--Text-Color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-/* Mobile: horizontal scrollable gallery no visible scrollbar */
+.toggle-features {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .pricing-section { padding: 3rem 1.25rem; }
-  .pricing-section h2 { font-size: 2.2rem; margin-bottom: 1.75rem; }
+  .plan-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .pricing-section { 
+    padding: 3rem 1.25rem; 
+  }
+
+  .pricing-section h2 { font-size: 2.2rem; 
+    margin-bottom: 1.75rem; 
+  }
 
   .pricing-grid {
     display: flex;
@@ -390,18 +517,19 @@
 
   .pricing-card {
     width: 120px;
-    flex: 0 0 82%;          
-    min-height: 520px;      
+    flex: 0 0 82%;
+    max-width: 82%;
+    min-height: 520px;
     scroll-snap-align: center;
     margin-bottom: 0;
     padding: 1.75rem;
     border-left-width: 4px;
-    transform: none;         
+    transform: none;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    height: auto;            
+    height: auto;
   }
 
-  /* reduce emphasis on middle card for mobile */
+/* reduce emphasis on middle card for mobile */
   .pricing-grid > .pricing-card:nth-child(2) {
     transform: none;
     border-left-width: 4px;
@@ -409,16 +537,33 @@
     z-index: 1;
   }
 
-  .pricing-card h3 { font-size: 1.4rem; }
-  .pricing-card .price { font-size: 1.05rem; }
-  .pricing-card ul li { font-size: 0.98rem; margin-bottom: 0.7rem; }
+  .pricing-card h3 { 
+    font-size: 1.4rem; 
+  }
+
+  .pricing-card .price { 
+    font-size: 1.05rem; 
+  }
+
+  .pricing-card ul li { 
+    font-size: 0.98rem; 
+    margin-bottom: 0.7rem; 
+  }
 
   /* Hide scrollbar across browsers */
-  .pricing-grid::-webkit-scrollbar { display: none; }
-  .pricing-grid { -ms-overflow-style: none; scrollbar-width: none; }
+  .pricing-grid::-webkit-scrollbar { 
+    display: none; 
+  }
+
+  .pricing-grid { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
 
  
-  html, body { overflow-x: hidden; }
+  html, body { 
+    overflow-x: hidden; 
+  }
 
   .pricing-footnote {
     margin-top: 1.25rem;
@@ -429,37 +574,55 @@
     padding: 0 5rem;
     line-height: 1.4;
   }
-}
 
-.pricing-card .price.product {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--Text-Color);
-  margin-bottom: 0.5rem;
-}
+   .pricing-intro {
+    margin-bottom: 2rem;
+    padding-inline: 1.25rem;
+  }
 
+  .pricing-intro p {
+    width: min(90%, 320px);
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+ 
+  .plan-subtitle {
+    font-size: .9rem;
+    margin-bottom: 1.2rem;
+    min-height: auto;
+  }
 
-.pricing-card .price.service {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--Text-Color);
-  margin-bottom: 1.25rem;
-}
+  .pricing-separator {
+      gap: 0.5rem;
+      margin: 0.75rem 0;
+  }
 
-.promo-banner {
-  margin: 2rem auto;
-  padding: 1rem 4.5rem;
-  background-color: var(--Secondary-Color);
-  color: var(--Text-Color);
-  font-size: 1.1rem;
-  font-weight: 700;
-  border-radius: 8px;
-  max-width: 900px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+  .pricing-separator span {
+    font-size: 0.72rem;
+    padding: 0 0.25rem;
+  }
 
-@media (max-width: 768px) {
+  .pricing-box {
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .price-amount {
+    font-size: 1.65rem;
+  }
+
+  .price-label {
+    font-size: 0.9rem;
+  }
+
+  .price-period {
+    font-size: 0.9rem;
+  }
+
+  .price-divider {
+    font-size: 1.4rem;
+  }
+
   .pricing-card:last-child {
     margin-right: 1.25rem;
   }
@@ -468,18 +631,6 @@
     margin-left: 0; 
   }
 
-  .pricing-card {
-  flex: 0 0 82%;
-  max-width: 82%;
-}
-
-}
-
-.toggle-features {
-  display: none;
-}
-
-@media (max-width: 768px) {
   .toggle-features {
     display: inline-block;
     margin-top: auto;
@@ -501,13 +652,11 @@
   overflow: hidden;
   height: 0;
   transition: height 0.35s ease;
+  }
+
 }
 
-/* .pricing-card.expanded .extra-feature {
-    display: list-item;
-  } */
-}
-
+/* footnote under prices */
 .pricing-footnote {
   opacity: 0.75;
   font-size: 0.875rem;
@@ -619,7 +768,6 @@
   background-color: var(--Accent-Color);
 }
 
-
 .cell.feature {
   justify-content: flex-start;
   text-align: left;
@@ -708,7 +856,6 @@
   .cell.highlight {
     background-color: var(--Accent-Color);
   }
-
 
   .comparison-tooltip {
     position: static;
