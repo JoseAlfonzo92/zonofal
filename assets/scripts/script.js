@@ -84,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // Notify other scripts that the language changed
+    window.dispatchEvent(new Event("languageChanged"));
     
   }
 
@@ -323,6 +325,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, { threshold: 0.4 });
     elements.forEach(el => observer.observe(el));
+
+        // Make it available to other scripts
+    window.revealOnScroll = revealOnScroll;
   };
 
   // Lazy-init scroll animations
