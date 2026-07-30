@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Project found:", project.title.en);
 
-    /**
-     * Updates the page title and SEO metadata
-     */
+    
+      //Updates the page title and SEO metadata
+     
     function updatePageMetadata(project, lang) {
         const title =
             lang === "es"
@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
         setMeta('meta[name="twitter:image"]', project.heroImage.src);
     }
 
-    /**
-     * Renders the project using the current language
-     */
+    
+      //Renders the project using the current language
+     
     function renderCurrentProject() {
         const lang = document.documentElement.lang || "en";
 
@@ -102,11 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
-    /**
-     * Re-render when the language changes.
-     * If your language toggle dispatches this event,
-     * the page title, metadata and content will all update.
-     */
+    
+     // Re-render when the language changes.
+     // If your language toggle dispatches this event,
+     // the page title, metadata and content will all update.
+     
     window.addEventListener("languageChanged", () => {
         renderCurrentProject();
     });
