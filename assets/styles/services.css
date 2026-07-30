@@ -9,7 +9,7 @@
   margin-bottom: 100px;
 }
 
-.services-content h2 {
+.services-content h1 {
   font-size: 3.5rem;
   font-family: var(--Inter-font-family);
   margin-bottom: 1.5rem;
@@ -174,7 +174,7 @@
     padding: 3rem 1.5rem;
   }
 
-  .services-content h2 {
+  .services-content h1 {
     font-size: 2.2rem;
     margin-bottom: 1.2rem;
   }

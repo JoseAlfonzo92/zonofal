@@ -12,7 +12,7 @@
   margin-bottom: 1rem;
 }
 
-.project-item-header h2 {
+.project-item-header h1 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   color: var(--Text-Color);
@@ -211,19 +211,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 56px;
   height: 56px;
-
   border: 1px solid var(--Text-Color);
   border-radius: 50%;
-
   background: none;
-
   color: var(--Text-Color);
-
   cursor: pointer;
-
   transition:
     background .25s ease,
     color .25s ease,
@@ -251,11 +245,8 @@
     position: relative;
     width: min(650px, 100%);
     aspect-ratio: 16 / 10;
-
     overflow: hidden;
-
     border-radius: 14px;
-
     box-shadow: 0 14px 55px rgba(0,0,0,.35);
 }
 
@@ -377,9 +368,7 @@
   height: 100%;
 }
 
-/* ===========================
-   TEAM SECTION
-=========================== */
+/* TEAM SECTION */
 
 .team-section {
   max-width: 900px;
@@ -413,15 +402,11 @@
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-
   margin-bottom: 1.5rem;
   padding: 1.5rem;
-
   border-radius: 12px;
-
   background: var(--Card-Background, transparent);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-
   transition: transform .3s ease,
               box-shadow .3s ease;
 }
@@ -502,7 +487,7 @@
     margin-bottom: 0.75rem;
   }
 
-  .project-item-header h2 {
+  .project-item-header h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }

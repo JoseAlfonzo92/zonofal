@@ -24,7 +24,6 @@ html{
     scroll-behavior: smooth;
 }
 
-
 /* General Layout */
 body {
     font-family: var(--Inter-font-family);
@@ -35,7 +34,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 
 /* Header */
 /* Smooth hide/show transition */
@@ -52,7 +50,6 @@ header {
   background-color: var(--Primary-Color);
   
 }
-
 
 /* Hidden state when reaching footer */
 .header-hidden {
@@ -81,7 +78,6 @@ header {
   opacity: 0.6;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-
 
 /* Navigation Links */
 .nav-links {
@@ -120,7 +116,6 @@ header {
 .nav-links a:hover::after {
     width: 100%;
 }
-
 
 /* Base layout */
 .nav-desktop {
@@ -193,7 +188,6 @@ header {
   transform: rotate(45deg);
 }
 
-
 .dropdown-icon {
   stroke: var(--Accent-Color);
   stroke-width: 2;
@@ -231,8 +225,6 @@ header {
 }
 
 /* Mobile menu */
-
-
 .nav-mobile.hidden {
   display: flex;
 }
@@ -247,10 +239,21 @@ header {
 
 /* Responsive rules */
 @media (max-width: 768px) {
-  .nav-desktop { display: none; }
-  .hamburger-menu { display: flex; }
-  .nav-mobile { display: flex; }
-  .dropdown-menu { display: none !important; } /* Hide dropdown on mobile */
+  .nav-desktop { 
+    display: none; 
+  }
+
+  .hamburger-menu { 
+    display: flex; 
+  }
+
+  .nav-mobile { 
+    display: flex; 
+  }
+
+  .dropdown-menu { 
+    display: none !important; 
+  } /* Hide dropdown on mobile */
 }
 
 .hamburger-icon line {
@@ -820,55 +823,6 @@ a.cta-button:hover {
   opacity: 0.95;
 }
 
-/* Newsletter Form */
-/* .newsletter form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.newsletter input[type="email"] {
-  flex: 1 1 0px;
-  padding: 0.6rem;
-  border: none;
-  border-bottom: 1px solid var(--Secondary-Color); 
-  background: none;
-  border-radius: 0; 
-  text-align: center;
-  min-width: 180px;
-  color: var(--Background-Color);
-  font-size: 1rem;
-  font-weight: 400;
-}
- */
-/* Placeholder Styling */
-/* .newsletter input::placeholder {
-  color: var(--Secondary-Color);
-  font-style: italic;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-
-.newsletter button {
-  flex: 0 0 auto;
-  padding: 0.6rem 1rem;
-  color: var(--Background-Color);
-  font-weight: 500;
-  background: none;
-  border: 1px solid var(--Background-Color);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
-}
-
-.newsletter button:hover {
-  background: none;
-  color: var(--Accent-Color);
-  border: 1px solid var(--Accent-Color);
-} */
-
 /* Right Columns: Quick Links, Resources, Social */
 .footer-right-columns {
   display: flex;
@@ -1024,6 +978,7 @@ a.cta-button:hover {
     header{
         position: fixed;
         padding: 5px 10px;
+        width: 100vw;
     }
 
 
@@ -1048,41 +1003,41 @@ a.cta-button:hover {
     }
 
     /* features section */
-.features-list-home {
-  padding: 2rem;
-}
+  .features-list-home {
+    padding: 2rem;
+  }
 
-.features-items-home {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
+  .features-items-home {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
 
-.feature-item-home {
-  padding: 1rem;
-  text-align: center;
-}
+  .feature-item-home {
+    padding: 1rem;
+    text-align: center;
+  }
 
-.features-list-home h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+  .features-list-home h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 
-.feature-item-home h3 {
-  font-size: 1.1rem;
-}
+  .feature-item-home h3 {
+    font-size: 1.1rem;
+  }
 
-.feature-item-home p {
-  font-size: 0.9rem;
-}
+  .feature-item-home p {
+    font-size: 0.9rem;
+  }
 
-.feature-link {
-  font-size: 0.95rem;
-}
+  .feature-link {
+    font-size: 0.95rem;
+  }
 
-.arrow-icon {
-  font-size: 0.9rem;
-}
+  .arrow-icon {
+    font-size: 0.9rem;
+  }
 
 /* benefits section */
   .benefits {

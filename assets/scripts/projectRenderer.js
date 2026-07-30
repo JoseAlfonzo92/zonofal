@@ -17,9 +17,9 @@ function renderHeader(project, lang) {
     <i class="fas fa-${project.icon || 'laptop-code'}" aria-hidden="true"></i>
   </div>
 
-  <h2 id="project-title" data-en="${project.title.en}" data-es="${project.title.es}">
+  <h1 id="project-title" data-en="${project.title.en}" data-es="${project.title.es}">
     ${project.title[lang]}
-  </h2>
+  </h1>
 
   <img src="${project.heroImage.src}" 
        alt="${project.heroImage.alt[lang]}" 
