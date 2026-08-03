@@ -344,6 +344,11 @@ textarea.error {
   transform: scaleX(1);
 }
 
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
 /* privacy commitment section */
 .privacy-section {
   background-color: var(--Secondary-Background-Color);

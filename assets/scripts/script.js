@@ -102,10 +102,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
  // Contact form validation and submission
     if (contactForm) {
+
+      const formLoadedAt = Date.now();
       contactForm.addEventListener("submit", e => {
         e.preventDefault();
 
         const form = e.target;
+
+        const honeypot = form.querySelector("#website");
+
+        if (honeypot.value.trim() !== "") {
+          return;
+        }
+
         let valid = true;
 
         const submitBtn = form.querySelector("button[type='submit']");
@@ -186,10 +195,20 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.textContent =
           currentLanguage === "es" ? "Enviando..." : "Sending...";
 
+        const secondsOnPage = (Date.now() - formLoadedAt) / 1000;
+
+        if (secondsOnPage < 4) {
+          console.warn("Form submitted too quickly.");
+          return;
+        }
+
         // Submit form
+        const formData = new FormData(form);
+        formData.append("loadTime", formLoadedAt);
+
         fetch(form.action, {
           method: "POST",
-          body: new URLSearchParams(new FormData(form))
+          body: new URLSearchParams(formData)
         })
         .then(() => {
           const container = document.querySelector(".contact-content");
