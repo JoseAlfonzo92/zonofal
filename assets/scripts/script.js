@@ -101,9 +101,27 @@ document.addEventListener("DOMContentLoaded", () => {
   switchLanguage(currentLanguage);
 
  // Contact form validation and submission
-    if (contactForm) {
+      if (contactForm) {
 
       const formLoadedAt = Date.now();
+      const submitBtn = contactForm.querySelector("button[type='submit']");
+
+
+      // Prevent instant submissions while the form initializes (anti-spam)
+      submitBtn.disabled = true;
+      submitBtn.textContent =
+        currentLanguage === "es"
+          ? "Preparando el formulario..."
+          : "Setting up the form...";
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent =
+          currentLanguage === "es"
+            ? "Enviar Mensaje"
+            : "Send Message";
+      }, 4000);
+
       contactForm.addEventListener("submit", e => {
         e.preventDefault();
 
@@ -194,13 +212,6 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.disabled = true;
         submitBtn.textContent =
           currentLanguage === "es" ? "Enviando..." : "Sending...";
-
-        const secondsOnPage = (Date.now() - formLoadedAt) / 1000;
-
-        if (secondsOnPage < 4) {
-          console.warn("Form submitted too quickly.");
-          return;
-        }
 
         // Submit form
         const formData = new FormData(form);
