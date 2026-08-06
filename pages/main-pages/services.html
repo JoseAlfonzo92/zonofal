@@ -332,15 +332,46 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
     Plans & Pricing
   </h2>
 
-  <div class="pricing-intro">
-  <p
-    data-en="Every website includes a one-time development fee and a required monthly license. The development fee covers the design and build of your website, while the monthly license keeps your website hosted, maintained, secured, and continuously updated."
-    data-es="Cada sitio web incluye una tarifa única de desarrollo y una licencia mensual obligatoria. La tarifa de desarrollo cubre el diseño y la creación de su sitio web, mientras que la licencia mensual mantiene su sitio alojado, seguro, actualizado y con mantenimiento continuo.">
-    Every website includes a one-time development fee and a required monthly license. The development fee covers the design and build of your website, while the monthly license keeps your website hosted, maintained, secured, and continuously updated.
-  </p>
-</div>
+     <div class="pricing-intro">
+      <p
+        data-en="Every website includes a one-time development fee and a required monthly license. The development fee covers the design and build of your website, while the monthly license keeps your website hosted, maintained, secured, and continuously updated."
+        data-es="Cada sitio web incluye una tarifa única de desarrollo y una licencia mensual obligatoria. La tarifa de desarrollo cubre el diseño y la creación de su sitio web, mientras que la licencia mensual mantiene su sitio alojado, seguro, actualizado y con mantenimiento continuo.">
+        <span class="icon"><i class="fas fa-info-circle"></i></span>
+        Every website includes a one-time development fee and a required monthly license. The development fee covers the design and build of your website, while the monthly license keeps your website hosted, maintained, secured, and continuously updated.
+      </p>
+    </div>
 
-  <div class="pricing-grid">
+
+    <!-- Currency toggle -->
+    <div class="currency-toggle">
+
+        <span class="currency-label"
+              data-en="Currency"
+              data-es="Moneda">
+            Currency
+        </span>
+
+        <div class="currency-switch">
+
+            <button
+                class="currency-btn active"
+                data-currency="ars"
+                type="button">
+                ARS
+            </button>
+
+            <button
+                class="currency-btn"
+                data-currency="usd"
+                type="button">
+                USD
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="pricing-grid">
 
     <!-- Basic plan -->
 <article class="pricing-card" aria-labelledby="plan-basic-heading">
@@ -361,9 +392,17 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
   <div class="pricing-box">
 
     <div class="pricing-item">
-      <span class="price-amount">
+  <span class="price-amount">
+
+    <span class="price ars active">
         ARS 161.000
-      </span>
+    </span>
+
+    <span class="price usd">
+        USD 600
+    </span>
+
+</span>
 
       <span class="price-label"
             data-en="One-time development fee"
@@ -381,14 +420,23 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
 </div>
 
     <div class="pricing-item">
-      <span class="price-amount">
+   <span class="price-amount">
+
+    <span class="price ars active">
         ARS 22.000
-        <span class="price-period"
-              data-en="/month"
-              data-es="/mes">
-          /month
+        <span class="price-period" data-en="/month" data-es="/mes">
+            /month
         </span>
-      </span>
+    </span>
+
+    <span class="price usd">
+        USD 30
+        <span class="price-period" data-en="/month" data-es="/mes">
+            /month
+        </span>
+    </span>
+
+</span>
 
       <span class="price-label"
             data-en="Required website license"
@@ -512,9 +560,17 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
   <div class="pricing-box">
 
     <div class="pricing-item">
-      <span class="price-amount">
+       <span class="price-amount">
+
+      <span class="price ars active">
         ARS 375.000
       </span>
+
+      <span class="price usd">
+        USD 2,000
+      </span>
+
+    </span>
 
       <span class="price-label"
             data-en="One-time development fee"
@@ -533,6 +589,8 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
 
     <div class="pricing-item">
       <span class="price-amount">
+
+      <span class="price ars active">
         ARS 33.000
         <span class="price-period"
               data-en="/month"
@@ -540,6 +598,17 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
           /month
         </span>
       </span>
+
+      <span class="price usd">
+        USD 45
+        <span class="price-period"
+              data-en="/month"
+              data-es="/mes">
+          /month
+        </span>
+      </span>
+
+    </span>
 
       <span class="price-label"
             data-en="Required website license"
@@ -663,27 +732,37 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
   <div class="pricing-box">
 
     <div class="pricing-item">
-      <span class="price-amount">
+        <span class="price-amount">
+
+      <span class="price ars active" data-en="Starting at ARS 535,000" data-es="A partir de ARS 535.000">
         ARS 535.000
       </span>
+
+      <span class="price usd" data-en="Starting at USD 4,000" data-es="A partir de USD 4,000">
+        Starting at USD 4,000
+      </span>
+
+    </span>
 
       <span class="price-label"
             data-en="One-time development fee"
             data-es="Tarifa única de desarrollo">
         One-time development fee
       </span>
-    </div>
+    </div>      
 
-    <div class="pricing-separator">
-  <span
-    data-en="Monthly license after launch"
-    data-es="Licencia mensual después del lanzamiento">
-    Monthly license after launch
-  </span>
-</div>
+          <div class="pricing-separator">
+        <span
+          data-en="Monthly license after launch"
+          data-es="Licencia mensual después del lanzamiento">
+          Monthly license after launch
+        </span>
+      </div>
 
     <div class="pricing-item">
-      <span class="price-amount">
+       <span class="price-amount">
+
+      <span class="price ars active">
         ARS 49.000
         <span class="price-period"
               data-en="/month"
@@ -691,6 +770,17 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
           /month
         </span>
       </span>
+
+      <span class="price usd">
+        USD 70
+        <span class="price-period"
+              data-en="/month"
+              data-es="/mes">
+          /month
+        </span>
+      </span>
+
+    </span>
 
       <span class="price-label"
             data-en="Required website license"
@@ -804,27 +894,34 @@ content="https://res.cloudinary.com/dolmulmgp/image/upload/v1768921350/logo_zono
   Limited-time offer: First month of service included
 </div>
 
-
 <!-- Pricing Footnotes -->
 <div class="pricing-footnotes">
+
   <p class="pricing-footnote"
-     data-en="Prices are shown in Argentine pesos (ARS). For clients outside Argentina, projects are quoted in USD."
-     data-es="Los precios se muestran en pesos argentinos (ARS). Para clientes fuera de Argentina, los proyectos se cotizan en USD.">
-    Prices are shown in Argentine pesos (ARS). For clients outside Argentina, projects are quoted in USD.
+     data-en="Prices can be viewed in Argentine Pesos (ARS) or U.S. Dollars (USD). USD prices are market-based reference rates for international clients and are not direct currency conversions."
+     data-es="Los precios pueden visualizarse en Pesos Argentinos (ARS) o Dólares Estadounidenses (USD). Los precios en USD son valores de referencia basados en el mercado para clientes internacionales y no corresponden a una conversión directa de moneda.">
+    Prices can be viewed in Argentine Pesos (ARS) or U.S. Dollars (USD). USD prices are market-based reference rates for international clients and are not direct currency conversions.
   </p>
 
   <p class="pricing-footnote"
-     data-en="Project fee covers a licensed website product built for your business. You receive full usage rights; source ownership and resale rights are defined in the Terms of Service."
-     data-es="La tarifa del proyecto cubre un producto web licenciado desarrollado para su negocio. Usted recibe derechos completos de uso; la propiedad del código y los derechos de reventa se definen en los Términos del Servicio.">
-    Project fee covers a licensed website product built for your business. You receive full usage rights; source ownership and resale rights are defined in the Terms of Service.
+     data-en="Project fees cover the design and development of a licensed website tailored to your business. The required monthly license includes hosting, security, maintenance, updates, and ongoing technical support."
+     data-es="La tarifa del proyecto cubre el diseño y desarrollo de un sitio web licenciado adaptado a su negocio. La licencia mensual obligatoria incluye hosting, seguridad, mantenimiento, actualizaciones y soporte técnico continuo.">
+    Project fees cover the design and development of a licensed website tailored to your business. The required monthly license includes hosting, security, maintenance, updates, and ongoing technical support.
+  </p>
+
+  <p class="pricing-footnote"
+     data-en="You receive full rights to use your website for your business. Source code ownership, licensing conditions, and resale rights are detailed in the Terms of Service."
+     data-es="Usted recibe todos los derechos para utilizar su sitio web en su negocio. La propiedad del código fuente, las condiciones de licencia y los derechos de reventa se detallan en los Términos del Servicio.">
+    You receive full rights to use your website for your business. Source code ownership, licensing conditions, and resale rights are detailed in the Terms of Service.
   </p>
 
   <a href="../legal-pages/terms-of-service.html"
      class="pricing-terms-link"
      data-en="View full licensing terms"
-     data-es="Ver términos completos de licencia">
+     data-es="Ver términos completos de la licencia">
     View full licensing terms
   </a>
+
 </div>
 </section>
 

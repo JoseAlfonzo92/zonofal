@@ -517,3 +517,54 @@ function updateComparisonLanguage(lang) {
           : cell.dataset.planEn;
     });
 }
+
+// Currency Switching toggle
+const currencyButtons = document.querySelectorAll(".currency-btn");
+const currencySwitch = document.querySelector(".currency-switch");
+
+function changeCurrency(currency){
+
+    // Toggle active button
+    currencyButtons.forEach(btn=>{
+        btn.classList.toggle("active", btn.dataset.currency === currency);
+    });
+
+    // Move the pseudo-element
+    currencySwitch.classList.toggle("usd", currency === "usd");
+
+    // Animate prices
+    document.querySelectorAll(".price.active").forEach(price=>{
+
+        price.classList.add("fade-out");
+
+        setTimeout(()=>{
+            price.classList.remove("active","fade-out");
+        },180);
+
+    });
+
+    setTimeout(()=>{
+
+        document.querySelectorAll(`.price.${currency}`).forEach(price=>{
+            price.classList.add("active");
+        });
+
+    },180);
+
+    localStorage.setItem("currency", currency);
+
+}
+
+currencyButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        if(button.classList.contains("active")) return;
+
+        changeCurrency(button.dataset.currency);
+
+    });
+
+});
+
+changeCurrency(localStorage.getItem("currency") || "ars");
