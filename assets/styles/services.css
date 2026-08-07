@@ -683,6 +683,19 @@
   display: none;
 }
 
+.price-prefix{
+    display:block;
+    margin-bottom:.25rem;
+    font-family:var(--Inter-font-family);
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--Primary-Color);
+    opacity:.85;
+
+}
+
 @media (max-width: 768px) {
   .plan-badge {
     font-size: 0.75rem;
@@ -848,6 +861,11 @@
   height: 0;
   transition: height 0.35s ease;
   }
+
+  .price-prefix{
+        font-size:.68rem;
+        margin-bottom:.2rem;
+    }
 
 }
 
